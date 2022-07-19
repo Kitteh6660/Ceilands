@@ -11,11 +11,8 @@ import kittehmod.ceilands.item.CeilandsItems;
 import kittehmod.ceilands.worldgen.biomes.CeilandsBiomes;
 import kittehmod.ceilands.worldgen.features.CeilandsFeatures;
 import kittehmod.ceilands.worldgen.features.trunkplacers.CeilandsTrunkPlacerType;
-import kittehmod.ceilands.worldgen.features.trunkplacers.CeiltrunkTrunkPlacer;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -42,6 +39,7 @@ public class CeilandsMod
         CeilandsBlockEntities.BLOCK_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         CeilandsEntities.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         CeilandsTrunkPlacerType.TRUNK_PLACERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        CeilandsPOIType.POI_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         CeilandsFeatures.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
         CeilandsBiomes.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         

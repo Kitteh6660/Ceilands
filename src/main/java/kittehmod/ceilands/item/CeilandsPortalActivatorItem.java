@@ -1,6 +1,5 @@
 package kittehmod.ceilands.item;
 
-import kittehmod.ceilands.CeilandsMod;
 import kittehmod.ceilands.block.CeilandsBlockTags;
 import kittehmod.ceilands.block.CeilandsBlocks;
 import kittehmod.ceilands.block.CeilandsPortalBlock;
@@ -14,7 +13,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class CeilandsPortalActivatorItem extends Item
@@ -60,7 +58,7 @@ public class CeilandsPortalActivatorItem extends Item
 					if (level.getBlockState(pos.below(i).relative(dir, j)).is(CeilandsBlockTags.CEILANDS_PORTAL_FRAME_BLOCKS)) {
 						break;
 					}
-					else if (!(level.getBlockState(pos.below(i).relative(dir, j)).getBlock() == Blocks.AIR || level.getBlockState(pos.above(i).relative(dir, j)).getBlock() == CeilandsBlocks.CEILANDS_PORTAL.get())) {
+					else if (!(level.getBlockState(pos.below(i).relative(dir, j)).is(CeilandsBlockTags.CEILANDS_PORTAL_REPLACEABLES))) {
 						return false;
 					}
 					if (j >= 22) {
@@ -71,7 +69,7 @@ public class CeilandsPortalActivatorItem extends Item
 					if (level.getBlockState(pos.below(i).relative(dir.getOpposite(), j)).is(CeilandsBlockTags.CEILANDS_PORTAL_FRAME_BLOCKS)) {
 						break;
 					}
-					else if (!(level.getBlockState(pos.below(i).relative(dir.getOpposite(), j)).getBlock() == Blocks.AIR || level.getBlockState(pos.above(i).relative(dir.getOpposite(), j)).getBlock() == CeilandsBlocks.CEILANDS_PORTAL.get())) {
+					else if (!(level.getBlockState(pos.below(i).relative(dir.getOpposite(), j)).is(CeilandsBlockTags.CEILANDS_PORTAL_REPLACEABLES))) {
 						return false;
 					}
 					if (j >= 22) {
@@ -90,7 +88,7 @@ public class CeilandsPortalActivatorItem extends Item
 					if (level.getBlockState(pos.above(i).relative(dir, j)).is(CeilandsBlockTags.CEILANDS_PORTAL_FRAME_BLOCKS)) {
 						break;
 					}
-					else if (!(level.getBlockState(pos.above(i).relative(dir, j)).getBlock() == Blocks.AIR || level.getBlockState(pos.above(i).relative(dir, j)).getBlock() == CeilandsBlocks.CEILANDS_PORTAL.get())) {
+					else if (!(level.getBlockState(pos.above(i).relative(dir, j)).is(CeilandsBlockTags.CEILANDS_PORTAL_REPLACEABLES))) {
 						return false;
 					}
 					if (j >= 22) {
@@ -101,7 +99,7 @@ public class CeilandsPortalActivatorItem extends Item
 					if (level.getBlockState(pos.above(i).relative(dir.getOpposite(), j)).is(CeilandsBlockTags.CEILANDS_PORTAL_FRAME_BLOCKS)) {
 						break;
 					}
-					else if (!(level.getBlockState(pos.above(i).relative(dir.getOpposite(), j)).getBlock() == Blocks.AIR || level.getBlockState(pos.above(i).relative(dir.getOpposite(), j)).getBlock() == CeilandsBlocks.CEILANDS_PORTAL.get())) {
+					else if (!(level.getBlockState(pos.above(i).relative(dir.getOpposite(), j)).is(CeilandsBlockTags.CEILANDS_PORTAL_REPLACEABLES))) {
 						return false;
 					}
 					if (j >= 22) {
@@ -124,7 +122,7 @@ public class CeilandsPortalActivatorItem extends Item
 					if (level.getBlockState(pos.below(i).relative(dir, j)).is(CeilandsBlockTags.CEILANDS_PORTAL_FRAME_BLOCKS)) {
 						break;
 					}
-					if (level.getBlockState(pos.below(i).relative(dir, j)).getBlock() == Blocks.AIR) {
+					if (level.getBlockState(pos.below(i).relative(dir, j)).is(CeilandsBlockTags.CEILANDS_PORTAL_REPLACEABLES)) {
 						level.setBlock(pos.below(i).relative(dir, j), CeilandsBlocks.CEILANDS_PORTAL.get().defaultBlockState().setValue(CeilandsPortalBlock.AXIS, dir.getAxis()), 11);
 					}
 				}
@@ -132,7 +130,7 @@ public class CeilandsPortalActivatorItem extends Item
 					if (level.getBlockState(pos.below(i).relative(dir.getOpposite(), j)).is(CeilandsBlockTags.CEILANDS_PORTAL_FRAME_BLOCKS)) {
 						break;
 					}
-					if (level.getBlockState(pos.below(i).relative(dir.getOpposite(), j)).getBlock() == Blocks.AIR) {
+					if (level.getBlockState(pos.below(i).relative(dir.getOpposite(), j)).is(CeilandsBlockTags.CEILANDS_PORTAL_REPLACEABLES)) {
 						level.setBlock(pos.below(i).relative(dir.getOpposite(), j), CeilandsBlocks.CEILANDS_PORTAL.get().defaultBlockState().setValue(CeilandsPortalBlock.AXIS, dir.getAxis()), 11);
 					}
 				}
@@ -146,7 +144,7 @@ public class CeilandsPortalActivatorItem extends Item
 					if (level.getBlockState(pos.above(i).relative(dir, j)).is(CeilandsBlockTags.CEILANDS_PORTAL_FRAME_BLOCKS)) {
 						break;
 					}
-					if (level.getBlockState(pos.above(i).relative(dir, j)).getBlock() == Blocks.AIR) {
+					if (level.getBlockState(pos.above(i).relative(dir, j)).is(CeilandsBlockTags.CEILANDS_PORTAL_REPLACEABLES)) {
 						level.setBlock(pos.above(i).relative(dir, j), CeilandsBlocks.CEILANDS_PORTAL.get().defaultBlockState().setValue(CeilandsPortalBlock.AXIS, dir.getAxis()), 11);
 					}
 				}
@@ -154,7 +152,7 @@ public class CeilandsPortalActivatorItem extends Item
 					if (level.getBlockState(pos.above(i).relative(dir.getOpposite(), j)).is(CeilandsBlockTags.CEILANDS_PORTAL_FRAME_BLOCKS)) {
 						break;
 					}
-					if (level.getBlockState(pos.above(i).relative(dir.getOpposite(), j)).getBlock() == Blocks.AIR) {
+					if (level.getBlockState(pos.above(i).relative(dir.getOpposite(), j)).is(CeilandsBlockTags.CEILANDS_PORTAL_REPLACEABLES)) {
 						level.setBlock(pos.above(i).relative(dir.getOpposite(), j), CeilandsBlocks.CEILANDS_PORTAL.get().defaultBlockState().setValue(CeilandsPortalBlock.AXIS, dir.getAxis()), 11);
 					}
 				}

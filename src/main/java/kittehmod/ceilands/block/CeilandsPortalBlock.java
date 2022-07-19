@@ -1,6 +1,7 @@
 package kittehmod.ceilands.block;
 
 import kittehmod.ceilands.worldgen.dimension.CeilandsDimension;
+import kittehmod.ceilands.worldgen.dimension.CeilandsTeleporter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.AxisDirection;
@@ -81,8 +82,9 @@ public class CeilandsPortalBlock extends Block
 			ResourceKey<Level> levelToChoose = entity.getLevel() == minecraftserver.getLevel(CeilandsDimension.CEILANDS) ? Level.OVERWORLD : CeilandsDimension.CEILANDS;
 			entity.handleInsidePortal(pos);
 			if (!entity.isOnPortalCooldown()) {
+				ServerLevel destinationWorld = minecraftserver.getLevel(levelToChoose);
 				entity.setPortalCooldown();
-				entity.changeDimension(minecraftserver.getLevel(levelToChoose));
+				entity.changeDimension(minecraftserver.getLevel(levelToChoose), new CeilandsTeleporter(destinationWorld));
 			}
 		}
 	}

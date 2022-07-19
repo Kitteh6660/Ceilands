@@ -9,5 +9,6 @@ import net.minecraft.world.level.block.Block;
 public class CeilandsBlockTags
 {
 	
-	public static final TagKey<Block> CEILANDS_PORTAL_FRAME_BLOCKS = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(CeilandsMod.MODID, "ceilands_portal_blocks"));
+	public static final TagKey<Block> CEILANDS_PORTAL_FRAME_BLOCKS = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(CeilandsMod.MODID, "ceilands_portal_frame_blocks"));
+	public static final TagKey<Block> CEILANDS_PORTAL_REPLACEABLES = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(CeilandsMod.MODID, "ceilands_portal_replaceables"));
 }
