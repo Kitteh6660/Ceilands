@@ -65,6 +65,9 @@
   "biome.ceilands.ocean_orbs": "Ocean Orbs",
   "biome.ceilands.snow_roof": "Snow Roof",
   
+  "entity.ceilands.ceilands_boat": "Ceilands Boat",
+  "entity.ceilands.ceilands_chest_boat": "Ceilands Boat with Chest",
+  
   "advancements.ceilands.root.title": "The Ceilands",
   "advancements.ceilands.root.description": "Welcome to the Ceilands, a surreal dimension with bedrock ceiling but no bedrock floor!",
   "advancements.ceilands.find_hanging_castle.title": "The Castle in the Sky",
