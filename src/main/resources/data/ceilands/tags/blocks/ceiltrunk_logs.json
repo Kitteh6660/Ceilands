@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:ceiltrunk_log",
+    "ceilands:stripped_ceiltrunk_log",
+    "ceilands:ceiltrunk_wood",
+    "ceilands:stripped_ceiltrunk_wood"
+  ]
+}

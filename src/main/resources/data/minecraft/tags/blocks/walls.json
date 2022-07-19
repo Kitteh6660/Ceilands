@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:ceilingneous_wall",
+    "ceilands:polished_ceilingneous_wall",
+    "ceilands:ceilingneous_brick_wall"
+  ]
+}

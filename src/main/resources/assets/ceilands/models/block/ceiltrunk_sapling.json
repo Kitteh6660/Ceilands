@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "ceilands:block/ceiltrunk_sapling"
+  }
+}

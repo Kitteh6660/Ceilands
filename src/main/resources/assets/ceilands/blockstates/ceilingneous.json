@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "ceilands:block/ceilingneous"
+      },
+      {
+        "model": "ceilands:block/ceilingneous_mirrored"
+      },
+      {
+        "model": "ceilands:block/ceilingneous",
+        "y": 180
+      },
+      {
+        "model": "ceilands:block/ceilingneous_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "ceilands:block/polished_ceilingneous"
+  }
+}

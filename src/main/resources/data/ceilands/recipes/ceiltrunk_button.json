@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "ceilands:ceiltrunk_planks"
+    }
+  ],
+  "result": {
+    "item": "ceilands:ceiltrunk_button"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ceilands:block/luzawood_slab"
+    },
+    "type=double": {
+      "model": "ceilands:block/luzawood_planks"
+    },
+    "type=top": {
+      "model": "ceilands:block/luzawood_slab_top"
+    }
+  }
+}

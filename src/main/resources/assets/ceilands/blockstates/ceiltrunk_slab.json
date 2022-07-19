@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ceilands:block/ceiltrunk_slab"
+    },
+    "type=double": {
+      "model": "ceilands:block/ceiltrunk_planks"
+    },
+    "type=top": {
+      "model": "ceilands:block/ceiltrunk_slab_top"
+    }
+  }
+}

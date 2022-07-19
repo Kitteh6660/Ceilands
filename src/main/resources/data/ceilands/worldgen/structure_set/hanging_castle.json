@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "ceilands:hanging_castle",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "frequency": 0.1,
+    "spacing": 16,
+    "separation": 8,
+    "salt": 1646207470
+  }
+}

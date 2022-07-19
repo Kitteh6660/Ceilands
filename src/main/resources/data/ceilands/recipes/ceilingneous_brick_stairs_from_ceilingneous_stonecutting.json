@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ceilands:ceilingneous"
+  },
+  "result": "ceilands:ceilingneous_brick_stairs",
+  "count": 1
+}

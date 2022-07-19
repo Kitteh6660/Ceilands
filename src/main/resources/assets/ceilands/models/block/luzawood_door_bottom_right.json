@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "ceilands:block/luzawood_door_bottom",
+    "top": "ceilands:block/luzawood_door_top"
+  }
+}

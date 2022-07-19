@@ -1,0 +1,8 @@
+{
+  "type": "ceilands:water_orb",
+  "config": {
+    "state": {
+      "Name": "ceilands:ceilingneous"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ceilands:block/ceiltrunk_pressure_plate"
+    },
+    "powered=true": {
+      "model": "ceilands:block/ceiltrunk_pressure_plate_down"
+    }
+  }
+}

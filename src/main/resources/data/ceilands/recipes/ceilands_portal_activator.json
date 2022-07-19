@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "key": {
+    "C": {
+      "item": "minecraft:fire_charge"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "S": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    " E ",
+    "RCR",
+    " S "
+  ],
+  "result": {
+    "item": "ceilands:ceilands_portal_activator"
+  }
+}

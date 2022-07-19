@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "ceilands:block/ceiltrunk_leaves"
+  }
+}

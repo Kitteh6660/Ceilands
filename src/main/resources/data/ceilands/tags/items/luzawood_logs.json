@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:luzawood_log",
+    "ceilands:stripped_luzawood_log",
+    "ceilands:luzawood_wood",
+    "ceilands:stripped_luzawood_wood"
+  ]
+}

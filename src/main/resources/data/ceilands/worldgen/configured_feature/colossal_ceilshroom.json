@@ -1,0 +1,8 @@
+{
+  "type": "ceilands:colossal_ceilshroom",
+  "config": {
+    "state": {
+      "Name": "minecraft:mushroom_stem"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "ceilands:block/luzawood_planks",
+    "side": "ceilands:block/luzawood_planks",
+    "top": "ceilands:block/luzawood_planks"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ceilands:block/ceilands_portal_ns"
+    },
+    "axis=z": {
+      "model": "ceilands:block/ceilands_portal_ew"
+    }
+  }
+}

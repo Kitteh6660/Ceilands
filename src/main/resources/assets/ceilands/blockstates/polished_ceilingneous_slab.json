@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ceilands:block/polished_ceilingneous_slab"
+    },
+    "type=double": {
+      "model": "ceilands:block/polished_ceilingneous"
+    },
+    "type=top": {
+      "model": "ceilands:block/polished_ceilingneous_slab_top"
+    }
+  }
+}

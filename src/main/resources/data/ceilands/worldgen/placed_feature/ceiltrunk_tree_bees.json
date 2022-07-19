@@ -1,0 +1,42 @@
+{
+  "feature": "ceilands:ceiltrunk_tree_bees",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "below_top": 12
+        },
+        "min_inclusive": {
+          "above_bottom": 12
+        }
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "allowed_search_condition": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [ "minecraft:air", "#minecraft:cave_vines" ]
+      },
+      "direction_of_search": "up",
+      "max_steps": 32,
+      "target_condition": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "ceilands:ceiltrunk_sapling",
+          "Properties": {
+            "stage": "0"
+          }
+        }
+      }
+    }
+  ]
+}

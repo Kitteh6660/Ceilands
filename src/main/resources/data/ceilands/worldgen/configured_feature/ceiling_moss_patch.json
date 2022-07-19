@@ -1,0 +1,8 @@
+{
+  "type": "ceilands:ceiling_moss_patch",
+  "config": {
+    "state": {
+      "Name": "minecraft:moss_block"
+    }
+  }
+}

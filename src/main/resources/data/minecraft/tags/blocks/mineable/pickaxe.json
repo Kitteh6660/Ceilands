@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:ceilingneous",
+    "ceilands:ceilingneous_stairs",
+    "ceilands:ceilingneous_slab",
+    "ceilands:ceilingneous_wall",
+    "ceilands:polished_ceilingneous",
+    "ceilands:polished_ceilingneous_stairs",
+    "ceilands:polished_ceilingneous_slab",
+    "ceilands:polished_ceilingneous_wall",
+    "ceilands:ceilingneous_bricks",
+    "ceilands:ceilingneous_brick_stairs",
+    "ceilands:ceilingneous_brick_slab",
+    "ceilands:ceilingneous_brick_wall",
+    "ceilands:chiseled_ceilingneous",
+    "ceilands:ceilingneous_button",
+    "ceilands:ceilingneous_pressure_plate"
+  ]
+}

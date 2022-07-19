@@ -1,0 +1,26 @@
+{
+  "name": "ceilands:the_ceilands",
+  "ultrawarm": false,
+  "natural": true,
+  "coordinate_scale": 8,
+  "has_skylight": false,
+  "has_ceiling": true,
+  "ambient_light": 0.1;
+  "piglin_safe": true,
+  "bed_works": true,
+  "respawn_anchor_works": true,
+  "has_raids": false,
+  "logical_height": 192,
+  "min_y": 0,
+  "height": 256,
+  "monster_spawn_block_light_limit": 0,
+  "monster_spawn_light_level": {
+    "type": "minecraft:uniform",
+    "value": {
+      "max_inclusive": 7,
+      "min_inclusive": 0
+    }
+  },
+  "infiniburn": "#infiniburn_overworld",
+  "effects": "minecraft:overworld"
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "ceilands:block/ceilingneous",
+    "side": "ceilands:block/ceilingneous",
+    "top": "ceilands:block/ceilingneous"
+  }
+}
