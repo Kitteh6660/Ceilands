@@ -28,6 +28,11 @@ public class ModBoat extends Boat
 		this.zo = p_219875_;
 	}
 	
+	protected void defineSynchedData() {
+		super.defineSynchedData();
+		this.entityData.define(DATA_ID_TYPE, ModBoat.Type.CEILTRUNK.ordinal());
+   }
+	
 	protected void addAdditionalSaveData(CompoundTag p_38359_) {
 		p_38359_.putString("Type", this.getCeilandsBoatType().getName());
 	}

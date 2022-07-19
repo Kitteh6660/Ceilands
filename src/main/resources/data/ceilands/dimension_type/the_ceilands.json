@@ -10,7 +10,7 @@
   "bed_works": true,
   "respawn_anchor_works": true,
   "has_raids": false,
-  "logical_height": 192,
+  "logical_height": 255,
   "min_y": 0,
   "height": 256,
   "monster_spawn_block_light_limit": 0,
