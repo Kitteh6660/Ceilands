@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ceilands:block/ceilingneous_emerald_ore"
+  }
+}

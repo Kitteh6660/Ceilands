@@ -1,0 +1,8 @@
+{
+  "type": "ceilands:ceiling_snow_patch",
+  "config": {
+    "state": {
+      "Name": "minecraft:snow_block"
+    }
+  }
+}

@@ -20,6 +20,15 @@
   "block.ceilands.ceilingneous_button": "Ceilingneous Button",
   "block.ceilands.ceilingneous_pressure_plate": "Ceilingneous Pressure Plate",
 
+  "block.ceilands.ceilingneous_coal_ore": "Ceilingneous Coal Ore",
+  "block.ceilands.ceilingneous_copper_ore": "Ceilingneous Copper Ore",
+  "block.ceilands.ceilingneous_iron_ore": "Ceilingneous Iron Ore",
+  "block.ceilands.ceilingneous_gold_ore": "Ceilingneous Gold Ore",
+  "block.ceilands.ceilingneous_diamond_ore": "Ceilingneous Diamond Ore",
+  "block.ceilands.ceilingneous_redstone_ore": "Ceilingneous Redstone Ore",
+  "block.ceilands.ceilingneous_lapis_ore": "Ceilingneous Lapis Lazuli Ore",
+  "block.ceilands.ceilingneous_emerald_ore": "Ceilingneous Emerald Ore",
+
   "block.ceilands.ceiltrunk_log": "Ceiltrunk Log",
   "block.ceilands.stripped_ceiltrunk_log": "Stripped Ceiltrunk Log",
   "block.ceilands.ceiltrunk_wood": "Ceiltrunk Wood",

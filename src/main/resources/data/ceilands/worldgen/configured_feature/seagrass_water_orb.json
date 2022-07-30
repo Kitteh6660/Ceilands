@@ -1,0 +1,6 @@
+{
+  "type": "ceilands:ceilands_seagrass",
+  "config": {
+    "probability": 0.6
+  }
+}

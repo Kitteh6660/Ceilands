@@ -1,0 +1,31 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "position_predicate": {
+            "predicate_type": "minecraft:axis_aligned_linear_pos",
+            "axis": "y",
+            "min_dist": 1,
+            "max_dist": 64,
+            "min_chance": 1,
+            "max_chance": 1
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:chain"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:air"
+          },
+          "output_state": {
+            "Name": "minecraft:chain"
+          },
+          "output_nbt": "hanging_castle_chains"
+        }
+      ]
+    }
+  ]
+}

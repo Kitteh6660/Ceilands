@@ -4,22 +4,21 @@ import java.util.List;
 
 import com.mojang.serialization.Codec;
 
-import kittehmod.ceilands.CeilandsMod;
-import kittehmod.ceilands.block.CeilandsBlocks;
+import kittehmod.ceilands.util.MathHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration;
 
 public class NaturalBridgeFeature extends Feature<BlockStateConfiguration>
 {
-	
+	// Currently disabled.
 	public NaturalBridgeFeature(Codec<BlockStateConfiguration> codec) {
 		super(codec);
 	}
@@ -27,41 +26,53 @@ public class NaturalBridgeFeature extends Feature<BlockStateConfiguration>
 	@Override
 	public boolean place(FeaturePlaceContext<BlockStateConfiguration> context) {
 		List<Direction> startingDirections = List.of(Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST);
+		BlockState state = context.config().state;
 		BlockPos blockpos = context.origin();
 		RandomSource randomsource = context.random();
 		WorldGenLevel worldgenlevel = context.level();
 		BlockPos pointA = null;
 		BlockPos pointB = null;
 		Block refBlock;
-		int archHeight = 2 + randomsource.nextInt(8);
 		int diffX;
 		int diffY;
 		int diffZ;
+		// Cancel generation if it doesn't pick an empty block.
+		if (worldgenlevel.getBlockState(blockpos).getBlock() != Blocks.AIR) {
+			return false;
+		}
 		// Search for solid land for Point A.
 		int dirChooser = randomsource.nextInt(startingDirections.size());
 		Direction dir = startingDirections.get(dirChooser);
-		for (int fwd = 0; fwd < 16; fwd++) {
-			for (int hgt = 16; hgt > -16; hgt--) {
-				refBlock = worldgenlevel.getBlockState(blockpos.relative(dir, fwd).above(hgt)).getBlock();
-				if (refBlock != Blocks.AIR && !(refBlock instanceof LeavesBlock)) {
-					pointA = blockpos.relative(dir, fwd).above(hgt);
+		for (int fwd = 0; fwd < 12; fwd++) {
+			for (int hgt = 6; hgt > -6; hgt--) {
+				for (int wdth = -5; wdth <= 5; wdth++) {
+					refBlock = worldgenlevel.getBlockState(blockpos.relative(dir, fwd).relative(dir.getClockWise(), wdth).above(hgt)).getBlock();
+					if (refBlock != Blocks.AIR && refBlock == state.getBlock()) {
+						pointA = blockpos.relative(dir, fwd).relative(dir.getClockWise(), wdth).above(hgt);
+						break;
+					}
 				}
+				if (pointA != null) {
+					break;
+				}
+			}
+			if (pointA != null) {
+				break;
 			}
 		}
 		// Search for solid land for Point B.
-		/*dirChooser = randomsource.nextInt(startingDirections.size());
-		if (randomsource.nextFloat() < 0.5) {
-			dir = dir.getOpposite();
-		}
-		else {
-			dir = randomsource.nextFloat() < 0.5 ? dir.getCounterClockWise() : dir.getClockWise();
-		}*/
-		dir = dir.getOpposite();
-		for (int fwd = 0; fwd < 16; fwd++) {
-			for (int hgt = 16; hgt > -16; hgt--) {
-				refBlock = worldgenlevel.getBlockState(blockpos.relative(dir, fwd).above(hgt)).getBlock();
-				if (refBlock != Blocks.AIR && !(refBlock instanceof LeavesBlock)) {
-					pointB = blockpos.relative(dir, fwd).above(hgt);
+		for (int attempt = 0; attempt < 3; attempt++) {
+			dir = dir.getClockWise();
+			for (int fwd = 0; fwd < 12; fwd++) {
+				for (int hgt = 6; hgt > -6; hgt--) {
+					refBlock = worldgenlevel.getBlockState(blockpos.relative(dir, fwd).above(hgt)).getBlock();
+					if (refBlock != Blocks.AIR && refBlock == state.getBlock()) {
+						pointB = blockpos.relative(dir, fwd).above(hgt);
+						break;
+					}
+				}
+				if (pointB != null) {
+					break;
 				}
 			}
 		}
@@ -72,23 +83,25 @@ public class NaturalBridgeFeature extends Feature<BlockStateConfiguration>
 		diffY = Math.abs(pointA.getY() - pointB.getY());
 		diffZ = Math.abs(pointA.getZ() - pointB.getZ());
 		int dist = calculateBiggestOfThree(diffX, diffY, diffZ);
-		CeilandsMod.LOGGER.info("Working on placing blocks.");
+		int radiusSize = 1 + Math.max((int)Math.floor(Math.sqrt(dist)), 2);
+		if (radiusSize > 3) {
+			radiusSize = 3;
+		}
+		int archHeight = 2 + randomsource.nextInt(Math.max(8 - diffY, 1));
 		for (int i = 0; i < dist; i++) {
-			CeilandsMod.LOGGER.info("Placing...");
-			makeSphereAt(worldgenlevel, blockpos.above(pointA.getY() - pointB.getY() > 0 ? calcDistProgress(diffY, i, dist) : -calcDistProgress(diffY, i, dist)).north(calcDistProgress(diffX, i, dist)).east(calcDistProgress(diffZ, i, dist)), CeilandsBlocks.CEILINGNEOUS.get(), 3);
+			BlockPos posToSet = MathHelper.getInterpolatedBlockPos(pointA, pointB, ((float)i / dist));
+			makeSphereAt(worldgenlevel, posToSet.above((int)Math.floor(Math.sin(((float)i / dist) * Math.PI) * archHeight)), state, radiusSize);
 		}
 		return true;
 	}
 	
-	private int calcDistProgress(int dist, int currentProgress, int totalProgress) {
-		return dist * (currentProgress / totalProgress);
-	}
-	
-	private void makeSphereAt(WorldGenLevel level, BlockPos pos, Block block, int radius) {
+	private void makeSphereAt(WorldGenLevel level, BlockPos pos, BlockState state, int radius) {
 		for (int i = -radius; i < radius; i++) {
 			for (int j = -radius; j < radius; j++) {
 				for (int k = -radius; k < radius; k++) {
-					this.setBlock(level, pos.above(i).south(j).east(k), block.defaultBlockState());
+					if (MathHelper.isPlotInSphere(i, j, k, radius)) {
+						this.setBlock(level, pos.above(i).south(j).east(k), state);
+					}
 				}
 			}
 		}

@@ -1,0 +1,8 @@
+{
+  "type": "ceilands:arch_bridge",
+  "config": {
+    "state": {
+      "Name": "minecraft:packed_ice"
+    }
+  }
+}

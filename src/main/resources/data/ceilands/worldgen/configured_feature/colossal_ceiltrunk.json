@@ -1,0 +1,8 @@
+{
+  "type": "ceilands:colossal_ceiltrunk",
+  "config": {
+    "state": {
+      "Name": "ceilands:ceiltrunk_log"
+    }
+  }
+}

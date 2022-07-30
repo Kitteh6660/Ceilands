@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:ceilingneous_copper_ore",
+    "ceilands:ceilingneous_iron_ore",
+    "ceilands:ceilingneous_lapis_ore"
+  ]
+}

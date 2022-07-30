@@ -2,14 +2,14 @@ package kittehmod.ceilands.worldgen.features;
 
 import com.mojang.serialization.Codec;
 
-import kittehmod.ceilands.block.CeilandsBlocks;
-import kittehmod.ceilands.util.CircleHelper;
+import kittehmod.ceilands.util.MathHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration;
@@ -26,12 +26,13 @@ public class WaterOrbFeature extends Feature<BlockStateConfiguration>
 		RandomSource randomsource = context.random();
 		WorldGenLevel worldgenlevel = context.level();
 		int radius = 12 + randomsource.nextInt(5);
+		BlockState state = context.config().state;
 		// Stage 1: Create a hollow half-sphere.
 		for (int posY = 0; posY < radius; posY++) {
 			for (int posX = -radius; posX < radius; posX++) {
 				for (int posZ = -radius; posZ < radius; posZ++) {
-					if (CircleHelper.isPlotInSphere(posX, posY, posZ, radius) && !worldgenlevel.getBlockState(blockpos.below(posY).east(posX).south(posZ)).getFluidState().is(FluidTags.WATER)) {
-						this.setBlock(worldgenlevel, blockpos.below(posY).east(posX).south(posZ), CeilandsBlocks.CEILINGNEOUS.get().defaultBlockState());
+					if (MathHelper.isPlotInSphere(posX, posY, posZ, radius) && !worldgenlevel.getBlockState(blockpos.below(posY).east(posX).south(posZ)).getFluidState().is(FluidTags.WATER)) {
+						this.setBlock(worldgenlevel, blockpos.below(posY).east(posX).south(posZ), state);
 					}
 				}
 			}
@@ -41,7 +42,7 @@ public class WaterOrbFeature extends Feature<BlockStateConfiguration>
 		for (int posY = 0; posY < radius; posY++) {
 			for (int posX = -radius; posX < radius; posX++) {
 				for (int posZ = -radius; posZ < radius; posZ++) {
-					if (CircleHelper.isPlotInSphere(posX, posY, posZ, radius)) {
+					if (MathHelper.isPlotInSphere(posX, posY, posZ, radius)) {
 						this.setBlock(worldgenlevel, blockpos.below(posY).east(posX).south(posZ), Blocks.WATER.defaultBlockState());
 					}
 				}
@@ -65,7 +66,7 @@ public class WaterOrbFeature extends Feature<BlockStateConfiguration>
 		for (int posY = radius - 3; posY < radius; posY++) {
 			for (int posX = -radius; posX < radius; posX++) {
 				for (int posZ = -radius; posZ < radius; posZ++) {
-					if (CircleHelper.isPlotInSphere(posX, posY, posZ, radius)) {
+					if (MathHelper.isPlotInSphere(posX, posY, posZ, radius)) {
 						this.setBlock(worldgenlevel, blockpos.below(posY).east(posX).south(posZ), block.defaultBlockState());
 						if (posX == 0 && posZ == 0) {
 							this.setBlock(worldgenlevel, blockpos.below(posY).east(posX).south(posZ), Blocks.GLOWSTONE.defaultBlockState());

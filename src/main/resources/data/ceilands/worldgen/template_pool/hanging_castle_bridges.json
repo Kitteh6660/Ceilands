@@ -8,7 +8,7 @@
         "element_type": "minecraft:single_pool_element",
         "location": "ceilands:hanging_castle_bridge",
         "projection": "rigid",
-        "processors": "minecraft:empty"
+        "processors": "ceilands:hanging_castle_degradation"
       }
     },
     {
@@ -17,7 +17,7 @@
         "element_type": "minecraft:single_pool_element",
         "location": "ceilands:hanging_castle_bridge_long",
         "projection": "rigid",
-        "processors": "minecraft:empty"
+        "processors": "ceilands:hanging_castle_degradation"
       }
     },
     {
@@ -26,7 +26,7 @@
         "element_type": "minecraft:single_pool_element",
         "location": "ceilands:hanging_castle_bridge_endcap",
         "projection": "rigid",
-        "processors": "minecraft:empty"
+        "processors": "ceilands:hanging_castle_degradation"
       }
     }
   ]

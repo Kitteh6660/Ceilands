@@ -2,7 +2,7 @@ package kittehmod.ceilands.worldgen.features;
 
 import com.mojang.serialization.Codec;
 
-import kittehmod.ceilands.util.CircleHelper;
+import kittehmod.ceilands.util.MathHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
@@ -67,10 +67,10 @@ public class ColossalCeilshroom extends Feature<BlockStateConfiguration>
 		for (int capY = 0; capY < capThickness; capY++) {
 			for (int capX = -capRadius; capX < capRadius; capX++) {
 				for (int capZ = -capRadius; capZ < capRadius; capZ++) { 
-					if (CircleHelper.isPlotInCircle(capX, capZ, capRadius)) {
+					if (MathHelper.isPlotInCircle(capX, capZ, capRadius)) {
 						if (worldgenlevel.getBlockState(blockpos.below(capY).east(capX).south(capZ)) == Blocks.AIR.defaultBlockState()) {
 							this.setBlock(worldgenlevel, blockpos.below(capY).east(capX).south(capZ), capBlock.defaultBlockState());
-							if (genLush && capY == 0 && capX > -capRadius + 2 && capX < capRadius - 2 && capZ > -capRadius + 2 && capZ < capRadius - 2 && CircleHelper.isPlotInCircle(capX, capZ, capRadius - 2) && !(worldgenlevel.getBlockState(blockpos.below(capY).east(capX).south(capZ)).getBlock() == Blocks.MUSHROOM_STEM)) {
+							if (genLush && capY == 0 && capX > -capRadius + 2 && capX < capRadius - 2 && capZ > -capRadius + 2 && capZ < capRadius - 2 && MathHelper.isPlotInCircle(capX, capZ, capRadius - 2) && !(worldgenlevel.getBlockState(blockpos.below(capY).east(capX).south(capZ)).getBlock() == Blocks.MUSHROOM_STEM)) {
 								this.setBlock(worldgenlevel, blockpos.below(capY).east(capX).south(capZ), lushBlock.defaultBlockState());
 							}
 							if (genShroomlights && randomsource.nextFloat() < 0.02) {

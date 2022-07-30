@@ -1,0 +1,33 @@
+{
+  "name": "ceilands:ruined_ceilands_portal",
+  "fallback": "ceilands:ruined_ceilands_portal",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ruined_ceilands_portal_1",
+        "projection": "rigid",
+        "processors": "ceilands:ruined_ceilands_portal_degradation"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ruined_ceilands_portal_2",
+        "projection": "rigid",
+        "processors": "ceilands:ruined_ceilands_portal_degradation"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ruined_ceilands_portal_3",
+        "projection": "rigid",
+        "processors": "ceilands:ruined_ceilands_portal_degradation"
+      }
+    }
+  ]
+}

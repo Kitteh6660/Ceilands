@@ -1,0 +1,8 @@
+{
+  "type": "ceilands:huge_icicle",
+  "config": {
+    "state": {
+      "Name": "minecraft:packed_ice"
+    }
+  }
+}

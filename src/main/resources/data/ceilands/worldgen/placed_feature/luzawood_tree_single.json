@@ -1,9 +1,9 @@
 {
-  "feature": "ceilands:luzawood_tree_single",
+  "feature": "ceilands:flower_luzawood",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 12
+      "count": 32
     },
     {
       "type": "minecraft:in_square"

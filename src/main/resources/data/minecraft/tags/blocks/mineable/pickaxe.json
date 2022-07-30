@@ -15,6 +15,14 @@
     "ceilands:ceilingneous_brick_wall",
     "ceilands:chiseled_ceilingneous",
     "ceilands:ceilingneous_button",
-    "ceilands:ceilingneous_pressure_plate"
+    "ceilands:ceilingneous_pressure_plate",
+    "ceilands:ceilingneous_coal_ore",
+    "ceilands:ceilingneous_copper_ore",
+    "ceilands:ceilingneous_iron_ore",
+    "ceilands:ceilingneous_gold_ore",
+    "ceilands:ceilingneous_redstone_ore",
+    "ceilands:ceilingneous_lapis_ore",
+    "ceilands:ceilingneous_diamond_ore",
+    "ceilands:ceilingneous_emerald_ore"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:ceilingneous_gold_ore",
+    "ceilands:ceilingneous_redstone_ore",
+    "ceilands:ceilingneous_diamond_ore",
+    "ceilands:ceilingneous_emerald_ore"
+  ]
+}

@@ -40,6 +40,15 @@ public class CeilandsItems
 	public static final RegistryObject<Item> CEILINGNEOUS_BUTTON = ITEMS.register("ceilingneous_button", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 	public static final RegistryObject<Item> CEILINGNEOUS_PRESSURE_PLATE = ITEMS.register("ceilingneous_pressure_plate", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_PRESSURE_PLATE.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 
+	public static final RegistryObject<Item> CEILINGNEOUS_COAL_ORE = ITEMS.register("ceilingneous_coal_ore", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_COAL_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Item> CEILINGNEOUS_COPPER_ORE = ITEMS.register("ceilingneous_copper_ore", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_COPPER_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Item> CEILINGNEOUS_IRON_ORE = ITEMS.register("ceilingneous_iron_ore", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_IRON_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Item> CEILINGNEOUS_GOLD_ORE = ITEMS.register("ceilingneous_gold_ore", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_GOLD_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Item> CEILINGNEOUS_DIAMOND_ORE = ITEMS.register("ceilingneous_diamond_ore", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_DIAMOND_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Item> CEILINGNEOUS_REDSTONE_ORE = ITEMS.register("ceilingneous_redstone_ore", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_REDSTONE_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Item> CEILINGNEOUS_LAPIS_ORE = ITEMS.register("ceilingneous_lapis_ore", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_LAPIS_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Item> CEILINGNEOUS_EMERALD_ORE = ITEMS.register("ceilingneous_emerald_ore", () -> new BlockItem(CeilandsBlocks.CEILINGNEOUS_EMERALD_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+
 	public static final RegistryObject<Item> CEILTRUNK_LOG = ITEMS.register("ceiltrunk_log", () -> new BlockItem(CeilandsBlocks.CEILTRUNK_LOG.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 	public static final RegistryObject<Item> STRIPPED_CEILTRUNK_LOG = ITEMS.register("stripped_ceiltrunk_log", () -> new BlockItem(CeilandsBlocks.STRIPPED_CEILTRUNK_LOG.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 	public static final RegistryObject<Item> CEILTRUNK_WOOD = ITEMS.register("ceiltrunk_wood", () -> new BlockItem(CeilandsBlocks.CEILTRUNK_WOOD.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));

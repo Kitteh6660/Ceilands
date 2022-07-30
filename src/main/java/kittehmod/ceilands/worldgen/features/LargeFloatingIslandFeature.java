@@ -3,7 +3,7 @@ package kittehmod.ceilands.worldgen.features;
 import com.mojang.serialization.Codec;
 
 import kittehmod.ceilands.block.CeilandsBlocks;
-import kittehmod.ceilands.util.CircleHelper;
+import kittehmod.ceilands.util.MathHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
@@ -30,7 +30,7 @@ public class LargeFloatingIslandFeature extends Feature<BlockStateConfiguration>
 		int taperingSteps = height * 0.5 < radius ? 2 : 1;
 		boolean hasPond = randomsource.nextFloat() < 0.2;
 		int pondDepth = hasPond ? randomsource.nextInt(3) : 0;
-		int pondWidth = hasPond ? pondDepth * 2 + randomsource.nextInt(4) : 0;
+		int pondWidth = hasPond ? pondDepth * 2 + randomsource.nextInt(4) + 1 : 0;
 		for (int posY = 0; posY < height; posY++) {
 			if (posY == 0) {
 				radius--;
@@ -40,7 +40,7 @@ public class LargeFloatingIslandFeature extends Feature<BlockStateConfiguration>
 			}
 			for (int posX = -radius; posX < radius; posX++) {
 				for (int posZ = -radius; posZ < radius; posZ++) {
-					if (CircleHelper.isPlotInCircle(posX, posZ, radius) && worldgenlevel.getBlockState(blockpos.below(posY).east(posX).south(posZ)).getBlock() == Blocks.AIR) {
+					if (MathHelper.isPlotInCircle(posX, posZ, radius) && worldgenlevel.getBlockState(blockpos.below(posY).east(posX).south(posZ)).getBlock() == Blocks.AIR) {
 						if (posY == 0) {
 							this.setBlock(worldgenlevel, blockpos.below(posY).east(posX).south(posZ), Blocks.GRASS_BLOCK.defaultBlockState());
 						}
@@ -57,12 +57,14 @@ public class LargeFloatingIslandFeature extends Feature<BlockStateConfiguration>
 							this.setBlock(worldgenlevel, blockpos.below(posY).east(posX).south(posZ), CeilandsBlocks.CEILINGNEOUS.get().defaultBlockState());
 						}
 					}
-					if (hasPond && CircleHelper.isPlotInCircle(posX, posZ, pondWidth) && posY <= pondDepth) {
+					if (hasPond && MathHelper.isPlotInCircle(posX, posZ, pondWidth) && posY <= pondDepth) {
 						this.setBlock(worldgenlevel, blockpos.below(posY).east(posX).south(posZ), Blocks.WATER.defaultBlockState());
 						this.setBlock(worldgenlevel, blockpos.below(posY + 1).east(posX).south(posZ), Blocks.SAND.defaultBlockState());
-						pondWidth--;
 					}
 				}
+			}
+			if (pondWidth > 0) {
+				pondWidth--;
 			}
 			if (posY % taperingSteps == 0) {
 				radius -= taperingAmt;

@@ -18,7 +18,7 @@
             }
           ],
           "name": "minecraft:iron_ingot",
-          "weight": 50
+          "weight": 30
         },
         {
           "type": "minecraft:item",
@@ -86,7 +86,7 @@
             }
           ],
           "name": "minecraft:iron_nugget",
-          "weight": 25
+          "weight": 8
         },
         {
           "type": "minecraft:item",
@@ -95,14 +95,14 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 10.0,
+                "max": 3.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:gold_nugget",
-          "weight": 10
+          "name": "minecraft:blaze_rod",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -111,14 +111,14 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 10.0,
+                "max": 2.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:lapis_lazuli",
-          "weight": 20
+          "name": "minecraft:echo_shard",
+          "weight": 3
         }
       ],
       "rolls": {

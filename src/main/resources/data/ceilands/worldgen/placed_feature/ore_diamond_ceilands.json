@@ -1,0 +1,27 @@
+{
+  "feature": "ceilands:ore_diamond_ceilands_small",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 7
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:trapezoid",
+        "max_inclusive": {
+          "above_bottom": 48
+        },
+        "min_inclusive": {
+          "above_bottom": -24
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

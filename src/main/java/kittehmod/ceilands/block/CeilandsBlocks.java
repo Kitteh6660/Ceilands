@@ -1,15 +1,20 @@
 package kittehmod.ceilands.block;
 
+import java.util.function.ToIntFunction;
+
 import kittehmod.ceilands.CeilandsMod;
 import kittehmod.ceilands.worldgen.features.trees.CeiltrunkTreeGrower;
 import kittehmod.ceilands.worldgen.features.trees.LuzawoodTreeGrower;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.RedStoneOreBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -20,6 +25,8 @@ import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -54,6 +61,15 @@ public class CeilandsBlocks
 	
 	public static final RegistryObject<Block> CEILINGNEOUS_BUTTON = BLOCKS.register("ceilingneous_button", () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.STONE).noCollission().strength(0.5F).sound(SoundType.STONE).noCollission()));
 	public static final RegistryObject<Block> CEILINGNEOUS_PRESSURE_PLATE = BLOCKS.register("ceilingneous_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(0.5F).sound(SoundType.STONE)));	
+	
+	public static final RegistryObject<Block> CEILINGNEOUS_COAL_ORE = BLOCKS.register("ceilingneous_coal_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(0, 2)));
+	public static final RegistryObject<Block> CEILINGNEOUS_COPPER_ORE = BLOCKS.register("ceilingneous_copper_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+	public static final RegistryObject<Block> CEILINGNEOUS_IRON_ORE = BLOCKS.register("ceilingneous_iron_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+	public static final RegistryObject<Block> CEILINGNEOUS_GOLD_ORE = BLOCKS.register("ceilingneous_gold_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+	public static final RegistryObject<Block> CEILINGNEOUS_DIAMOND_ORE = BLOCKS.register("ceilingneous_diamond_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(3, 7)));
+	public static final RegistryObject<Block> CEILINGNEOUS_REDSTONE_ORE = BLOCKS.register("ceilingneous_redstone_ore", () -> new RedStoneOreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).lightLevel(litBlockEmission(9))));
+	public static final RegistryObject<Block> CEILINGNEOUS_LAPIS_ORE = BLOCKS.register("ceilingneous_lapis_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(2, 5)));
+	public static final RegistryObject<Block> CEILINGNEOUS_EMERALD_ORE = BLOCKS.register("ceilingneous_emerald_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(3, 7)));
 	
 	public static final RegistryObject<Block> CEILTRUNK_LOG = BLOCKS.register("ceiltrunk_log", () -> new ModLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> STRIPPED_CEILTRUNK_LOG = BLOCKS.register("stripped_ceiltrunk_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)));
@@ -91,4 +107,10 @@ public class CeilandsBlocks
 	public static final RegistryObject<Block> LUZAWOOD_FENCE_GATE = BLOCKS.register("luzawood_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> LUZAWOOD_SIGN = BLOCKS.register("luzawood_sign", () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.LUZAWOOD));
 	public static final RegistryObject<Block> LUZAWOOD_WALL_SIGN = BLOCKS.register("luzawood_wall_sign", () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.LUZAWOOD));
+	
+	private static ToIntFunction<BlockState> litBlockEmission(int p_50760_) {
+		return (p_50763_) -> {
+			return p_50763_.getValue(BlockStateProperties.LIT) ? p_50760_ : 0;
+		};
+	}
 }
