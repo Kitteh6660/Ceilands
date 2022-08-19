@@ -2,6 +2,7 @@ package kittehmod.ceilands.block;
 
 import kittehmod.ceilands.worldgen.dimension.CeilandsDimension;
 import kittehmod.ceilands.worldgen.dimension.CeilandsTeleporter;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.AxisDirection;
@@ -13,6 +14,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -81,10 +83,15 @@ public class CeilandsPortalBlock extends Block
 			MinecraftServer minecraftserver = ((ServerLevel)level).getServer();
 			ResourceKey<Level> levelToChoose = entity.getLevel() == minecraftserver.getLevel(CeilandsDimension.CEILANDS) ? Level.OVERWORLD : CeilandsDimension.CEILANDS;
 			entity.handleInsidePortal(pos);
-			if (!entity.isOnPortalCooldown()) {
+			if (!entity.isOnPortalCooldown() && entity.portalTime >= entity.getPortalWaitTime() - 1) {
 				ServerLevel destinationWorld = minecraftserver.getLevel(levelToChoose);
 				entity.setPortalCooldown();
 				entity.changeDimension(minecraftserver.getLevel(levelToChoose), new CeilandsTeleporter(destinationWorld));
+			}
+		}
+		else if (level.isClientSide()) {
+			if (entity instanceof Player) {
+				((LocalPlayer)entity).handleInsidePortal(pos);
 			}
 		}
 	}

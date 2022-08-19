@@ -66,8 +66,8 @@ public class CeiltrunkTreeFeature extends Feature<TreeConfiguration>
 		p_236408_0_.setBlock(p_236408_1_, p_236408_2_, 19);
 	}
 
-	public static boolean validTreePos(LevelSimulatedReader p_236404_0_, BlockPos p_236404_1_) {
-		return isAirOrLeaves(p_236404_0_, p_236404_1_) || isReplaceablePlant(p_236404_0_, p_236404_1_) || isBlockWater(p_236404_0_, p_236404_1_);
+	public static boolean validTreePos(LevelSimulatedReader level, BlockPos pos) {
+		return isAirOrLeaves(level, pos) || isReplaceablePlant(level, pos) || isBlockWater(level, pos);
 	}
 
 	/**
@@ -81,6 +81,9 @@ public class CeiltrunkTreeFeature extends Feature<TreeConfiguration>
 		BlockPos blockpos = config.rootPlacer.map((rootplacer) -> { return rootplacer.getTrunkOrigin(pos, source); }).orElse(pos);
 		int i1 = Math.min(pos.getY(), blockpos.getY());
 		int j1 = Math.max(pos.getY(), blockpos.getY()) + trunkHeight + 1;
+		if (!isFree(level, pos.below())) {
+			return false;
+		}
 		if (i1 >= level.getMinBuildHeight() + 1 && j1 <= level.getMaxBuildHeight()) {
 			OptionalInt optionalint = config.minimumSize.minClippedHeight();
 			int k1 = this.getMaxFreeTreeHeight(level, trunkHeight, blockpos, config);

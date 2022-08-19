@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:ceiltrunk_boat",
+    "ceilands:ceiltrunk_chest_boat",
+    "ceilands:luzawood_boat",
+    "ceilands:luzawood_chest_boat"
+  ]
+}

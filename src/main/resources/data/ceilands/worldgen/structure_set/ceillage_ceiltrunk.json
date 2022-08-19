@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "ceilands:ceillage_ceiltrunk",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "frequency": 0.5,
+    "spacing": 16,
+    "separation": 8,
+    "salt": 8192
+  }
+}

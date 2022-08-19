@@ -17,6 +17,9 @@
   "carvers": {
     "air": [
       "minecraft:cave"
+    ],
+    "liquid": [
+      "minecraft:cave"
     ]
   },
   "features": [

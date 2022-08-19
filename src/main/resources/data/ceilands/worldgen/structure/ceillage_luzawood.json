@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#ceilands:has_structure/ceillage_luzawood",
+  "step": "underground_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin",
+  "start_pool": "ceilands:ceillage/luzawood/start",
+  "size": 4,
+  "start_height": {
+    "type": "minecraft:uniform",
+    "max_inclusive": {
+      "below_top": 70
+    },
+    "min_inclusive": {
+      "absolute": 16
+    }
+  },
+  "max_distance_from_center": 80,
+  "use_expansion_hack": false
+}
