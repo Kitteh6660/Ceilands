@@ -84,14 +84,16 @@ public class NaturalBridgeFeature extends Feature<BlockStateConfiguration>
 		diffZ = Math.abs(pointA.getZ() - pointB.getZ());
 		int dist = calculateBiggestOfThree(diffX, diffY, diffZ);
 		int radiusSize = 1 + Math.max((int)Math.floor(Math.sqrt(dist)), 2);
-		if (radiusSize > 3) {
-			radiusSize = 3;
+		if (radiusSize > 2) {
+			radiusSize = 2;
 		}
 		int archHeight = 2 + randomsource.nextInt(Math.max(8 - diffY, 1));
 		for (int i = 0; i < dist; i++) {
 			BlockPos posToSet = MathHelper.getInterpolatedBlockPos(pointA, pointB, ((float)i / dist));
 			makeSphereAt(worldgenlevel, posToSet.above((int)Math.floor(Math.sin(((float)i / dist) * Math.PI) * archHeight)), state, radiusSize);
 		}
+		//this.setBlock(worldgenlevel, pointA, Blocks.GOLD_BLOCK.defaultBlockState());
+		//this.setBlock(worldgenlevel, pointB, Blocks.DIAMOND_BLOCK.defaultBlockState());
 		return true;
 	}
 	

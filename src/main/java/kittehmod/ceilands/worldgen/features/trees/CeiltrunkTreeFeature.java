@@ -26,10 +26,10 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer.FoliageSetter;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.BitSetDiscreteVoxelShape;
 import net.minecraft.world.phys.shapes.DiscreteVoxelShape;
 
@@ -39,26 +39,25 @@ public class CeiltrunkTreeFeature extends Feature<TreeConfiguration>
 		super(codecIn);
 	}
 
-	public static boolean isFree(LevelSimulatedReader p_236410_0_, BlockPos p_236410_1_) {
-		return validTreePos(p_236410_0_, p_236410_1_) || p_236410_0_.isStateAtPosition(p_236410_1_, (p_236417_0_) -> { return p_236417_0_.is(BlockTags.LOGS); });
+	public static boolean isFree(LevelSimulatedReader level, BlockPos pos) {
+		return validTreePos(level, pos) || level.isStateAtPosition(pos, (state) -> { return state.is(BlockTags.LOGS); });
 	}
 
-	private static boolean isVine(LevelSimulatedReader p_236414_0_, BlockPos p_236414_1_) {
-		return p_236414_0_.isStateAtPosition(p_236414_1_, (p_236415_0_) -> { return p_236415_0_.is(Blocks.VINE); });
+	private static boolean isVine(LevelSimulatedReader level, BlockPos pos) {
+		return level.isStateAtPosition(pos, (state) -> { return state.is(Blocks.VINE); });
 	}
 
-	private static boolean isBlockWater(LevelSimulatedReader p_236416_0_, BlockPos p_236416_1_) {
-		return p_236416_0_.isStateAtPosition(p_236416_1_, (p_236413_0_) -> { return p_236413_0_.is(Blocks.WATER); });
+	private static boolean isBlockWater(LevelSimulatedReader level, BlockPos pos) {
+		return level.isStateAtPosition(pos, (state) -> { return state.is(Blocks.WATER); });
 	}
 
-	public static boolean isAirOrLeaves(LevelSimulatedReader p_236412_0_, BlockPos p_236412_1_) {
-		return p_236412_0_.isStateAtPosition(p_236412_1_, (p_236411_0_) -> { return p_236411_0_.isAir() || p_236411_0_.is(BlockTags.LEAVES); });
+	public static boolean isAirOrLeaves(LevelSimulatedReader level, BlockPos pos) {
+		return level.isStateAtPosition(pos, (state) -> { return state.isAir() || state.is(BlockTags.LEAVES); });
 	}
 
-	private static boolean isReplaceablePlant(LevelSimulatedReader p_236419_0_, BlockPos p_236419_1_) {
-		return p_236419_0_.isStateAtPosition(p_236419_1_, (p_236406_0_) -> {
-			Material material = p_236406_0_.getMaterial();
-			return material == Material.REPLACEABLE_PLANT;
+	private static boolean isReplaceablePlant(LevelSimulatedReader level, BlockPos pos) {
+		return level.isStateAtPosition(pos, (blockstate) -> {
+			return blockstate.canBeReplaced();
 		});
 	}
 
@@ -73,7 +72,7 @@ public class CeiltrunkTreeFeature extends Feature<TreeConfiguration>
 	/**
 	 * Called when placing the tree feature.
 	 */
-	private boolean doPlace(WorldGenLevel level, RandomSource source, BlockPos pos, BiConsumer<BlockPos, BlockState> p_225261_, BiConsumer<BlockPos, BlockState> p_225262_, BiConsumer<BlockPos, BlockState> p_225263_, TreeConfiguration config) {
+	private boolean doPlace(WorldGenLevel level, RandomSource source, BlockPos pos, BiConsumer<BlockPos, BlockState> consumer1, BiConsumer<BlockPos, BlockState> consumer2, FoliageSetter foliage, TreeConfiguration config) {
 		int trunkHeight = config.trunkPlacer.getTreeHeight(source);
 		int foliageHeight = config.foliagePlacer.foliageHeight(source, trunkHeight, config);
 		int k = trunkHeight + foliageHeight;
@@ -88,11 +87,11 @@ public class CeiltrunkTreeFeature extends Feature<TreeConfiguration>
 			OptionalInt optionalint = config.minimumSize.minClippedHeight();
 			int k1 = this.getMaxFreeTreeHeight(level, trunkHeight, blockpos, config);
 			if (k1 >= -trunkHeight || !optionalint.isEmpty() && k1 >= optionalint.getAsInt()) {
-				if (config.rootPlacer.isPresent() && !config.rootPlacer.get().placeRoots(level, p_225261_, source, pos, blockpos, config)) {
+				if (config.rootPlacer.isPresent() && !config.rootPlacer.get().placeRoots(level, consumer1, source, pos, blockpos, config)) {
 					return false;
 				} else {
-					List<FoliagePlacer.FoliageAttachment> list = config.trunkPlacer.placeTrunk(level, p_225262_, source, k1, blockpos, config);
-					list.forEach((p_225279_) -> { config.foliagePlacer.createFoliage(level, p_225263_, source, config, k1, p_225279_, foliageHeight, l); });
+					List<FoliagePlacer.FoliageAttachment> list = config.trunkPlacer.placeTrunk(level, consumer2, source, k1, blockpos, config);
+					list.forEach((p_225279_) -> { config.foliagePlacer.createFoliage(level, foliage, source, config, k1, p_225279_, foliageHeight, l); });
 					return true;
 				}
 			} else {
@@ -140,15 +139,21 @@ public class CeiltrunkTreeFeature extends Feature<TreeConfiguration>
 			set1.add(pos.immutable());
 			worldgenlevel.setBlock(pos, state, 19);
 		};
-		BiConsumer<BlockPos, BlockState> biconsumer2 = (pos, state) -> {
-			set2.add(pos.immutable());
-			worldgenlevel.setBlock(pos, state, 19);
-		};
+		FoliageSetter foliage = new FoliagePlacer.FoliageSetter() {
+         public void set(BlockPos pos, BlockState state) {
+            set2.add(pos.immutable());
+            worldgenlevel.setBlock(pos, state, 19);
+         }
+
+         public boolean isSet(BlockPos state) {
+            return set2.contains(state);
+         }
+      };
 		BiConsumer<BlockPos, BlockState> biconsumer3 = (pos, state) -> {
 			set3.add(pos.immutable());
 			worldgenlevel.setBlock(pos, state, 19);
 		};
-		boolean flag = this.doPlace(worldgenlevel, randomsource, blockpos, biconsumer, biconsumer1, biconsumer2, treeconfiguration);
+		boolean flag = this.doPlace(worldgenlevel, randomsource, blockpos, biconsumer, biconsumer1, foliage, treeconfiguration);
 		if (flag && (!set1.isEmpty() || !set2.isEmpty())) {
 			if (!treeconfiguration.decorators.isEmpty()) {
 				TreeDecorator.Context treedecorator$context = new TreeDecorator.Context(worldgenlevel, biconsumer3, randomsource, set1, set2, set);

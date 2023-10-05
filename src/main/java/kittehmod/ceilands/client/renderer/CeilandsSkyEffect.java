@@ -1,5 +1,8 @@
 package kittehmod.ceilands.client.renderer;
 
+import org.joml.Matrix4f;
+import org.joml.Vector3f;
+
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.BufferBuilder;
@@ -9,8 +12,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.Tesselator;
 import com.mojang.blaze3d.vertex.VertexBuffer;
 import com.mojang.blaze3d.vertex.VertexFormat;
-import com.mojang.math.Matrix4f;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
@@ -41,8 +43,8 @@ public class CeilandsSkyEffect implements IForgeDimensionSpecialEffects
 		}
 
 		@Override
-		public Vec3 getBrightnessDependentFogColor(Vec3 vec3, float p_108909_) {
-			return vec3.multiply((double) (p_108909_ * 0.94F + 0.06F), (double) (p_108909_ * 0.94F + 0.06F), (double) (p_108909_ * 0.91F + 0.09F));
+		public Vec3 getBrightnessDependentFogColor(Vec3 vec3, float fl) {
+			return vec3.multiply((double) (fl * 0.94F + 0.06F), (double) (fl * 0.94F + 0.06F), (double) (fl * 0.91F + 0.09F));
 		}
 
 		@Override
@@ -62,7 +64,7 @@ public class CeilandsSkyEffect implements IForgeDimensionSpecialEffects
 			if (!isFoggy) {
 				FogType fogtype = camera.getFluidInCamera();
 				if (fogtype != FogType.POWDER_SNOW && fogtype != FogType.LAVA && !this.doesMobEffectBlockSky(camera)) {
-					RenderSystem.disableTexture();
+					//RenderSystem.disableCull();
 					Vec3 vec3 = level.getSkyColor(minecraft.gameRenderer.getMainCamera().getPosition(), partialTick);
 					float f = (float) vec3.x;
 					float f1 = (float) vec3.y;
@@ -77,18 +79,16 @@ public class CeilandsSkyEffect implements IForgeDimensionSpecialEffects
 					minecraft.levelRenderer.skyBuffer.drawWithShader(poseStack.last().pose(), projectionMatrix, shaderinstance);
 					VertexBuffer.unbind();
 					RenderSystem.enableBlend();
-					RenderSystem.defaultBlendFunc();
 					//This part controls the sunrise and sunset horizons.
 					float[] afloat = level.effects().getSunriseColor(level.getTimeOfDay(partialTick), partialTick);
 					if (afloat != null) {
 						RenderSystem.setShader(GameRenderer::getPositionColorShader);
-						RenderSystem.disableTexture();
 						RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 						poseStack.pushPose();
-						poseStack.mulPose(Vector3f.XP.rotationDegrees(90.0F));
+						poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
 						float f3 = Mth.sin(level.getSunAngle(partialTick)) < 0.0F ? 180.0F : 0.0F;
-						poseStack.mulPose(Vector3f.ZP.rotationDegrees(-f3));
-						poseStack.mulPose(Vector3f.ZP.rotationDegrees(-90.0F));
+						poseStack.mulPose(Axis.ZP.rotationDegrees(-f3));
+						poseStack.mulPose(Axis.ZP.rotationDegrees(-90.0F));
 						float f4 = afloat[0];
 						float f5 = afloat[1];
 						float f6 = afloat[2];
@@ -107,14 +107,12 @@ public class CeilandsSkyEffect implements IForgeDimensionSpecialEffects
 						BufferUploader.drawWithShader(bufferbuilder.end());
 						poseStack.popPose();
 					}
-	
-					RenderSystem.enableTexture();
 					RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 					poseStack.pushPose();
 					float f11 = 1.0F - level.getRainLevel(partialTick);
 					RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, f11);
-					poseStack.mulPose(Vector3f.YP.rotationDegrees(-90.0F));
-					poseStack.mulPose(Vector3f.XP.rotationDegrees((level.getTimeOfDay(partialTick + 0.5F) * -360.0F) + 180.0F));
+					poseStack.mulPose(Axis.YP.rotationDegrees(-90.0F));
+					poseStack.mulPose(Axis.XP.rotationDegrees((level.getTimeOfDay(partialTick + 0.5F) * -360.0F) + 180.0F));
 					Matrix4f matrix4f1 = poseStack.last().pose();
 					float f12 = 30.0F;
 					RenderSystem.setShader(GameRenderer::getPositionTexShader);
@@ -140,7 +138,6 @@ public class CeilandsSkyEffect implements IForgeDimensionSpecialEffects
 					bufferbuilder.vertex(matrix4f1, f12, -100.0F, -f12).uv(f13, f14).endVertex();
 					bufferbuilder.vertex(matrix4f1, -f12, -100.0F, -f12).uv(f15, f14).endVertex();
 					BufferUploader.drawWithShader(bufferbuilder.end());
-					RenderSystem.disableTexture();
 					float f10 = level.getStarBrightness(partialTick) * f11;
 					if (f10 > 0.0F) {
 						RenderSystem.setShaderColor(f10, f10, f10, f10);
@@ -153,11 +150,11 @@ public class CeilandsSkyEffect implements IForgeDimensionSpecialEffects
 	
 					RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 					RenderSystem.disableBlend();
+					RenderSystem.defaultBlendFunc();
 					poseStack.popPose();
-					RenderSystem.disableTexture();
 					RenderSystem.setShaderColor(0.0F, 0.0F, 0.0F, 1.0F);
-					//double d0 = minecraft.player.getEyePosition(partialTick).y - level.getLevelData().getHorizonHeight(level);
-					/*if (d0 < 0.0D) {
+					/*double d0 = minecraft.player.getEyePosition(partialTick).y - level.getLevelData().getHorizonHeight(level);
+					if (d0 < 0.0D) {
 						poseStack.pushPose();
 						poseStack.translate(0.0D, 12.0D, 0.0D);
 						minecraft.levelRenderer.darkBuffer.bind();
@@ -166,13 +163,13 @@ public class CeilandsSkyEffect implements IForgeDimensionSpecialEffects
 						poseStack.popPose();
 					}*/
 	
-					if (level.effects().hasGround()) {
+					RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+					/*if (level.effects().hasGround()) {
 						RenderSystem.setShaderColor(f * 0.2F + 0.04F, f1 * 0.2F + 0.04F, f2 * 0.6F + 0.1F, 1.0F);
 					} else {
 						RenderSystem.setShaderColor(f, f1, f2, 1.0F);
-					}
+					}*/
 	
-					RenderSystem.enableTexture();
 					RenderSystem.depthMask(true);
 				}
 			}
@@ -186,6 +183,12 @@ public class CeilandsSkyEffect implements IForgeDimensionSpecialEffects
 			} else {
 				return livingentity.hasEffect(MobEffects.BLINDNESS) || livingentity.hasEffect(MobEffects.DARKNESS);
 			}
+		}
+		
+		@Override
+		public void adjustLightmapColors(ClientLevel level, float partialTicks, float skyDarken, float skyLight, float blockLight, int pixelX, int pixelY, Vector3f colors) {
+			
+			
 		}
 	}
 }

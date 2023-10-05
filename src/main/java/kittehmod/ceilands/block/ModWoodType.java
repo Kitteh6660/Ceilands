@@ -5,6 +5,6 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class ModWoodType
 {
-	public static final WoodType CEILTRUNK = WoodType.create(CeilandsMod.MODID + ":ceiltrunk");
-	public static final WoodType LUZAWOOD = WoodType.create(CeilandsMod.MODID + ":luzawood");
+	public static final WoodType CEILTRUNK = WoodType.register(new WoodType(CeilandsMod.MODID + ":ceiltrunk", ModBlockSetType.CEILTRUNK));
+	public static final WoodType LUZAWOOD = WoodType.register(new WoodType(CeilandsMod.MODID + ":luzawood", ModBlockSetType.LUZAWOOD));
 }

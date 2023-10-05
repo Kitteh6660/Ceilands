@@ -47,16 +47,13 @@ public class CeilingSaplingBlock extends SaplingBlock
 		if (state.getValue(STAGE) == 0) {
 			level.setBlock(pos, state.cycle(STAGE), 4);
 		} else {
-			if (!net.minecraftforge.event.ForgeEventFactory.saplingGrowTree(level, random, pos)) {
-				return;
-			}
 			this.treeGrower.growTree(level, level.getChunkSource().getGenerator(), pos, state, random);
 		}
 
 	}
 
 	@Override
-	public boolean isValidBonemealTarget(BlockGetter getter, BlockPos pos, BlockState state, boolean p_50900_) {
+	public boolean isValidBonemealTarget(LevelReader getter, BlockPos pos, BlockState state, boolean p_50900_) {
 		return true;
 	}
 

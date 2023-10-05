@@ -1,4 +1,5 @@
 {
+  "has_precipitation": true,
   "precipitation": "rain",
   "category": "forest",
   "temperature": 1.0,

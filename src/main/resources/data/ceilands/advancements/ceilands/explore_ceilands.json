@@ -17,6 +17,22 @@
       },
       "trigger": "minecraft:location"
     },
+    "ceilands:inverted_peaks": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ceilands:inverted_peaks"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
     "ceilands:luzawood_forest": {
       "conditions": {
         "player": [
@@ -84,6 +100,9 @@
   "requirements": [
     [
       "ceilands:snowroof"
+    ],
+    [
+      "ceilands:inverted_peaks"
     ],
     [
       "ceilands:luzawood_forest"

@@ -1,4 +1,6 @@
 {
+  "block.ceilands.ceilands_portal": "Ceilands Portal",
+
   "block.ceilands.ceilingneous": "Ceilingneous",
   "block.ceilands.ceilingneous_stairs": "Ceilingneous Stairs",
   "block.ceilands.ceilingneous_slab": "Ceilingneous Slab",
@@ -45,6 +47,7 @@
   "block.ceilands.ceiltrunk_button": "Ceiltrunk Button",
   "block.ceilands.ceiltrunk_pressure_plate": "Ceiltrunk Pressure Plate",
   "block.ceilands.ceiltrunk_sign": "Ceiltrunk Sign",
+  "block.ceilands.ceiltrunk_hanging_sign": "Ceiltrunk Hanging Sign",
   
   "block.ceilands.luzawood_log": "Luzawood Log",
   "block.ceilands.stripped_luzawood_log": "Stripped Luzawood Log",
@@ -62,6 +65,7 @@
   "block.ceilands.luzawood_button": "Luzawood Button",
   "block.ceilands.luzawood_pressure_plate": "Luzawood Pressure Plate",
   "block.ceilands.luzawood_sign": "Luzawood Sign",
+  "block.ceilands.luzawood_hanging_sign": "Luzawood Hanging Sign",
 
   "item.ceilands.ceilands_portal_activator": "Ceilands Portal Activator",
   "item.ceilands.luzawood_boat": "Luzawood Boat",
@@ -73,6 +77,7 @@
   "biome.ceilands.topsy_forest": "Topsy Forest",
   "biome.ceilands.ocean_orbs": "Ocean Orbs",
   "biome.ceilands.snow_roof": "Snow Roof",
+  "biome.ceilands.inverted_peaks": "Inverted Peaks",
   
   "entity.ceilands.ceilands_boat": "Ceilands Boat",
   "entity.ceilands.ceilands_chest_boat": "Ceilands Boat with Chest",
@@ -82,5 +87,5 @@
   "advancements.ceilands.find_hanging_castle.title": "The Castle in the Sky",
   "advancements.ceilands.find_hanging_castle.description": "Find a Hanging Castle in the Ceilands.",
   "advancements.ceilands.explore_ceilands.title": "Topsy Tourist Destination",
-  "advancements.ceilands.explore_ceilands.description": "Explore all four Ceilands biomes currently implemented."
+  "advancements.ceilands.explore_ceilands.description": "Explore all five Ceilands biomes."
 }

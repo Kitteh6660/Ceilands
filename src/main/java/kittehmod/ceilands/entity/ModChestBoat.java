@@ -51,38 +51,48 @@ public class ModChestBoat extends ModBoat implements HasCustomInventoryScreen, C
 		return 1;
 	}
 
-	protected void addAdditionalSaveData(CompoundTag p_219908_) {
-		super.addAdditionalSaveData(p_219908_);
-		this.addChestVehicleSaveData(p_219908_);
+	protected void addAdditionalSaveData(CompoundTag tag) {
+		super.addAdditionalSaveData(tag);
+		this.addChestVehicleSaveData(tag);
 	}
 
-	protected void readAdditionalSaveData(CompoundTag p_219901_) {
-		super.readAdditionalSaveData(p_219901_);
-		this.readChestVehicleSaveData(p_219901_);
+	protected void readAdditionalSaveData(CompoundTag tag) {
+		super.readAdditionalSaveData(tag);
+		this.readChestVehicleSaveData(tag);
 	}
 
-	public void destroy(DamageSource p_219892_) {
-		super.destroy(p_219892_);
-		this.chestVehicleDestroyed(p_219892_, this.level, this);
+	public void destroy(DamageSource source) {
+		super.destroy(source);
+		this.chestVehicleDestroyed(source, this.level(), this);
 	}
 
-	public void remove(Entity.RemovalReason p_219894_) {
-		if (!this.level.isClientSide && p_219894_.shouldDestroy()) {
-			Containers.dropContents(this.level, this, this);
+	public void remove(Entity.RemovalReason reason) {
+		if (!this.level().isClientSide() && reason.shouldDestroy()) {
+			Containers.dropContents(this.level(), this, this);
 		}
 
-		super.remove(p_219894_);
+		super.remove(reason);
 	}
 
-	public InteractionResult interact(Player p_219898_, InteractionHand p_219899_) {
-		return this.canAddPassenger(p_219898_) && !p_219898_.isSecondaryUseActive() ? super.interact(p_219898_, p_219899_) : this.interactWithChestVehicle(this::gameEvent, p_219898_);
+	public InteractionResult interact(Player player, InteractionHand hand) {
+		if (this.canAddPassenger(player) && !player.isSecondaryUseActive()) {
+			return super.interact(player, hand);
+		} else {
+			InteractionResult interactionresult = this.interactWithContainerVehicle(player);
+			if (interactionresult.consumesAction()) {
+				this.gameEvent(GameEvent.CONTAINER_OPEN, player);
+				PiglinAi.angerNearbyPiglins(player, true);
+			}
+
+			return interactionresult;
+		}
 	}
 
-	public void openCustomInventoryScreen(Player p_219906_) {
-		p_219906_.openMenu(this);
-		if (!p_219906_.level.isClientSide) {
-			this.gameEvent(GameEvent.CONTAINER_OPEN, p_219906_);
-			PiglinAi.angerNearbyPiglins(p_219906_, true);
+	public void openCustomInventoryScreen(Player player) {
+		player.openMenu(this);
+		if (!player.level().isClientSide()) {
+			this.gameEvent(GameEvent.CONTAINER_OPEN, player);
+			PiglinAi.angerNearbyPiglins(player, true);
 		}
 
 	}

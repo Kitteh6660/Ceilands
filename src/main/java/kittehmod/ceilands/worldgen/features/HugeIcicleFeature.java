@@ -2,6 +2,7 @@ package kittehmod.ceilands.worldgen.features;
 
 import com.mojang.serialization.Codec;
 
+import kittehmod.ceilands.block.CeilandsBlocks;
 import kittehmod.ceilands.util.MathHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -35,12 +36,23 @@ public class HugeIcicleFeature extends Feature<BlockStateConfiguration>
 		BlockState state = context.config().state;
 		int width = 2 + randomsource.nextInt(8);
 		int narrowenIntervals = 4 + randomsource.nextInt(6);
+		if (state.getBlock() == CeilandsBlocks.CEILINGNEOUS.get()) {
+			width += randomsource.nextInt(24);
+			narrowenIntervals += randomsource.nextInt(8);
+			if (width > 16) width = 16; // Clamp it to a maximum width.
+			if (narrowenIntervals > 10) narrowenIntervals = 12;
+		}
 		int height = width * narrowenIntervals;
+		if (height > 220) {
+			height = 220;
+		}
 		for (int ht = 0; ht < height; ht++) {
 			for (int x = -width; x <= width; ++x) {
 				for (int z = -width; z <= width; ++z) {
 					if (MathHelper.isPlotInCircle(x, z, width) && worldgenlevel.getBlockState(blockpos.below(ht).east(x).south(z)).getBlock() == Blocks.AIR) {
-						worldgenlevel.setBlock(blockpos.below(ht).east(x).south(z), state, 11);
+						if (blockpos.below(ht).getY() >= worldgenlevel.getMinBuildHeight()) {
+							worldgenlevel.setBlock(blockpos.below(ht).east(x).south(z), state, 11);
+						}
 					}
 				}
 			}

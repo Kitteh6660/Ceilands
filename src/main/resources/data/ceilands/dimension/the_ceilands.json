@@ -21,13 +21,25 @@
           }
         },
         {
+          "biome": "ceilands:inverted_peaks",
+          "parameters": {
+            "temperature": 0.2,
+            "humidity": 0,
+            "continentalness": 0.2,
+            "erosion": 0.3,
+            "weirdness": 0.3,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
           "biome": "ceilands:topsy_forest",
           "parameters": {
             "temperature": 0.3,
             "humidity": 0.3,
             "continentalness": 0.1,
             "erosion": 0,
-            "weirdness": 0,
+            "weirdness": 0.2,
             "depth": 0,
             "offset": 0
           }

@@ -14,7 +14,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration;
-import net.minecraft.world.level.material.Material;
 
 public class SmallFloatingIslandFeature extends Feature<BlockStateConfiguration>
 {
@@ -157,7 +156,7 @@ public class SmallFloatingIslandFeature extends Feature<BlockStateConfiguration>
 
 	private void setIcebergBlock(BlockPos p_225125_, LevelAccessor p_225126_, RandomSource p_225127_, int p_225128_, int p_225129_, boolean p_225130_, boolean p_225131_, BlockState p_225132_) {
 		BlockState blockstate = p_225126_.getBlockState(p_225125_);
-		if (blockstate.getMaterial() == Material.AIR || blockstate.is(Blocks.SNOW_BLOCK) || blockstate.is(Blocks.ICE) || blockstate.is(Blocks.WATER)) {
+		if (blockstate.is(Blocks.AIR) || blockstate.is(Blocks.CAVE_AIR) || blockstate.is(Blocks.SNOW_BLOCK) || blockstate.is(Blocks.ICE) || blockstate.is(Blocks.WATER)) {
 			boolean flag = !p_225130_ || p_225127_.nextDouble() > 0.05D;
 			int i = p_225130_ ? 3 : 2;
 			if (p_225131_ && !blockstate.is(Blocks.WATER) && (double) p_225128_ <= (double) p_225127_.nextInt(Math.max(1, p_225129_ / i)) + (double) p_225129_ * 0.6D && flag) {
@@ -211,12 +210,12 @@ public class SmallFloatingIslandFeature extends Feature<BlockStateConfiguration>
 		return Mth.ceil(f1 / 2.0F);
 	}
 
-	private static boolean isIslandState(BlockState p_159886_) {
-		return p_159886_.is(CeilandsBlocks.CEILINGNEOUS.get()) || p_159886_.is(Blocks.SNOW_BLOCK) || p_159886_.is(Blocks.BLUE_ICE);
+	private static boolean isIslandState(BlockState state) {
+		return state.is(CeilandsBlocks.CEILINGNEOUS.get()) || state.is(Blocks.SNOW_BLOCK) || state.is(Blocks.BLUE_ICE);
 	}
 
-	private boolean belowIsAir(BlockGetter p_66046_, BlockPos p_66047_) {
-		return p_66046_.getBlockState(p_66047_.below()).getMaterial() == Material.AIR;
+	private boolean belowIsAir(BlockGetter state, BlockPos pos) {
+		return state.getBlockState(pos.below()).getBlock() == Blocks.AIR || state.getBlockState(pos.below()).getBlock() == Blocks.CAVE_AIR;
 	}
 
 	private void smooth(LevelAccessor p_66052_, BlockPos p_66053_, int p_66054_, int p_66055_, boolean p_66056_, int p_66057_) {

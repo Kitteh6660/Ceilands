@@ -81,7 +81,7 @@ public class CeilandsPortalBlock extends Block
 	public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
 		if (!level.isClientSide() && !entity.isPassenger() && !entity.isVehicle() && entity.canChangeDimensions()) {
 			MinecraftServer minecraftserver = ((ServerLevel)level).getServer();
-			ResourceKey<Level> levelToChoose = entity.getLevel() == minecraftserver.getLevel(CeilandsDimension.CEILANDS) ? Level.OVERWORLD : CeilandsDimension.CEILANDS;
+			ResourceKey<Level> levelToChoose = entity.level() == minecraftserver.getLevel(CeilandsDimension.CEILANDS) ? Level.OVERWORLD : CeilandsDimension.CEILANDS;
 			entity.handleInsidePortal(pos);
 			if (!entity.isOnPortalCooldown() && entity.portalTime >= entity.getPortalWaitTime() - 1) {
 				ServerLevel destinationWorld = minecraftserver.getLevel(levelToChoose);

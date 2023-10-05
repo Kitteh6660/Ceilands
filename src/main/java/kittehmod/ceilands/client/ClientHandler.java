@@ -12,6 +12,7 @@ import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.BlockPos;
@@ -29,9 +30,10 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientHandler
 {
-	@SuppressWarnings("removal")
+	@SuppressWarnings("deprecation")
 	public static void setupRenderers() {
 		BlockEntityRenderers.register(CeilandsBlockEntities.CEILANDS_SIGN.get(), SignRenderer::new);
+		BlockEntityRenderers.register(CeilandsBlockEntities.CEILANDS_HANGING_SIGN.get(), HangingSignRenderer::new);
 		
 		EntityRenderers.register(CeilandsEntities.CEILANDS_BOAT.get(), (boat) -> { return new CeilandsBoatRenderer(boat, false); } );
 		EntityRenderers.register(CeilandsEntities.CEILANDS_CHEST_BOAT.get(), (boat) -> { return new CeilandsBoatRenderer(boat, true); } );
@@ -71,7 +73,6 @@ public class ClientHandler
 	public static void registerSkyEffects(RegisterDimensionSpecialEffectsEvent event) {
 		CeilandsMod.LOGGER.info("Registering sky effects...");
 		event.register(new ResourceLocation(CeilandsMod.MODID, "the_ceilands"), new CeilandsSkyEffect.CeilandsEffects());
-		//DimensionSpecialEffects.EFFECTS.put(CeilandsDimension.CEILANDS.registry(), new CeilandsSkyEffect.CeilandsEffects());
 	}
 	
 	private static int getLuzawoodColour() {

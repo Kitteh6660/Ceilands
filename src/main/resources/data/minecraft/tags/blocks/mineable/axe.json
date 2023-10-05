@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "ceilands:ceiltrunk_log",
-    "ceilands:stripped_ceiltrunk_log",
     "ceilands:ceiltrunk_wood",
+    "ceilands:stripped_ceiltrunk_log",
     "ceilands:stripped_ceiltrunk_wood",
     "ceilands:ceiltrunk_planks",
     "ceilands:ceiltrunk_stairs",
@@ -16,9 +16,11 @@
     "ceilands:ceiltrunk_pressure_plate",
     "ceilands:ceiltrunk_sign",
     "ceilands:ceiltrunk_wall_sign",
+    "ceilands:ceiltrunk_hanging_sign",
+    "ceilands:ceiltrunk_wall_hanging_sign",
     "ceilands:luzawood_log",
-    "ceilands:stripped_luzawood_log",
     "ceilands:luzawood_wood",
+    "ceilands:stripped_luzawood_log",
     "ceilands:stripped_luzawood_wood",
     "ceilands:luzawood_planks",
     "ceilands:luzawood_stairs",
@@ -30,6 +32,8 @@
     "ceilands:luzawood_button",
     "ceilands:luzawood_pressure_plate",
     "ceilands:luzawood_sign",
-    "ceilands:luzawood_wall_sign"
+    "ceilands:luzawood_wall_sign",
+    "ceilands:luzawood_hanging_sign",
+    "ceilands:luzawood_wall_hanging_sign"
   ]
 }

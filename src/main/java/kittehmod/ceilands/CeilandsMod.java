@@ -16,6 +16,7 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -31,18 +32,20 @@ public class CeilandsMod
 
     public CeilandsMod()
     {
-        CeilandsBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        CeilandsItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        CeilandsBlockEntities.BLOCK_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        CeilandsEntities.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        CeilandsTrunkPlacerType.TRUNK_PLACERS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        CeilandsPOIType.POI_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        CeilandsFeatures.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        CeilandsBiomes.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
+    	IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+    	
+        CeilandsBlocks.BLOCKS.register(bus);
+        CeilandsItems.ITEMS.register(bus);
+        CeilandsBlockEntities.BLOCK_ENTITIES.register(bus);
+        CeilandsEntities.ENTITIES.register(bus);
+        CeilandsTrunkPlacerType.TRUNK_PLACERS.register(bus);
+        CeilandsPOIType.POI_TYPES.register(bus);
+        CeilandsFeatures.FEATURES.register(bus);
+        CeilandsBiomes.BIOMES.register(bus);
         
-    	FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupCommon);
+    	bus.addListener(this::setupCommon);
     	if (FMLEnvironment.dist == Dist.CLIENT) {
-    		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupClient);
+    		bus.addListener(this::setupClient);
     	}
     }
 
@@ -50,7 +53,6 @@ public class CeilandsMod
     {
        	event.enqueueWork(() -> WoodType.register(ModWoodType.CEILTRUNK));
     	event.enqueueWork(() -> WoodType.register(ModWoodType.LUZAWOOD));
-    	CeilandsFeatures.setupFeatures();
     }
 
     private void setupClient(FMLClientSetupEvent event)

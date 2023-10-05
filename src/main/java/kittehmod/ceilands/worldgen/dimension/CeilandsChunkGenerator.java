@@ -21,6 +21,8 @@ import net.minecraft.world.level.levelgen.structure.StructureSet;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 import net.minecraft.world.level.levelgen.synth.NormalNoise.NoiseParameters;
 
+import net.minecraft.world.level.chunk.ChunkGenerators;
+
 public class CeilandsChunkGenerator extends NoiseBasedChunkGenerator
 {
 

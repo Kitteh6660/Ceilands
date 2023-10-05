@@ -1,4 +1,5 @@
 {
+  "has_precipitation": true,
   "precipitation": "snow",
   "category": "forest",
   "temperature": 0.0,

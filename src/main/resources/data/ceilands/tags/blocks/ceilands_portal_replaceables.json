@@ -1,8 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:replaceable_plants",
+    "#minecraft:replaceable",
     "minecraft:air",
+    "minecraft:cave_air",
     "minecraft:sculk_vein",
     "ceilands:ceilands_portal"
   ]

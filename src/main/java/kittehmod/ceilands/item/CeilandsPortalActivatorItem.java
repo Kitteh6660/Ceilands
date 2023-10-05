@@ -40,6 +40,11 @@ public class CeilandsPortalActivatorItem extends Item
 				level.removeBlock(pos, false);
 			}
 		}
+		else {
+			if (isPortal(level, pos, player.getDirection().getClockWise(), true)) {
+				
+			}
+		}
 		return InteractionResult.PASS;
 	}
 
