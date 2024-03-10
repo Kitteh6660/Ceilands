@@ -17,7 +17,7 @@
   },
   "carvers": {
     "air": [
-      "minecraft:cave"
+      "ceilands:ceilands_cave"
     ]
   },
   "features": [

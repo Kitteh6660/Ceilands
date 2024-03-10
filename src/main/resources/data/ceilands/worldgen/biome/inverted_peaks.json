@@ -17,7 +17,7 @@
   },
   "carvers": {
     "air": [
-      "minecraft:cave"
+      "ceilands:ceilands_cave"
     ],
     "liquid": [
       "minecraft:cave"
@@ -100,26 +100,26 @@
       }
     ],
     "axolotls": [],
-    "creature": [],
-    "misc": [
+    "creature": [
       {
-        "type": "minecraft:snow_golem",
-        "maxCount": 1,
+        "type": "minecraft:goat",
+        "maxCount": 3,
         "minCount": 1,
-        "weight": 2
+        "weight": 10
       }
     ],
+    "misc": [],
     "monster": [
       {
         "type": "minecraft:spider",
         "maxCount": 4,
-        "minCount": 4,
+        "minCount": 2,
         "weight": 100
       },
       {
         "type": "minecraft:zombie",
         "maxCount": 4,
-        "minCount": 4,
+        "minCount": 2,
         "weight": 95
       },
       {
@@ -131,7 +131,7 @@
       {
         "type": "minecraft:skeleton",
         "maxCount": 4,
-        "minCount": 4,
+        "minCount": 2,
         "weight": 100
       },
       {
@@ -143,7 +143,7 @@
       {
         "type": "minecraft:slime",
         "maxCount": 4,
-        "minCount": 4,
+        "minCount": 2,
         "weight": 100
       },
       {
@@ -154,6 +154,12 @@
       },
       {
         "type": "minecraft:witch",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      },
+      {
+        "type": "minecraft:phantom",
         "maxCount": 1,
         "minCount": 1,
         "weight": 5

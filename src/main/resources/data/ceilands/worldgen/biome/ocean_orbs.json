@@ -9,7 +9,7 @@
   "effects": {
     "fog_color": 3198975,
     "foliage_color": 33023,
-    "grass_color": 33023,
+    "grass_color": 54043536,
     "sky_color": 3198975,
     "water_color": 33023,
     "water_fog_color": 33023,
@@ -17,7 +17,7 @@
   },
   "carvers": {
     "air": [
-      "minecraft:cave"
+      "ceilands:ceilands_cave"
     ]
   },
   "features": [
@@ -193,16 +193,15 @@
         "maxCount": 3,
         "minCount": 2,
         "weight": 4
-      }
-    ],
-    "water_creature": [
+      },
       {
         "type": "minecraft:squid",
         "maxCount": 6,
         "minCount": 4,
-        "weight": 10
+        "weight": 3
       }
-    ]
+    ],
+    "water_creature": []
   },
   "spawn_costs": {}
 }

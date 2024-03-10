@@ -1,10 +1,12 @@
 {
 	"required": true,
-	"package": "kittehmod.ceilands.mixin",
+	"package": "com.kittehmod.ceilands.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"refmap": "ceilands.refmap.json",
 	"mixins": [
-        "ServerLevelMixin"
+        "StrayMixin",
+        "ServerLevelMixin",
+        "VoidMixin"
 	],
 	"minVersion": "0.8"
 }

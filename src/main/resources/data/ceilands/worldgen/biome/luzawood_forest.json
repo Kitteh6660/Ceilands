@@ -2,7 +2,7 @@
   "has_precipitation": true,
   "precipitation": "rain",
   "category": "forest",
-  "temperature": 1.0,
+  "temperature": 0.8,
   "temperature_modifier": "none",
   "downfall": 0.6,
   "creature_spawn_probability": 0.4,
@@ -17,7 +17,7 @@
   },
   "carvers": {
     "air": [
-      "minecraft:cave"
+      "ceilands:ceilands_cave"
     ]
   },
   "features": [
@@ -107,19 +107,56 @@
       }
     ],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minecraft:pig",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 20
+      },
+      {
+        "type": "minecraft:cow",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 20
+      },
+      {
+        "type": "minecraft:sheep",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 20
+      },
+      {
+        "type": "minecraft:chicken",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 20
+      },
+      {
+        "type": "minecraft:horse",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 3
+      },
+      {
+        "type": "minecraft:rabbit",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 6
+      }
+    ],
     "misc": [],
     "monster": [
       {
         "type": "minecraft:spider",
         "maxCount": 4,
-        "minCount": 4,
+        "minCount": 2,
         "weight": 100
       },
       {
         "type": "minecraft:zombie",
         "maxCount": 4,
-        "minCount": 4,
+        "minCount": 2,
         "weight": 95
       },
       {
@@ -131,7 +168,7 @@
       {
         "type": "minecraft:skeleton",
         "maxCount": 4,
-        "minCount": 4,
+        "minCount": 1,
         "weight": 100
       },
       {
@@ -143,12 +180,12 @@
       {
         "type": "minecraft:slime",
         "maxCount": 4,
-        "minCount": 4,
+        "minCount": 1,
         "weight": 100
       },
       {
         "type": "minecraft:enderman",
-        "maxCount": 4,
+        "maxCount": 2,
         "minCount": 1,
         "weight": 10
       },

@@ -1,0 +1,15 @@
+{
+  "name": "ceilands:ocean_cube",
+  "fallback": "ceilands:ocean_cube",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ocean_cube",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
