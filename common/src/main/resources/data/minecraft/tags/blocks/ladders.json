@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "ceilands:ceiltrunk_ladder", "required": false},
+    {"id": "ceilands:luzawood_ladder", "required": false}
+  ]
+}

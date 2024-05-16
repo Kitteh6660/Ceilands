@@ -1,0 +1,24 @@
+{
+  "name": "ceilands:hanging_castle/intersection_first",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:hanging_castle/intersection_roofed",
+        "projection": "rigid",
+        "processors": "ceilands:hanging_castle_degradation"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:hanging_castle/intersection_stairs",
+        "projection": "rigid",
+        "processors": "ceilands:hanging_castle_degradation"
+      }
+    }
+  ]
+}

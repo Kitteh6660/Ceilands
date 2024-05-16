@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "ceilands",
+  "version": "${version}",
+
+  "name": "The Ceilands (QuiFabrge)",
+  "description": "The Ceilands is a mod that adds the titular dimension with bedrock ceiling but no bedrock floor!",
+  "authors": [
+    "Kitteh6660"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/the-ceilands",
+    "sources": "https://github.com/Kitteh6660/Ceilands"
+  },
+
+  "license": "MIT",
+  "icon": "logo.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.kittehmod.ceilands.fabric.CeilandsModFabric"
+    ],
+    "client": [
+      "com.kittehmod.ceilands.fabric.client.ClientHandler"
+    ]
+  },
+  "mixins": [
+    "ceilands_fabric.mixins.json"
+  ],
+  "accessWidener": "ceilands.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric-api": ">=0.90.0",
+    "minecraft": ">=1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "twilightforest": "*"
+  }
+}

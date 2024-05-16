@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "ceilands:block/luzawood_beehive_end",
+    "front": "ceilands:block/luzawood_beehive_front",
+    "particle": "ceilands:block/luzawood_beehive_side",
+    "side": "ceilands:block/luzawood_beehive_side",
+    "top": "ceilands:block/luzawood_beehive_end"
+  }
+}

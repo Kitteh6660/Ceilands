@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "ceilands:hollow_ceiltrunk_log_climbable", "required": false},
+    {"id": "ceilands:hollow_luzawood_log_climbable", "required": false }    
+  ]
+}

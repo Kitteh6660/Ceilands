@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_sign",
+  "key": {
+    "#": {
+      "item": "ceilands:ceiltrunk_planks"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    " X "
+  ],
+  "result": {
+    "count": 3,
+    "item": "ceilands:ceiltrunk_sign"
+  }
+}

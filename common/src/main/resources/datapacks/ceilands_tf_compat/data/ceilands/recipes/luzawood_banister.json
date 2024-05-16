@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "ceilands:luzawood_slab"
+    },
+    "|": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    "---",
+    "| |"
+  ],
+  "result": {
+    "count": 3,
+    "item": "ceilands:luzawood_banister"
+  },
+  "show_notification": true
+}

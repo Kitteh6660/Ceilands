@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "ceilands:ruined_ceilands_portal",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "frequency": 0.2,
+    "spacing": 24,
+    "separation": 8,
+    "salt": 44829106
+  }
+}

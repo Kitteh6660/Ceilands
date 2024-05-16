@@ -1,0 +1,9 @@
+{
+  "parent": "twilightforest:block/hollow_log_moss",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "inner": "ceilands:block/stripped_ceiltrunk_log",
+    "side": "ceilands:block/ceiltrunk_log",
+    "top": "ceilands:block/ceiltrunk_log_top"
+  }
+}

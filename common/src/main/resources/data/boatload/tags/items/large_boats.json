@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "ceilands:large_ceiltrunk_boat", "required": false},
+    {"id": "ceilands:large_luzawood_boat", "required": false}
+  ]
+}

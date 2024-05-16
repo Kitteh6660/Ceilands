@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "ceilands:ceiltrunk_trapdoor"
+    }
+  ],
+  "result": [
+    {
+      "item": "ceilands:ceiltrunk_planks"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "axe_dig"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "woodworks:config",
+          "value": "wooden_chests"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "redstone",
+        "group": "wooden_trapped_chest",
+        "ingredients": [
+          {
+            "item": "ceilands:ceiltrunk_chest"
+          },
+          {
+            "item": "minecraft:tripwire_hook"
+          }
+        ],
+        "result": {
+          "item": "ceilands:trapped_ceiltrunk_chest"
+        }
+      }
+    }
+  ]
+}

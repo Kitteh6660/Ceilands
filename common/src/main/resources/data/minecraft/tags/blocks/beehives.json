@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "ceilands:ceiltrunk_beehive", "required": false},
+    {"id": "ceilands:luzawood_beehive", "required": false}
+  ]
+}

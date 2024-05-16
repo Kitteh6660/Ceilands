@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "large_boat",
+  "key": {
+    "#": {
+      "item": "ceilands:ceiltrunk_planks"
+    },
+    "B": {
+      "item": "ceilands:ceiltrunk_boat"
+    }
+  },
+  "pattern": [
+    "#B#",
+    "###"
+  ],
+  "result": {
+    "item": "ceilands:large_ceiltrunk_boat"
+  },
+  "show_notification": true
+}

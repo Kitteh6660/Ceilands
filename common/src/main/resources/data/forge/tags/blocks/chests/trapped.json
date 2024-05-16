@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "ceilands:trapped_ceiltrunk_chest", "required": false },
+    {"id": "ceilands:trapped_luzawood_chest", "required": false }    
+  ]
+}

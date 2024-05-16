@@ -1,0 +1,6 @@
+{
+  "parent": "twilightforest:block/banister_connected",
+  "textures": {
+    "texture": "ceilands:block/luzawood_planks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_chiseled_bookshelf_slot_top_left",
+  "textures": {
+    "texture": "ceilands:block/chiseled_ceiltrunk_bookshelf_empty"
+  }
+}

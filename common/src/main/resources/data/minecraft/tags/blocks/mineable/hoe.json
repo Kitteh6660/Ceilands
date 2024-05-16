@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:ceiltrunk_leaves",
+    {"id": "ceilands:ceiltrunk_leaf_pile", "required": false},
+    "ceilands:luzawood_leaves",
+    {"id": "ceilands:luzawood_leaf_pile", "required": false}
+  ]
+}

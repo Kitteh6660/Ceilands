@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_sign",
+  "key": {
+    "#": {
+      "item": "ceilands:luzawood_planks"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    " X "
+  ],
+  "result": {
+    "count": 3,
+    "item": "ceilands:luzawood_sign"
+  }
+}

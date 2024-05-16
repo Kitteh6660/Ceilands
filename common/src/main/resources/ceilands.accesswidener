@@ -1,0 +1,14 @@
+accessWidener	v1	named
+
+# Widens the access of certain mobs to make mixin possible.
+accessible field net/minecraft/client/renderer/DimensionSpecialEffects EFFECTS Lit/unimi/dsi/fastutil/objects/Object2ObjectMap;
+accessible field net/minecraft/client/renderer/LevelRenderer minecraft Lnet/minecraft/client/Minecraft;
+accessible field net/minecraft/client/renderer/LevelRenderer starBuffer Lcom/mojang/blaze3d/vertex/VertexBuffer;
+accessible field net/minecraft/client/renderer/LevelRenderer skyBuffer Lcom/mojang/blaze3d/vertex/VertexBuffer;
+accessible field net/minecraft/client/renderer/LevelRenderer darkBuffer Lcom/mojang/blaze3d/vertex/VertexBuffer;
+accessible field net/minecraft/world/entity/Entity portalEntrancePos Lnet/minecraft/core/BlockPos;
+accessible field net/minecraft/world/entity/Entity portalTime I
+accessible class net/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier
+accessible method net/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacerType <init> (Lcom/mojang/serialization/Codec;)V
+accessible method net/minecraft/world/level/block/state/properties/WoodType register (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/world/level/block/state/properties/WoodType;
+accessible method net/minecraft/world/level/block/state/properties/BlockSetType register (Lnet/minecraft/world/level/block/state/properties/BlockSetType;)Lnet/minecraft/world/level/block/state/properties/BlockSetType;

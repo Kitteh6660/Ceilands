@@ -1,0 +1,42 @@
+{
+  "mappings": {
+    "com/kittehmod/ceilands/forge/forge/mixin/StrayMixin": {
+      "checkStraySpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/world/entity/monster/Stray;m_219120_(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z"
+    },
+    "com/kittehmod/ceilands/forge/forge/mixin/VoidMixin": {
+      "Lnet/minecraft/world/entity/Entity;onBelowWorld()V": "Lnet/minecraft/world/entity/Entity;m_6088_()V",
+      "checkBelowWorld()V": "Lnet/minecraft/world/entity/Entity;m_146871_()V"
+    },
+    "com/kittehmod/ceilands/forge/forge/mixin/VillagerMixin": {
+      "registerBrainGoals(Lnet/minecraft/world/entity/ai/Brain;)V": "Lnet/minecraft/world/entity/npc/Villager;m_35424_(Lnet/minecraft/world/entity/ai/Brain;)V"
+    },
+    "com/kittehmod/ceilands/forge/forge/mixin/AnimalMixin": {
+      "checkAnimalSpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/world/entity/animal/Animal;m_218104_(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z"
+    },
+    "com/kittehmod/ceilands/forge/forge/mixin/ServerLevelMixin": {
+      "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V": "Lnet/minecraft/server/level/ServerLevel;m_8615_(J)V",
+      "tick(Ljava/util/function/BooleanSupplier;)V": "Lnet/minecraft/server/level/ServerLevel;m_8793_(Ljava/util/function/BooleanSupplier;)V"
+    }
+  },
+  "data": {
+    "searge": {
+      "com/kittehmod/ceilands/forge/forge/mixin/StrayMixin": {
+        "checkStraySpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/world/entity/monster/Stray;m_219120_(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z"
+      },
+      "com/kittehmod/ceilands/forge/forge/mixin/VoidMixin": {
+        "Lnet/minecraft/world/entity/Entity;onBelowWorld()V": "Lnet/minecraft/world/entity/Entity;m_6088_()V",
+        "checkBelowWorld()V": "Lnet/minecraft/world/entity/Entity;m_146871_()V"
+      },
+      "com/kittehmod/ceilands/forge/forge/mixin/VillagerMixin": {
+        "registerBrainGoals(Lnet/minecraft/world/entity/ai/Brain;)V": "Lnet/minecraft/world/entity/npc/Villager;m_35424_(Lnet/minecraft/world/entity/ai/Brain;)V"
+      },
+      "com/kittehmod/ceilands/forge/forge/mixin/AnimalMixin": {
+        "checkAnimalSpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/world/entity/animal/Animal;m_218104_(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z"
+      },
+      "com/kittehmod/ceilands/forge/forge/mixin/ServerLevelMixin": {
+        "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V": "Lnet/minecraft/server/level/ServerLevel;m_8615_(J)V",
+        "tick(Ljava/util/function/BooleanSupplier;)V": "Lnet/minecraft/server/level/ServerLevel;m_8793_(Ljava/util/function/BooleanSupplier;)V"
+      }
+    }
+  }
+}

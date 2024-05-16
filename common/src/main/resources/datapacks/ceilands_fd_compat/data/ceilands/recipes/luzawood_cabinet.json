@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cabinet",
+  "key": {
+    "D": {
+      "item": "ceilands:luzawood_trapdoor"
+    },
+    "_": {
+      "item": "ceilands:luzawood_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "D D",
+    "___"
+  ],
+  "result": {
+    "item": "ceilands:luzawood_cabinet"
+  },
+  "show_notification": true
+}

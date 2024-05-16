@@ -1,0 +1,9 @@
+{
+  "parent": "twilightforest:block/vertical_hollow_log_vine",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "inner": "ceilands:block/stripped_luzawood_log",
+    "side": "ceilands:block/luzawood_log",
+    "top": "ceilands:block/luzawood_log_top"
+  }
+}
