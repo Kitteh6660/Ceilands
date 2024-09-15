@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "ceilands:ceiltrunk_banister", "required": false},
+    {"id": "ceilands:luzawood_banister", "required": false }    
+  ]
+}

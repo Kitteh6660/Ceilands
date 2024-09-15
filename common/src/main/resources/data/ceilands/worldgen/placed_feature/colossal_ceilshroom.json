@@ -1,0 +1,27 @@
+{
+  "feature": "ceilands:colossal_ceilshroom",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "below_top": 32
+        },
+        "min_inclusive": {
+          "above_bottom": 64
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

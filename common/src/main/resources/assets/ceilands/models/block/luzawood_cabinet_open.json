@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "ceilands:block/luzawood_cabinet_front_open",
+    "side": "ceilands:block/luzawood_cabinet_side",
+    "top": "ceilands:block/luzawood_cabinet_top"
+  }
+}

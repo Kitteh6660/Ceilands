@@ -1,0 +1,33 @@
+{
+  "name": "ceilands:hanging_castle/bridges",
+  "fallback": "ceilands:hanging_castle/bridges_endcap",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:hanging_castle/bridge",
+        "projection": "rigid",
+        "processors": "ceilands:hanging_castle_degradation"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:hanging_castle/bridge_long",
+        "projection": "rigid",
+        "processors": "ceilands:hanging_castle_degradation"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:hanging_castle/bridge_endcap",
+        "projection": "rigid",
+        "processors": "ceilands:hanging_castle_degradation"
+      }
+    }
+  ]
+}

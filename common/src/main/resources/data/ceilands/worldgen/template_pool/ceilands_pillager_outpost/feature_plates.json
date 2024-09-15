@@ -1,0 +1,17 @@
+{
+  "name": "ceilands:ceilands_pillager_outpost_feature_plates",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ceilands:ceilands_pillager_outpost/feature_plate",
+        "processors": {
+          "processors": []
+        },
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "woodworks:config",
+          "value": "wooden_chests"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "group": "wooden_chest",
+        "key": {
+          "#": {
+            "item": "ceilands:luzawood_planks"
+          }
+        },
+        "pattern": [
+          "###",
+          "# #",
+          "###"
+        ],
+        "result": {
+          "item": "ceilands:luzawood_chest"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

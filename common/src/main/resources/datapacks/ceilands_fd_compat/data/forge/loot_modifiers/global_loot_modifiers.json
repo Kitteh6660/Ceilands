@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "entries": [
+    "ceilands:add_loot_ceilands_pillager_outpost",
+    "ceilands:add_loot_ceillage_ceiltrunk",
+    "ceilands:add_loot_ceillage_luzawood",
+    "ceilands:add_loot_hanging_castle_kitchen"
+  ]
+}

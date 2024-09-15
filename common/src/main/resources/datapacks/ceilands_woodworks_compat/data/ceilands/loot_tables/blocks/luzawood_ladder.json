@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ceilands:luzawood_ladder"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ceilands:blocks/luzawood_ladder"
+}

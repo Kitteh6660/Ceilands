@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#ceilands:has_structure/ocean_cube",
+  "step": "underground_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "start_pool": "ceilands:ocean_cube",
+  "size": 1,
+  "start_height": {
+    "type": "minecraft:uniform",
+    "max_inclusive": {
+      "below_top": 64
+    },
+    "min_inclusive": {
+      "above_bottom": 30
+    }
+  },
+  "max_distance_from_center": 80,
+  "use_expansion_hack": false
+}

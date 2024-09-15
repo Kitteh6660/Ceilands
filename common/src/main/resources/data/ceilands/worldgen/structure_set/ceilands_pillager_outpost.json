@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      "structure": "ceilands:ceilands_pillager_outpost",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "exclusion_zone": {
+      "chunk_count": 10,
+      "other_set": "ceilands:ceillages"
+    },
+    "frequency": 0.15,
+    "spacing": 12,
+    "separation": 8,
+    "salt": 16384
+  }
+}

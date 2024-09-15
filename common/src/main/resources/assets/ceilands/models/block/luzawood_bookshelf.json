@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ceilands:block/luzawood_planks",
+    "side": "ceilands:block/luzawood_bookshelf"
+  }
+}

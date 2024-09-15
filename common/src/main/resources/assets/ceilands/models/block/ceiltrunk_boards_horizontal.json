@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "ceilands:block/ceiltrunk_boards",
+    "side": "ceilands:block/ceiltrunk_boards"
+  }
+}

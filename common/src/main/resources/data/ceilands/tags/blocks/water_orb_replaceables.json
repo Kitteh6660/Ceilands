@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:air",
+    "minecraft:cave_air",
+    "minecraft:dirt",
+    "minecraft:gravel",
+    "minecraft:sand",
+    "minecraft:water",
+    "minecraft:glass",
+    "minecraft:prismarine",
+    "ceilands:ceilingneous"
+  ]
+}

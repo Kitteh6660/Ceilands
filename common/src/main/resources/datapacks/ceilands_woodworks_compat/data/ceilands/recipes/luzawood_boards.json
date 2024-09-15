@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "woodworks:config",
+          "value": "wooden_boards"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "group": "wooden_boards",
+        "key": {
+          "#": {
+            "item": "ceilands:luzawood_planks"
+          }
+        },
+        "pattern": [
+          "#",
+          "#",
+		  "#"
+        ],
+        "result": {
+          "item": "ceilands:luzawood_boards",
+		  "count": 3
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

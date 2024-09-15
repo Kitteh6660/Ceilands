@@ -1,0 +1,45 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_luzawood_logs": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "ceilands:luzawood_logs"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "ceilands:luzawood_sign_from_luzawood_logs_sawing"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_luzawood_logs",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "ceilands:luzawood_sign_from_luzawood_logs_sawing"
+          ]
+        },
+        "sends_telemetry_event": false
+      },
+      "conditions": [
+        {
+          "type": "woodworks:config",
+          "value": "sawmill"
+        }
+      ]
+    }
+  ]
+}

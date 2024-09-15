@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cabinet",
+  "key": {
+    "D": {
+      "item": "ceilands:ceiltrunk_trapdoor"
+    },
+    "_": {
+      "item": "ceilands:ceiltrunk_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "D D",
+    "___"
+  ],
+  "result": {
+    "item": "ceilands:ceiltrunk_cabinet"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,101 @@
+plugins {
+    id 'java'
+    id 'idea'
+	id 'eclipse'
+    id 'maven-publish'
+    id 'fabric-loom'
+}
+base {
+    archivesBaseName = "fabric" // "${rootProject.archives_base_name}-${project.name}"
+}
+repositories {
+    maven { url "https://maven.shedaniel.me/" }
+    maven { url "https://maven.terraformersmc.com/releases" }
+	maven { url "https://cursemaven.com" } 
+}
+dependencies {
+    minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+    modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
+    modImplementation "com.terraformersmc:modmenu:4.2.0-beta.2", {
+        exclude module: "fabric-api"
+    }
+    implementation project(":common")
+}
+
+var commonAW = project(":common").file("src/main/resources/dramaticdoors.accesswidener")
+var generatedResources = file("src/generated/resources")
+
+loom {
+    if (project(":common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
+        accessWidenerPath.set(project(":common").file("src/main/resources/${project.mod_id}.accesswidener"))
+    }
+    mixin {
+        defaultRefmapName.set("${project.mod_id}_fabric.refmap.json")
+    }
+    runs {
+        client {
+            client()
+            setConfigName("Fabric Client")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+        server {
+            server()
+            setConfigName("Fabric Server")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+        datagen {
+            inherit server
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/generated")}"
+            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
+            runDir("build/datagen")
+        }
+    }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs += [
+                    'src/generated'
+            ]
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    source(project(":common").sourceSets.main.allSource)
+}
+tasks.withType(Javadoc).configureEach {
+    source(project(":common").sourceSets.main.allJava)
+}
+tasks.named("sourcesJar", Jar) {
+    from(project(":common").sourceSets.main.allSource)
+}
+
+processResources {
+    from project(":common").sourceSets.main.resources
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId base.archivesName.get()
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://" + System.getenv("local_maven")
+        }
+    }
+}
+
+tasks.withType(Jar).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}

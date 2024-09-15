@@ -1,0 +1,42 @@
+{
+  "mappings": {
+    "com/kittehmod/ceilands/fabric/fabric/mixin/AnimalMixin": {
+      "checkAnimalSpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1429;method_20663(Lnet/minecraft/class_1299;Lnet/minecraft/class_1936;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+    },
+    "com/kittehmod/ceilands/fabric/fabric/mixin/LevelRendererMixin": {
+      "Lnet/minecraft/client/renderer/DimensionSpecialEffects;skyType()Lnet/minecraft/client/renderer/DimensionSpecialEffects$SkyType;": "Lnet/minecraft/class_5294;method_29992()Lnet/minecraft/class_5294$class_5401;",
+      "Lnet/minecraft/client/renderer/LevelRenderer;renderSky(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/math/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V": "Lnet/minecraft/class_761;method_3257(Lnet/minecraft/class_4587;Lnet/minecraft/class_1159;FLnet/minecraft/class_4184;ZLjava/lang/Runnable;)V"
+    },
+    "com/kittehmod/ceilands/fabric/fabric/mixin/ServerLevelMixin": {
+      "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V": "Lnet/minecraft/class_3218;method_29199(J)V",
+      "tick(Ljava/util/function/BooleanSupplier;)V": "Lnet/minecraft/class_3218;method_18765(Ljava/util/function/BooleanSupplier;)V"
+    },
+    "com/kittehmod/ceilands/fabric/fabric/mixin/StrayMixin": {
+      "checkStraySpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1627;method_20686(Lnet/minecraft/class_1299;Lnet/minecraft/class_5425;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+    },
+    "com/kittehmod/ceilands/fabric/fabric/mixin/VoidMixin": {
+      "outOfWorld()V": "Lnet/minecraft/class_1309;method_5825()V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/kittehmod/ceilands/fabric/fabric/mixin/AnimalMixin": {
+        "checkAnimalSpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1429;method_20663(Lnet/minecraft/class_1299;Lnet/minecraft/class_1936;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+      },
+      "com/kittehmod/ceilands/fabric/fabric/mixin/LevelRendererMixin": {
+        "Lnet/minecraft/client/renderer/DimensionSpecialEffects;skyType()Lnet/minecraft/client/renderer/DimensionSpecialEffects$SkyType;": "Lnet/minecraft/class_5294;method_29992()Lnet/minecraft/class_5294$class_5401;",
+        "Lnet/minecraft/client/renderer/LevelRenderer;renderSky(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/math/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V": "Lnet/minecraft/class_761;method_3257(Lnet/minecraft/class_4587;Lnet/minecraft/class_1159;FLnet/minecraft/class_4184;ZLjava/lang/Runnable;)V"
+      },
+      "com/kittehmod/ceilands/fabric/fabric/mixin/ServerLevelMixin": {
+        "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V": "Lnet/minecraft/class_3218;method_29199(J)V",
+        "tick(Ljava/util/function/BooleanSupplier;)V": "Lnet/minecraft/class_3218;method_18765(Ljava/util/function/BooleanSupplier;)V"
+      },
+      "com/kittehmod/ceilands/fabric/fabric/mixin/StrayMixin": {
+        "checkStraySpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1627;method_20686(Lnet/minecraft/class_1299;Lnet/minecraft/class_5425;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+      },
+      "com/kittehmod/ceilands/fabric/fabric/mixin/VoidMixin": {
+        "outOfWorld()V": "Lnet/minecraft/class_1309;method_5825()V"
+      }
+    }
+  }
+}

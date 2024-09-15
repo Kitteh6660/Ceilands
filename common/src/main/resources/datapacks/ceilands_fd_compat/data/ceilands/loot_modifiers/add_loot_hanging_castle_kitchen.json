@@ -1,0 +1,11 @@
+{
+  "type": "farmersdelight:add_loot_table",
+  "conditions":
+  [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "ceilands:chests/ceilands_hanging_castle_kitchen"
+    }
+  ],
+  "lootTable": "ceilands:chests/fd_hanging_castle_kitchen"
+}

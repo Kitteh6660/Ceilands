@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "woodworks:config",
+          "value": "leaf_piles"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "group": "leaves",
+        "key": {
+          "#": {
+            "item": "ceilands:luzawood_leaf_pile"
+          }
+        },
+        "pattern": [
+          "##",
+          "##"
+        ],
+        "result": {
+          "item": "ceilands:luzawood_leaves"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

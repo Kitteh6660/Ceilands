@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ceilands:block/luzawood_ladder",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ceilands:block/luzawood_ladder"
+    },
+    "facing=south": {
+      "model": "ceilands:block/luzawood_ladder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ceilands:block/luzawood_ladder",
+      "y": 270
+    }
+  }
+}

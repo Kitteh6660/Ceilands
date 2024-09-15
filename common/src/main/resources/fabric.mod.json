@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+
+  "name": "${mod_name} (QuiFabrge)",
+  "description": "${description}",
+  "authors": [
+    "Kitteh6660"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/the-ceilands",
+    "sources": "https://github.com/Kitteh6660/Ceilands"
+  },
+
+  "license": "${license}",
+  "icon": "logo.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.kittehmod.ceilands.fabric.CeilandsModFabric"
+    ],
+    "client": [
+      "com.kittehmod.ceilands.fabric.client.ClientHandler"
+    ]
+  },
+  "mixins": [
+    "ceilands_fabric.mixins.json"
+  ],
+  "accessWidener": "ceilands.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=0.14.24",
+    "fabric-api": ">=0.77.0",
+    "minecraft": ">=1.19.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "twilightforest": "*"
+  }
+}

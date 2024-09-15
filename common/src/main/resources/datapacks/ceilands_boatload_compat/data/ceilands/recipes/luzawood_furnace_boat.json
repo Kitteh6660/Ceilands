@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "furnace_boat",
+  "ingredients": [
+    {
+      "item": "minecraft:furnace"
+    },
+    {
+      "item": "ceilands:luzawood_boat"
+    }
+  ],
+  "result": {
+    "item": "ceilands:luzawood_furnace_boat"
+  }
+}
