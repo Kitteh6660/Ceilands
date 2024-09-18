@@ -1,6 +1,6 @@
 plugins {
     id "io.github.pacifistmc.forgix" version "1.2.9"
-    id 'fabric-loom' version '1.3-SNAPSHOT' apply(false)
+    id 'fabric-loom' version '1.6-SNAPSHOT' apply(false)
     id 'net.minecraftforge.gradle' version '[6.0,6.2)' apply(false)
     id 'org.spongepowered.gradle.vanilla' version '0.2.1-SNAPSHOT' apply(false)
     id("org.spongepowered.mixin") version "0.7-SNAPSHOT" apply(false)
@@ -13,9 +13,9 @@ forgix {
 	version = '${rootProject.mod_version}'
 	
 	forge {
-		projectName = "forge"
-		jarLocation = "build/libs/forge.jar"
-		additionalRelocate("com.kittehmod.ceilands", "com.kittehmod.ceilands.forge")
+		projectName = "neoforge"
+		jarLocation = "build/libs/neoforge.jar"
+		additionalRelocate("com.kittehmod.ceilands", "com.kittehmod.ceilands.neoforge")
 	}
 	fabric {
 		projectName = "fabric"
@@ -27,7 +27,7 @@ forgix {
 subprojects {
     apply plugin: 'java'
 
-    java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+    java.toolchain.languageVersion = JavaLanguageVersion.of(21)
     java.withSourcesJar()
     java.withJavadocJar()
         
@@ -72,7 +72,7 @@ subprojects {
 
     tasks.withType(JavaCompile).configureEach {
         it.options.encoding = 'UTF-8'
-        it.options.getRelease().set(17)
+        it.options.getRelease().set(21)
     }
 
     processResources {
@@ -80,9 +80,8 @@ subprojects {
 			"version": mod_version,
 			"group": project.group, //Else we target the task's group.
 			"minecraft_version": rootProject.minecraft_version,
-			"forge_version": forge_version,
-			"forge_loader_version_range": forge_loader_version_range,
-			"forge_version_range": forge_version_range,
+			"neoforge_version": neoforge_version,
+			"neoforge_version_range": neoforge_version_range,
 			"minecraft_version_range": minecraft_version_range,
 			"fabric_version": fabric_api_version,
 			"fabric_loader_version": fabric_loader_version,
@@ -93,7 +92,7 @@ subprojects {
 			"description": mod_description
         ]
 
-        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {
+        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {
             expand(expandProps) {
 			    setEscapeBackslash(true)
 			}
