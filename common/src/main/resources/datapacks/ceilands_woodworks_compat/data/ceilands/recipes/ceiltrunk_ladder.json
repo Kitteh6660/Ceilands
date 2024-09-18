@@ -14,7 +14,7 @@
         "group": "wooden_ladder",
         "key": {
           "#": {
-            "item": "ceilands:ceiltrunk_planks"
+            "id": "ceilands:ceiltrunk_planks"
           },
           "S": {
             "item": "minecraft:stick"
@@ -27,7 +27,7 @@
         ],
         "result": {
           "count": 4,
-          "item": "ceilands:ceiltrunk_ladder"
+          "id": "ceilands:ceiltrunk_ladder"
         },
         "show_notification": true
       }

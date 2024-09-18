@@ -17,5 +17,4 @@ public class ModSignBlockEntity extends SignBlockEntity
 	public BlockEntityType<?> getType() {
 		return CeilandsBlockEntities.CEILANDS_SIGN;
 	}
-
 }

@@ -2,6 +2,7 @@ package com.kittehmod.ceilands.worldgen.structures;
 
 import com.kittehmod.ceilands.registry.CeilandsProcessors;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import net.minecraft.core.BlockPos;
@@ -18,7 +19,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 
 public class ChainProcessor extends StructureProcessor
 {
-	public static final Codec<ChainProcessor> CODEC = RecordCodecBuilder.create((instance) -> instance.group(Codec.INT.fieldOf("max_height").forGetter(config -> config.maxHeight)).apply(instance, instance.stable(ChainProcessor::new)));
+	public static final MapCodec<ChainProcessor> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(Codec.INT.fieldOf("max_height").forGetter(config -> config.maxHeight)).apply(instance, instance.stable(ChainProcessor::new)));
 
 	private final int maxHeight;
 	

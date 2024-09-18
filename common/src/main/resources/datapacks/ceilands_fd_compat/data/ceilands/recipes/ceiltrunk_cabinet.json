@@ -4,10 +4,10 @@
   "group": "cabinet",
   "key": {
     "D": {
-      "item": "ceilands:ceiltrunk_trapdoor"
+      "id": "ceilands:ceiltrunk_trapdoor"
     },
     "_": {
-      "item": "ceilands:ceiltrunk_slab"
+      "id": "ceilands:ceiltrunk_slab"
     }
   },
   "pattern": [
@@ -16,7 +16,7 @@
     "___"
   ],
   "result": {
-    "item": "ceilands:ceiltrunk_cabinet"
+    "id": "ceilands:ceiltrunk_cabinet"
   },
   "show_notification": true
 }

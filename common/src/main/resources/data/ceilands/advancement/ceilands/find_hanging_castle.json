@@ -1,0 +1,44 @@
+{
+  "parent": "ceilands:ceilands/root",
+  "criteria": {
+    "castle": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "ceilands:hanging_castle"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.ceilands.find_hanging_castle.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "ceilands:ceilingneous_bricks"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ceilands.find_hanging_castle.title"
+    }
+  },
+  "requirements": [
+    [
+      "castle"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "ceilands:polished_ceilingneous"
-  },
-  "result": "ceilands:ceilingneous_bricks",
-  "count": 1
-}

@@ -14,7 +14,7 @@
         "group": "wooden_bookshelf",
         "key": {
           "#": {
-            "item": "ceilands:luzawood_planks"
+            "id": "ceilands:luzawood_planks"
           },
           "X": {
             "item": "minecraft:book"
@@ -26,7 +26,7 @@
           "###"
         ],
         "result": {
-          "item": "ceilands:luzawood_bookshelf"
+          "id": "ceilands:luzawood_bookshelf"
         },
         "show_notification": true
       }

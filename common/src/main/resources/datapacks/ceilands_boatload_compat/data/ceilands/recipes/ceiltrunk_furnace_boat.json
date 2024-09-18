@@ -7,10 +7,10 @@
       "item": "minecraft:furnace"
     },
     {
-      "item": "ceilands:ceiltrunk_boat"
+      "id": "ceilands:ceiltrunk_boat"
     }
   ],
   "result": {
-    "item": "ceilands:ceiltrunk_furnace_boat"
+    "id": "ceilands:ceiltrunk_furnace_boat"
   }
 }

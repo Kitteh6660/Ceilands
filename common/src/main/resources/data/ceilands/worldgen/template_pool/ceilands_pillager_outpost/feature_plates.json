@@ -1,4 +1,6 @@
 {
+  "name": "ceilands:ceilands_pillager_outpost_feature_plates",
+  "fallback": "minecraft:empty",
   "elements": [
     {
       "element": {
@@ -11,6 +13,5 @@
       },
       "weight": 1
     }
-  ],
-  "fallback": "minecraft:empty"
+  ]
 }

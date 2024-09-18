@@ -2,12 +2,10 @@ package com.kittehmod.ceilands.fabric.util;
 
 import com.kittehmod.ceilands.registry.CeilandsItems;
 
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.world.item.CreativeModeTab.TabVisibility;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Items;
 
 public class CreativeTabHelper 
 {

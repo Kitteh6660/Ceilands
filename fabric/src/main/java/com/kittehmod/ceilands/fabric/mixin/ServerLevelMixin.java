@@ -14,11 +14,11 @@ import net.minecraft.server.level.ServerLevel;
 @Mixin(ServerLevel.class)
 public class ServerLevelMixin
 {
-	@Inject(method = "tick(Ljava/util/function/BooleanSupplier;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V", shift = At.Shift.BEFORE))
+	/*@Inject(method = "tick(Ljava/util/function/BooleanSupplier;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V", shift = At.Shift.BEFORE))
 	private void injectTick(BooleanSupplier supplier, CallbackInfo ci) {
 		if (((ServerLevel)(Object)this).dimension().equals(CeilandsDimension.CEILANDS)) {
 			long dayTimeCeilands = ((ServerLevel)(Object)this).getLevelData().getDayTime() + 24000L;
 			((ServerLevel)(Object)this).getServer().overworld().setDayTime(dayTimeCeilands - dayTimeCeilands % 24000L);
 		}
-	}
+	}*/
 }

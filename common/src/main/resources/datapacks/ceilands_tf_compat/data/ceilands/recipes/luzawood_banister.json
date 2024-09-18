@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "-": {
-      "item": "ceilands:luzawood_slab"
+      "id": "ceilands:luzawood_slab"
     },
     "|": {
       "tag": "forge:rods/wooden"
@@ -15,7 +15,7 @@
   ],
   "result": {
     "count": 3,
-    "item": "ceilands:luzawood_banister"
+    "id": "ceilands:luzawood_banister"
   },
   "show_notification": true
 }

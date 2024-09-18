@@ -5,7 +5,7 @@ import java.util.function.BiConsumer;
 
 import com.google.common.collect.ImmutableList;
 import com.kittehmod.ceilands.registry.CeilandsTrunkPlacerType;
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import net.minecraft.core.BlockPos;
@@ -22,9 +22,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 
 public class LuzawoodTrunkPlacer extends TrunkPlacer
 {
-	public static final Codec<LuzawoodTrunkPlacer> CODEC = RecordCodecBuilder.create((p_70261_) -> {
-		return trunkPlacerParts(p_70261_).apply(p_70261_, LuzawoodTrunkPlacer::new);
-	});
+	public static final MapCodec<LuzawoodTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((func) -> { return trunkPlacerParts(func).apply(func, LuzawoodTrunkPlacer::new); });
 	
 	public LuzawoodTrunkPlacer(int p_70268_, int p_70269_, int p_70270_) {
 		super(p_70268_, p_70269_, p_70270_);

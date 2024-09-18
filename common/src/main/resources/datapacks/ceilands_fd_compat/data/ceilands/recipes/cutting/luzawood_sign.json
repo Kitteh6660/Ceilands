@@ -2,12 +2,12 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "ceilands:luzawood_sign"
+      "id": "ceilands:luzawood_sign"
     }
   ],
   "result": [
     {
-      "item": "ceilands:luzawood_planks"
+      "id": "ceilands:luzawood_planks"
     }
   ],
   "tool": {

@@ -2,12 +2,12 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "ceilands:ceiltrunk_hanging_sign"
+      "id": "ceilands:ceiltrunk_hanging_sign"
     }
   ],
   "result": [
     {
-      "item": "ceilands:ceiltrunk_planks"
+      "id": "ceilands:ceiltrunk_planks"
     }
   ],
   "tool": {

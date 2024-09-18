@@ -14,7 +14,7 @@
         "group": "wooden_chest",
         "key": {
           "#": {
-            "item": "ceilands:luzawood_planks"
+            "id": "ceilands:luzawood_planks"
           }
         },
         "pattern": [
@@ -23,7 +23,7 @@
           "###"
         ],
         "result": {
-          "item": "ceilands:luzawood_chest"
+          "id": "ceilands:luzawood_chest"
         },
         "show_notification": true
       }

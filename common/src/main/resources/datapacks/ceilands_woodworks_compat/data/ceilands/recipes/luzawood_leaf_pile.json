@@ -14,12 +14,12 @@
         "group": "leaf_pile",
         "ingredients": [
           {
-            "item": "ceilands:luzawood_leaves"
+            "id": "ceilands:luzawood_leaves"
           }
         ],
         "result": {
           "count": 4,
-          "item": "ceilands:luzawood_leaf_pile"
+          "id": "ceilands:luzawood_leaf_pile"
         }
       }
     }

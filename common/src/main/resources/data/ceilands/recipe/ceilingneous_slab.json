@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ceilingneous_slab",
+  "key": {
+    "#": {
+      "item": "ceilands:ceilingneous"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "ceilands:ceilingneous_slab"
+  }
+}

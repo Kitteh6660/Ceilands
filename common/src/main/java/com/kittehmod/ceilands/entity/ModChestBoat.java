@@ -6,6 +6,7 @@ import com.kittehmod.ceilands.registry.CeilandsEntities;
 
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
@@ -24,13 +25,14 @@ import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.storage.loot.LootTable;
 
 public class ModChestBoat extends ModBoat implements HasCustomInventoryScreen, ContainerEntity
 {
 	private static final int CONTAINER_SIZE = 27;
 	private NonNullList<ItemStack> itemStacks = NonNullList.withSize(27, ItemStack.EMPTY);
 	@Nullable
-	private ResourceLocation lootTable;
+	private ResourceKey<LootTable> lootTable;
 	private long lootTableSeed;
 
 	public ModChestBoat(EntityType<? extends ModBoat> p_219869_, Level p_219870_) {
@@ -55,12 +57,12 @@ public class ModChestBoat extends ModBoat implements HasCustomInventoryScreen, C
 
 	protected void addAdditionalSaveData(CompoundTag tag) {
 		super.addAdditionalSaveData(tag);
-		this.addChestVehicleSaveData(tag);
+		this.addChestVehicleSaveData(tag, this.registryAccess());
 	}
 
 	protected void readAdditionalSaveData(CompoundTag tag) {
 		super.readAdditionalSaveData(tag);
-		this.readChestVehicleSaveData(tag);
+		this.readChestVehicleSaveData(tag, this.registryAccess());
 	}
 
 	public void destroy(DamageSource source) {
@@ -149,12 +151,12 @@ public class ModChestBoat extends ModBoat implements HasCustomInventoryScreen, C
 	}
 
 	@Nullable
-	public ResourceLocation getLootTable() {
+	public ResourceKey getLootTable() {
 		return this.lootTable;
 	}
 
-	public void setLootTable(@Nullable ResourceLocation p_219890_) {
-		this.lootTable = p_219890_;
+	public void setLootTable(ResourceKey<LootTable> loot) {
+		this.lootTable = loot;
 	}
 
 	public long getLootTableSeed() {

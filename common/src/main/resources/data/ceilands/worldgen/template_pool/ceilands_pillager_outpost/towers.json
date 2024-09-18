@@ -1,4 +1,6 @@
 {
+  "name": "ceilands:ceilands_pillager_outpost_towers",
+  "fallback": "minecraft:empty",
   "elements": [
     {
       "element": {
@@ -17,6 +19,5 @@
       },
       "weight": 1
     }
-  ],
-  "fallback": "minecraft:empty"
+  ]
 }

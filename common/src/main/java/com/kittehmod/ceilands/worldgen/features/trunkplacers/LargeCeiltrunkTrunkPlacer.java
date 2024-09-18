@@ -6,6 +6,7 @@ import java.util.function.BiConsumer;
 import com.google.common.collect.ImmutableList;
 import com.kittehmod.ceilands.registry.CeilandsTrunkPlacerType;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import net.minecraft.core.BlockPos;
@@ -22,7 +23,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 
 public class LargeCeiltrunkTrunkPlacer extends TrunkPlacer
 {
-	public static final Codec<LargeCeiltrunkTrunkPlacer> CODEC = RecordCodecBuilder.create((p_70261_) -> { return trunkPlacerParts(p_70261_).apply(p_70261_, LargeCeiltrunkTrunkPlacer::new); });
+	public static final MapCodec<LargeCeiltrunkTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((func) -> { return trunkPlacerParts(func).apply(func, LargeCeiltrunkTrunkPlacer::new); });
 	public static final Direction[] STARTING_BRANCH_DIRECTION = {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
 	
 	public LargeCeiltrunkTrunkPlacer(int p_70268_, int p_70269_, int p_70270_) {

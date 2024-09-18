@@ -2,12 +2,12 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "ceilands:luzawood_log"
+      "id": "ceilands:luzawood_log"
     }
   ],
   "result": [
     {
-      "item": "ceilands:stripped_luzawood_log"
+      "id": "ceilands:stripped_luzawood_log"
     },
     {
       "item": "farmersdelight:tree_bark"

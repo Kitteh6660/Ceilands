@@ -12,7 +12,7 @@
         "type": "woodworks:sawmill",
         "count": 1,
         "ingredient": {
-          "item": "ceilands:ceiltrunk_planks"
+          "id": "ceilands:ceiltrunk_planks"
         },
         "result": "ceilands:ceiltrunk_button"
       }

@@ -4,10 +4,10 @@
   "group": "large_boat",
   "key": {
     "#": {
-      "item": "ceilands:ceiltrunk_planks"
+      "id": "ceilands:ceiltrunk_planks"
     },
     "B": {
-      "item": "ceilands:ceiltrunk_boat"
+      "id": "ceilands:ceiltrunk_boat"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "###"
   ],
   "result": {
-    "item": "ceilands:large_ceiltrunk_boat"
+    "id": "ceilands:large_ceiltrunk_boat"
   },
   "show_notification": true
 }

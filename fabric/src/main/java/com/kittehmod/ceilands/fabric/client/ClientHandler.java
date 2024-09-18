@@ -1,8 +1,8 @@
 package com.kittehmod.ceilands.fabric.client;
 
-import com.kittehmod.ceilands.Ceilands;
 import com.kittehmod.ceilands.client.ClientBase;
 import com.kittehmod.ceilands.client.renderer.CeilandsBoatRenderer;
+import com.kittehmod.ceilands.client.renderer.CeilandsSkyEffect;
 import com.kittehmod.ceilands.registry.CeilandsBlockEntities;
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
 import com.kittehmod.ceilands.registry.CeilandsEntities;
@@ -13,15 +13,11 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.FoliageColor;
 
 public class ClientHandler implements ClientModInitializer

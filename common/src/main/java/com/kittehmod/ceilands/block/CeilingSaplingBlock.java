@@ -10,7 +10,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.grower.AbstractTreeGrower;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -22,9 +22,9 @@ public class CeilingSaplingBlock extends SaplingBlock
 	public static final IntegerProperty STAGE = BlockStateProperties.STAGE;
 	protected static final float AABB_OFFSET = 6.0F;
 	protected static final VoxelShape SHAPE = Block.box(2.0D, 4.0D, 2.0D, 14.0D, 16.0D, 14.0D);
-	private final AbstractTreeGrower treeGrower;
+	private final TreeGrower treeGrower;
 
-	public CeilingSaplingBlock(AbstractTreeGrower grower, Properties properties) {
+	public CeilingSaplingBlock(TreeGrower grower, Properties properties) {
 		super(grower, properties);
 		this.treeGrower = grower;
 		this.registerDefaultState(this.stateDefinition.any().setValue(STAGE, Integer.valueOf(0)));
@@ -51,11 +51,10 @@ public class CeilingSaplingBlock extends SaplingBlock
 		} else {
 			this.treeGrower.growTree(level, level.getChunkSource().getGenerator(), pos, state, random);
 		}
-
 	}
 
 	@Override
-	public boolean isValidBonemealTarget(LevelReader getter, BlockPos pos, BlockState state, boolean p_50900_) {
+	public boolean isValidBonemealTarget(LevelReader getter, BlockPos pos, BlockState state) {
 		return true;
 	}
 

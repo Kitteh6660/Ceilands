@@ -10,7 +10,7 @@ import net.minecraft.world.level.dimension.DimensionType;
 
 public class CeilandsDimension
 {
-	public static final ResourceKey<Level> CEILANDS = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(Ceilands.MOD_ID, "the_ceilands"));
+	public static final ResourceKey<Level> CEILANDS = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(Ceilands.MOD_ID, "the_ceilands"));
 	
-	public static final ResourceKey<DimensionType> CEILANDS_TYPE_KEY = ResourceKey.create(Registries.DIMENSION_TYPE, new ResourceLocation(Ceilands.MOD_ID, "the_ceilands"));
+	public static final ResourceKey<DimensionType> CEILANDS_TYPE_KEY = ResourceKey.create(Registries.DIMENSION_TYPE, ResourceLocation.fromNamespaceAndPath(Ceilands.MOD_ID, "the_ceilands"));
 }

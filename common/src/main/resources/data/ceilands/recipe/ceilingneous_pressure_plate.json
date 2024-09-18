@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "id": "ceilands:polished_ceilingneous"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "ceilands:ceilingneous_pressure_plate"
+  }
+}

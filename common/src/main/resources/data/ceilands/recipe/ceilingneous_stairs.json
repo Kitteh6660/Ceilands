@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ceilingneous_stairs",
+  "key": {
+    "#": {
+      "item": "ceilands:ceilingneous"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "ceilands:ceilingneous_stairs"
+  }
+}

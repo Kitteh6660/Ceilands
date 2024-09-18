@@ -12,7 +12,7 @@ public class ModStandingSignBlock extends StandingSignBlock
 {
 
 	public ModStandingSignBlock(Properties properties, WoodType woodtype) {
-		super(properties, woodtype);
+		super(woodtype, properties);
 	}
 
 	@Override

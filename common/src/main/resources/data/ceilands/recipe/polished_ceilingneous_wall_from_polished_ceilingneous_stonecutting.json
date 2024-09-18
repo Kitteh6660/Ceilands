@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ceilands:polished_ceilingneous"
+  },
+  "result": {
+	"id": "ceilands:polished_ceilingneous_wall",
+    "count": 1
+  }
+}

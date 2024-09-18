@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "ceilands:luzawood_log"
+    "id": "ceilands:luzawood_log"
   },
   "result": "ceilands:hollow_luzawood_log"
 }

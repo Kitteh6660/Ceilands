@@ -9,5 +9,5 @@ import net.minecraft.world.level.biome.Biome;
 
 public class CeilandsBiomeTags 
 {
-	public static final TagKey<Biome> IS_CEILANDS = TagKey.create(Registries.BIOME, new ResourceLocation(Ceilands.MOD_ID, "is_ceilands"));
+	public static final TagKey<Biome> IS_CEILANDS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Ceilands.MOD_ID, "is_ceilands"));
 }

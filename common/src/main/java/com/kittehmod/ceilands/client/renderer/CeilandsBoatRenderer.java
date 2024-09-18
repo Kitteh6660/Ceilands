@@ -35,7 +35,7 @@ public class CeilandsBoatRenderer extends EntityRenderer<ModBoat>
 		this.boatResources = Stream.of(ModBoat.Type.values()).collect(ImmutableMap.toImmutableMap((map) -> {
 			return map;
 		}, (boattype) -> {
-			return Pair.of(new ResourceLocation("ceilands", getTextureLocation(boattype, isChest)), this.createBoatModel(context, boattype, isChest));
+			return Pair.of(ResourceLocation.fromNamespaceAndPath("ceilands", getTextureLocation(boattype, isChest)), this.createBoatModel(context, boattype, isChest));
 		}));
 	}
 
@@ -77,7 +77,7 @@ public class CeilandsBoatRenderer extends EntityRenderer<ModBoat>
 		matrixStackIn.mulPose(Axis.YP.rotationDegrees(90.0F));
 		boatmodel.setupAnim(entityIn, partialTicks, 0.0F, -0.1F, 0.0F, 0.0F);
 		VertexConsumer vertexconsumer = bufferIn.getBuffer(boatmodel.renderType(resourcelocation));
-		boatmodel.renderToBuffer(matrixStackIn, vertexconsumer, packedLightIn, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+		boatmodel.renderToBuffer(matrixStackIn, vertexconsumer, packedLightIn, OverlayTexture.NO_OVERLAY);
 		if (!entityIn.isUnderWater()) {
 			VertexConsumer vertexconsumer1 = bufferIn.getBuffer(RenderType.waterMask());
 			boatmodel.waterPatch().render(matrixStackIn, vertexconsumer1, packedLightIn, OverlayTexture.NO_OVERLAY);
@@ -91,18 +91,18 @@ public class CeilandsBoatRenderer extends EntityRenderer<ModBoat>
 	public ResourceLocation getTextureLocation(ModBoat entity) {
 		switch (entity.getCeilandsBoatType()) {
 			case CEILTRUNK:
-				return new ResourceLocation("ceilands:textures/entity/boat/ceiltrunk.png");
+				return ResourceLocation.parse("ceilands:textures/entity/boat/ceiltrunk.png");
 			case LUZAWOOD:
 			default:
-				return new ResourceLocation("ceilands:textures/entity/boat/luzawood.png");
+				return ResourceLocation.parse("ceilands:textures/entity/boat/luzawood.png");
 		}
 	}
 
 	public Pair<ResourceLocation, BoatModel> getModelWithLocation(ModBoat boat) { return this.boatResources.get(boat.getCeilandsBoatType()); }
 	
 	private static ModelLayerLocation createLocation(String path, String p_171302_) {
-		return new ModelLayerLocation(new ResourceLocation("minecraft", path), p_171302_);
-		//return new ModelLayerLocation(new ResourceLocation("morecraft", p_171301_), p_171302_);
+		return new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("minecraft", path), p_171302_);
+		//return new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("morecraft", p_171301_), p_171302_);
 	}
 
 	public static ModelLayerLocation createBoatModelName(ModBoat.Type p_171290_) {

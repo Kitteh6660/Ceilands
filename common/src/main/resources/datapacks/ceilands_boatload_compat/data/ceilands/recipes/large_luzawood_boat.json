@@ -4,10 +4,10 @@
   "group": "large_boat",
   "key": {
     "#": {
-      "item": "ceilands:luzawood_planks"
+      "id": "ceilands:luzawood_planks"
     },
     "B": {
-      "item": "ceilands:luzawood_boat"
+      "id": "ceilands:luzawood_boat"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "###"
   ],
   "result": {
-    "item": "ceilands:large_luzawood_boat"
+    "id": "ceilands:large_luzawood_boat"
   },
   "show_notification": true
 }

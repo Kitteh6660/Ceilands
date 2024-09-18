@@ -2,12 +2,12 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "ceilands:ceiltrunk_trapdoor"
+      "id": "ceilands:ceiltrunk_trapdoor"
     }
   ],
   "result": [
     {
-      "item": "ceilands:ceiltrunk_planks"
+      "id": "ceilands:ceiltrunk_planks"
     }
   ],
   "tool": {

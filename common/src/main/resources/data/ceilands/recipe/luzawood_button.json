@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "ceilands:luzawood_planks"
+    }
+  ],
+  "result": {
+    "id": "ceilands:luzawood_button"
+  }
+}

@@ -14,7 +14,7 @@
         "group": "leaves",
         "key": {
           "#": {
-            "item": "ceilands:ceiltrunk_leaf_pile"
+            "id": "ceilands:ceiltrunk_leaf_pile"
           }
         },
         "pattern": [
@@ -22,7 +22,7 @@
           "##"
         ],
         "result": {
-          "item": "ceilands:ceiltrunk_leaves"
+          "id": "ceilands:ceiltrunk_leaves"
         },
         "show_notification": true
       }

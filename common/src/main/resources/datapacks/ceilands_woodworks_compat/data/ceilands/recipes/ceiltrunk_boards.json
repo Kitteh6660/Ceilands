@@ -14,7 +14,7 @@
         "group": "wooden_boards",
         "key": {
           "#": {
-            "item": "ceilands:ceiltrunk_slab"
+            "id": "ceilands:ceiltrunk_slab"
           }
         },
         "pattern": [
@@ -22,7 +22,7 @@
           "#"
         ],
         "result": {
-          "item": "ceilands:ceiltrunk_boards"
+          "id": "ceilands:ceiltrunk_boards"
         },
         "show_notification": true
       }

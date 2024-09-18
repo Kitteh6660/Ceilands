@@ -14,14 +14,14 @@
         "group": "wooden_trapped_chest",
         "ingredients": [
           {
-            "item": "ceilands:luzawood_chest"
+            "id": "ceilands:luzawood_chest"
           },
           {
             "item": "minecraft:tripwire_hook"
           }
         ],
         "result": {
-          "item": "ceilands:trapped_luzawood_chest"
+          "id": "ceilands:trapped_luzawood_chest"
         }
       }
     }

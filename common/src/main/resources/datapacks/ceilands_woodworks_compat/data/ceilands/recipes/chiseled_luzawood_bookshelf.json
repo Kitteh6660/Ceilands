@@ -13,10 +13,10 @@
         "category": "building",
         "key": {
           "#": {
-            "item": "ceilands:luzawood_planks"
+            "id": "ceilands:luzawood_planks"
           },
           "X": {
-            "item": "ceilands:luzawood_slab"
+            "id": "ceilands:luzawood_slab"
           }
         },
         "pattern": [
@@ -25,7 +25,7 @@
           "###"
         ],
         "result": {
-          "item": "ceilands:chiseled_luzawood_bookshelf"
+          "id": "ceilands:chiseled_luzawood_bookshelf"
         },
         "show_notification": true
       }

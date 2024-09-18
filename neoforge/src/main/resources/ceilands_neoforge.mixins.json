@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.kittehmod.ceilands.neoforge.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AnimalMixin",
+    "StrayMixin",
+    "ServerLevelMixin",
+    "VoidMixin"
+  ],
+  "client": [
+    "LevelRendererMixin"
+  ],
+  "minVersion": "0.8"
+}

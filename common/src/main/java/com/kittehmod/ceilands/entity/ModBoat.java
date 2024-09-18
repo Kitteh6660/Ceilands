@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.Block;
 
 public class ModBoat extends Boat
 {
-	private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
+	private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModBoat.class, EntityDataSerializers.INT);
 
 	public ModBoat(EntityType<? extends ModBoat> p_38290_, Level level) {
 		super(p_38290_, level);
@@ -30,9 +30,9 @@ public class ModBoat extends Boat
 		this.zo = p_219875_;
 	}
 	
-	protected void defineSynchedData() {
-		super.defineSynchedData();
-		this.entityData.define(DATA_ID_TYPE, ModBoat.Type.CEILTRUNK.ordinal());
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(DATA_ID_TYPE, ModBoat.Type.CEILTRUNK.ordinal());
    }
 	
 	protected void addAdditionalSaveData(CompoundTag p_38359_) {

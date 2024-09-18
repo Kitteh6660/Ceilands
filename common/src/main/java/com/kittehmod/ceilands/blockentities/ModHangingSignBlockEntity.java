@@ -17,5 +17,4 @@ public class ModHangingSignBlockEntity extends HangingSignBlockEntity
 	public BlockEntityType<?> getType() {
 		return CeilandsBlockEntities.CEILANDS_HANGING_SIGN;
 	}
-
 }

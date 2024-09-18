@@ -1,12 +1,12 @@
 package com.kittehmod.ceilands.registry;
 
-import com.kittehmod.ceilands.Ceilands;
 import com.kittehmod.ceilands.worldgen.features.trunkplacers.CeiltrunkTrunkPlacer;
 import com.kittehmod.ceilands.worldgen.features.trunkplacers.DoubleLuzawoodTrunkPlacer;
 import com.kittehmod.ceilands.worldgen.features.trunkplacers.LargeCeiltrunkTrunkPlacer;
 import com.kittehmod.ceilands.worldgen.features.trunkplacers.LuzawoodTrunkPlacer;
+import com.mojang.serialization.MapCodec;
 
-import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 
 public class CeilandsTrunkPlacerType

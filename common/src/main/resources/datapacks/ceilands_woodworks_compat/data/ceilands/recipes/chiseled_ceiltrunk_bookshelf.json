@@ -13,10 +13,10 @@
         "category": "building",
         "key": {
           "#": {
-            "item": "ceilands:ceiltrunk_planks"
+            "id": "ceilands:ceiltrunk_planks"
           },
           "X": {
-            "item": "ceilands:ceiltrunk_slab"
+            "id": "ceilands:ceiltrunk_slab"
           }
         },
         "pattern": [
@@ -25,7 +25,7 @@
           "###"
         ],
         "result": {
-          "item": "ceilands:chiseled_ceiltrunk_bookshelf"
+          "id": "ceilands:chiseled_ceiltrunk_bookshelf"
         },
         "show_notification": true
       }

@@ -7,10 +7,10 @@
       "item": "minecraft:furnace"
     },
     {
-      "item": "ceilands:luzawood_boat"
+      "id": "ceilands:luzawood_boat"
     }
   ],
   "result": {
-    "item": "ceilands:luzawood_furnace_boat"
+    "id": "ceilands:luzawood_furnace_boat"
   }
 }

@@ -12,7 +12,7 @@
         "type": "woodworks:sawmill",
         "count": 1,
         "ingredient": {
-          "item": "ceilands:luzawood_planks"
+          "id": "ceilands:luzawood_planks"
         },
         "result": "ceilands:luzawood_fence"
       }

@@ -2,12 +2,12 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "ceilands:ceiltrunk_wood"
+      "id": "ceilands:ceiltrunk_wood"
     }
   ],
   "result": [
     {
-      "item": "ceilands:stripped_ceiltrunk_wood"
+      "id": "ceilands:stripped_ceiltrunk_wood"
     },
     {
       "item": "farmersdelight:tree_bark"

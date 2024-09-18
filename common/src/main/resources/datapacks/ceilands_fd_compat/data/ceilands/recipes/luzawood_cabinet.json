@@ -4,10 +4,10 @@
   "group": "cabinet",
   "key": {
     "D": {
-      "item": "ceilands:luzawood_trapdoor"
+      "id": "ceilands:luzawood_trapdoor"
     },
     "_": {
-      "item": "ceilands:luzawood_slab"
+      "id": "ceilands:luzawood_slab"
     }
   },
   "pattern": [
@@ -16,7 +16,7 @@
     "___"
   ],
   "result": {
-    "item": "ceilands:luzawood_cabinet"
+    "id": "ceilands:luzawood_cabinet"
   },
   "show_notification": true
 }

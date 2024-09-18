@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ceilands:ceilingneous"
+  },
+  "result": {
+	"id": "ceilands:ceilingneous_slab",
+    "count": 2
+  }
+}

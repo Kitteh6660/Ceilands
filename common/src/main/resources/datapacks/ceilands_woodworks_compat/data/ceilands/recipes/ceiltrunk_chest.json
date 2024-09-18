@@ -14,7 +14,7 @@
         "group": "wooden_chest",
         "key": {
           "#": {
-            "item": "ceilands:ceiltrunk_planks"
+            "id": "ceilands:ceiltrunk_planks"
           }
         },
         "pattern": [
@@ -23,7 +23,7 @@
           "###"
         ],
         "result": {
-          "item": "ceilands:ceiltrunk_chest"
+          "id": "ceilands:ceiltrunk_chest"
         },
         "show_notification": true
       }

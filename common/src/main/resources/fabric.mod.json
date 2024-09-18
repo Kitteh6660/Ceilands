@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "ceilands",
+  "id": "${mod_id}",
   "version": "${version}",
 
-  "name": "The Ceilands (QuiFabrge)",
-  "description": "The Ceilands is a mod that adds the titular dimension with bedrock ceiling but no bedrock floor!",
+  "name": "The Ceilands",
+  "description": "${description}",
   "authors": [
     "Kitteh6660"
   ],

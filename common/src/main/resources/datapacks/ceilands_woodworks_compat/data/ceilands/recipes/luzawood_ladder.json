@@ -14,7 +14,7 @@
         "group": "wooden_ladder",
         "key": {
           "#": {
-            "item": "ceilands:luzawood_planks"
+            "id": "ceilands:luzawood_planks"
           },
           "S": {
             "item": "minecraft:stick"
@@ -27,7 +27,7 @@
         ],
         "result": {
           "count": 4,
-          "item": "ceilands:luzawood_ladder"
+          "id": "ceilands:luzawood_ladder"
         },
         "show_notification": true
       }

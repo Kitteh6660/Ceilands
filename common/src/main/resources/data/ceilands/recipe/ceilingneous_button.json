@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "id": "ceilands:polished_ceilingneous"
+    }
+  ],
+  "result": {
+    "id": "ceilands:ceilingneous_button"
+  }
+}

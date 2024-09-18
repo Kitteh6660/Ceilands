@@ -14,7 +14,7 @@
         "group": "wooden_boards",
         "key": {
           "#": {
-            "item": "ceilands:luzawood_slab"
+            "id": "ceilands:luzawood_slab"
           }
         },
         "pattern": [
@@ -22,7 +22,7 @@
           "#"
         ],
         "result": {
-          "item": "ceilands:luzawood_boards"
+          "id": "ceilands:luzawood_boards"
         },
         "show_notification": true
       }

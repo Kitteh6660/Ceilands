@@ -13,8 +13,10 @@ import com.kittehmod.ceilands.worldgen.features.SmallFloatingIslandFeature;
 import com.kittehmod.ceilands.worldgen.features.WaterOrbFeature;
 import com.kittehmod.ceilands.worldgen.features.trees.CeiltrunkTreeFeature;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
@@ -39,11 +41,11 @@ public class CeilandsFeatures
 	public static final Feature<BlockStateConfiguration> FLOATING_ISLAND = new SmallFloatingIslandFeature(BlockStateConfiguration.CODEC);
 	public static final Feature<BlockStateConfiguration> FLOATING_ISLAND_LARGE = new LargeFloatingIslandFeature(BlockStateConfiguration.CODEC);
 	
-	public static final ResourceKey<ConfiguredFeature<?, ?>> CEILTRUNK_TREE_REGULAR = FeatureUtils.createKey("ceilands:ceiltrunk_tree");
-	public static final ResourceKey<ConfiguredFeature<?, ?>> CEILTRUNK_TREE_BEES = FeatureUtils.createKey("ceilands:ceiltrunk_tree_bees");
-	public static final ResourceKey<ConfiguredFeature<?, ?>> CEILTRUNK_TREE_LARGE = FeatureUtils.createKey("ceilands:ceiltrunk_tree_large");
-	public static final ResourceKey<ConfiguredFeature<?, ?>> LUZAWOOD_TREE_SINGLE = FeatureUtils.createKey("ceilands:luzawood_tree_single");
-	public static final ResourceKey<ConfiguredFeature<?, ?>> LUZAWOOD_TREE_SINGLE_BEES = FeatureUtils.createKey("ceilands:luzawood_tree_single_bees");
-	public static final ResourceKey<ConfiguredFeature<?, ?>> LUZAWOOD_TREE_DOUBLE = FeatureUtils.createKey("ceilands:luzawood_tree_double");
-	public static final ResourceKey<ConfiguredFeature<?, ?>> LUZAWOOD_TREE_DOUBLE_BEES = FeatureUtils.createKey("ceilands:luzawood_tree_double_bees");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> CEILTRUNK_TREE_REGULAR = ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.tryParse("ceilands:ceiltrunk_tree"));
+	public static final ResourceKey<ConfiguredFeature<?, ?>> CEILTRUNK_TREE_BEES = ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.tryParse("ceilands:ceiltrunk_tree_bees"));
+	public static final ResourceKey<ConfiguredFeature<?, ?>> CEILTRUNK_TREE_LARGE = ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.tryParse("ceilands:ceiltrunk_tree_large"));
+	public static final ResourceKey<ConfiguredFeature<?, ?>> LUZAWOOD_TREE_SINGLE = ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.tryParse("ceilands:luzawood_tree_single"));
+	public static final ResourceKey<ConfiguredFeature<?, ?>> LUZAWOOD_TREE_SINGLE_BEES = ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.tryParse("ceilands:luzawood_tree_single_bees"));
+	public static final ResourceKey<ConfiguredFeature<?, ?>> LUZAWOOD_TREE_DOUBLE = ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.tryParse("ceilands:luzawood_tree_double"));
+	public static final ResourceKey<ConfiguredFeature<?, ?>> LUZAWOOD_TREE_DOUBLE_BEES = ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.tryParse("ceilands:luzawood_tree_double_bees"));
 }
