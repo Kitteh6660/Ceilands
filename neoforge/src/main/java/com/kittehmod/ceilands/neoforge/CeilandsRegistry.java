@@ -5,10 +5,8 @@ import java.util.List;
 
 import com.kittehmod.ceilands.Ceilands;
 import com.kittehmod.ceilands.block.CeilandsFlammableBlocks;
-import com.kittehmod.ceilands.neoforge.compat.BoatloadCompat;
 import com.kittehmod.ceilands.neoforge.compat.FarmersDelightCompat;
 import com.kittehmod.ceilands.neoforge.compat.TwilightForestCompat;
-import com.kittehmod.ceilands.neoforge.compat.WoodworksCompat;
 import com.kittehmod.ceilands.registry.CeilandsBlockEntities;
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
 import com.kittehmod.ceilands.registry.CeilandsEntities;
@@ -28,7 +26,6 @@ import net.minecraft.world.level.block.FireBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import oshi.util.tuples.Pair;
 import oshi.util.tuples.Triplet;
