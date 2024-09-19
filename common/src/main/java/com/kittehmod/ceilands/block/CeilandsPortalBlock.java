@@ -11,13 +11,11 @@ import com.kittehmod.ceilands.tags.CeilandsBlockTags;
 import com.kittehmod.ceilands.util.CeilandsPortalForcer;
 
 import net.minecraft.BlockUtil;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.AxisDirection;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -27,10 +25,12 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Portal;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -39,13 +39,11 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.border.WorldBorder;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.portal.DimensionTransition;
+import net.minecraft.world.level.portal.PortalForcer;
 import net.minecraft.world.level.portal.PortalShape;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import net.minecraft.world.level.block.NetherPortalBlock;
-import net.minecraft.world.level.block.Portal;
 
 public class CeilandsPortalBlock extends Block implements Portal
 {
@@ -110,6 +108,11 @@ public class CeilandsPortalBlock extends Block implements Portal
         }
 	}
 	
+    @Override
+    public int getPortalTransitionTime(ServerLevel $$0, Entity $$1) {
+        return $$1 instanceof Player $$2 ? Math.max(1, $$0.getGameRules().getInt($$2.getAbilities().invulnerable ? GameRules.RULE_PLAYERS_NETHER_PORTAL_CREATIVE_DELAY : GameRules.RULE_PLAYERS_NETHER_PORTAL_DEFAULT_DELAY)) : 0;
+    }
+	
 	@Override
 	public DimensionTransition getPortalDestination(ServerLevel level, Entity entity, BlockPos pos) {
         ResourceKey<Level> resourcekey = level.dimension() == CeilandsDimension.CEILANDS ? Level.OVERWORLD : CeilandsDimension.CEILANDS;
@@ -142,7 +145,8 @@ public class CeilandsPortalBlock extends Block implements Portal
 	
     @Nullable
     private DimensionTransition getExitPortal(ServerLevel level, Entity entity, BlockPos pos1, BlockPos pos2, boolean p_350326_, WorldBorder border) {
-        Optional<BlockPos> optional = level.getPortalForcer().findClosestPortalPosition(pos2, p_350326_, border);
+    	PortalForcer forcer = new CeilandsPortalForcer(level);
+        Optional<BlockPos> optional = forcer.findClosestPortalPosition(pos2, p_350326_, border);
         BlockUtil.FoundRectangle blockutil$foundrectangle;
         DimensionTransition.PostDimensionTransition dimensiontransition$postdimensiontransition;
         if (optional.isPresent()) {
@@ -152,7 +156,7 @@ public class CeilandsPortalBlock extends Block implements Portal
             dimensiontransition$postdimensiontransition = DimensionTransition.PLAY_PORTAL_SOUND.then(p_351967_ -> p_351967_.placePortalTicket(blockpos));
         } else {
             Direction.Axis direction$axis = entity.level().getBlockState(pos1).getOptionalValue(AXIS).orElse(Direction.Axis.X);
-            Optional<BlockUtil.FoundRectangle> optional1 = level.getPortalForcer().createPortal(pos2, direction$axis);
+            Optional<BlockUtil.FoundRectangle> optional1 = forcer.createPortal(pos2, direction$axis);
             if (optional1.isEmpty()) {
                 Ceilands.LOGGER.error("Unable to create a portal, likely target out of worldborder");
                 return null;

@@ -17,4 +17,9 @@ public class ModSignBlockEntity extends SignBlockEntity
 	public BlockEntityType<?> getType() {
 		return CeilandsBlockEntities.CEILANDS_SIGN;
 	}
+	
+	@Override
+    public boolean isValidBlockState(BlockState $$0) {
+        return this.getType().isValid($$0);
+    }
 }
