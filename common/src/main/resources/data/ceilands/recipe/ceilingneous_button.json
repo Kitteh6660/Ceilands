@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "id": "ceilands:polished_ceilingneous"
+      "item": "ceilands:polished_ceilingneous"
     }
   ],
   "result": {

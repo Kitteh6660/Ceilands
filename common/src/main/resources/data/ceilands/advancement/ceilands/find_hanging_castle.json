@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "ceilands:hanging_castle"
+                "structures": "ceilands:hanging_castle"
               }
             }
           }

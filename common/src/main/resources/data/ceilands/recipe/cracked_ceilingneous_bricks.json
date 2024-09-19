@@ -5,5 +5,7 @@
   "ingredient": {
     "item": "ceilands:ceilingneous_bricks"
   },
-  "result": "ceilands:cracked_ceilingneous_bricks"
+  "result": {
+    "id": "ceilands:cracked_ceilingneous_bricks"
+  }
 }

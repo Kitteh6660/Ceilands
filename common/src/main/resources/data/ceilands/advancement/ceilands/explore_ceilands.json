@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ceilands:snow_roof"
+                "biomes": "ceilands:snow_roof"
               }
             }
           }
@@ -25,7 +25,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ceilands:inverted_peaks"
+                "biomes": "ceilands:inverted_peaks"
               }
             }
           }
@@ -41,7 +41,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ceilands:luzawood_forest"
+                "biomes": "ceilands:luzawood_forest"
               }
             }
           }
@@ -57,7 +57,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ceilands:topsy_forest"
+                "biomes": "ceilands:topsy_forest"
               }
             }
           }
@@ -73,7 +73,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ceilands:ocean_orbs"
+                "biomes": "ceilands:ocean_orbs"
               }
             }
           }
