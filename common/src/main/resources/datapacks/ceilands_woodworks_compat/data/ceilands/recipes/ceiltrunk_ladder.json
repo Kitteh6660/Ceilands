@@ -16,9 +16,9 @@
           "#": {
             "item": "ceilands:ceiltrunk_planks"
           },
-          "S": {
-            "item": "minecraft:stick"
-          }
+		  "X": {
+		    "tag": "ceilands:rods/wooden"
+		  }
         },
         "pattern": [
           "S S",

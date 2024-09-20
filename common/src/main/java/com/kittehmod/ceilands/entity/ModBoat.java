@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.Block;
 
 public class ModBoat extends Boat
 {
-	private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
+	private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModBoat.class, EntityDataSerializers.INT);
 
 	public ModBoat(EntityType<? extends ModBoat> entity, Level level) {
 		super(entity, level);
