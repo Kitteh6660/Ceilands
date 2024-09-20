@@ -20,7 +20,7 @@ public class VoidMixin
 	@Inject(method = "onBelowWorld()V", at = @At(value = "HEAD"), cancellable = true) 
 	private void injectOutOfWorld(CallbackInfo callback) {
 		Entity entity = ((Entity)(Object)this);
-		if (!entity.level().getGameRules().getBoolean(CeilandsGameRules.CEILANDS_VOID_TELEPORT)) {
+		if (!entity.level().getGameRules().getBoolean(CeilandsGameRules.CEILANDS_VOID_TELEPORT) || entity.level().isClientSide()) {
 			return;
 		}
 		MinecraftServer minecraftserver = ((ServerLevel)entity.level()).getServer();

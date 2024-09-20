@@ -11,6 +11,7 @@ import com.kittehmod.ceilands.registry.CeilandsBlockEntities;
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
 import com.kittehmod.ceilands.registry.CeilandsEntities;
 import com.kittehmod.ceilands.registry.CeilandsFeatures;
+import com.kittehmod.ceilands.registry.CeilandsGameRules;
 import com.kittehmod.ceilands.registry.CeilandsItems;
 import com.kittehmod.ceilands.registry.CeilandsPOIType;
 import com.kittehmod.ceilands.registry.CeilandsTrunkPlacerType;
@@ -35,7 +36,7 @@ public class CeilandsRegistry
 	public static final List<Pair<ResourceLocation, Block>> COMPAT_BLOCKS = new ArrayList();
 	public static final List<Pair<ResourceLocation, Item>> COMPAT_ITEMS = new ArrayList();
 	
-	private static boolean initializedTrunkPlacerTypes = false;
+	private static boolean initializedAdditional = false;
 	
 	@SubscribeEvent
 	public static void register(RegisterEvent event) {
@@ -222,13 +223,14 @@ public class CeilandsRegistry
 		event.register(Registries.POINT_OF_INTEREST_TYPE, registry -> {
 			registry.register(CeilandsPOIType.CEILANDS_PORTAL, CeilandsPOIType.CEILANDS_PORTAL_POI);
 		});
-		if (!initializedTrunkPlacerTypes) {
-			initializedTrunkPlacerTypes = true;
-			CeilandsRegistry.registerTrunkPlacerTypes();
+		if (!initializedAdditional) {
+			initializedAdditional = true;
+			CeilandsRegistry.registerAdditional();
 		}
 	}
 	
-	protected static void registerTrunkPlacerTypes() {
+	protected static void registerAdditional() {
+		CeilandsGameRules.setup();
 		Registry.register(BuiltInRegistries.TRUNK_PLACER_TYPE, ResourceLocation.fromNamespaceAndPath(Ceilands.MOD_ID, "ceiltrunk_trunk_placer"), CeilandsTrunkPlacerType.CEILTRUNK_TRUNK_PLACER);
 		Registry.register(BuiltInRegistries.TRUNK_PLACER_TYPE, ResourceLocation.fromNamespaceAndPath(Ceilands.MOD_ID, "large_ceiltrunk_trunk_placer"), CeilandsTrunkPlacerType.LARGE_CEILTRUNK_TRUNK_PLACER);
 		Registry.register(BuiltInRegistries.TRUNK_PLACER_TYPE, ResourceLocation.fromNamespaceAndPath(Ceilands.MOD_ID, "luzawood_trunk_placer"), CeilandsTrunkPlacerType.LUZAWOOD_TRUNK_PLACER);

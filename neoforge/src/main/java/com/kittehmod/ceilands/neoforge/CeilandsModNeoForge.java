@@ -37,7 +37,6 @@ public class CeilandsModNeoForge
 		bus.addListener(this::setupCommon);
 		hookCompats(bus);
 		bus.addListener(this::setupDataPacks);
-		CeilandsGameRules.setup();
 	}
 
 	private void hookCompats(IEventBus bus) {
