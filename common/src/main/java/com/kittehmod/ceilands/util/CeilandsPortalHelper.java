@@ -171,8 +171,9 @@ public class CeilandsPortalHelper
         }
         else {
             WorldBorder border = level.getWorldBorder();
+            int offset = destinationIsCeilands ? 0 : -64;
             double diff = DimensionType.getTeleportationScale(entity.getLevel().dimensionType(), level.dimensionType());
-            BlockPos blockpos = border.clampToBounds(entity.getX() * diff, entity.getY(), entity.getZ() * diff);
+            BlockPos blockpos = border.clampToBounds(entity.getX() * diff, entity.getY() + offset, entity.getZ() * diff);
             return this.getOrMakePortal(entity, blockpos, border).map((result) -> {
                 BlockState blockstate = entity.level.getBlockState(entity.portalEntrancePos);
                 Direction.Axis axis;
@@ -207,12 +208,15 @@ public class CeilandsPortalHelper
     }
     
     public static void attemptTeleport(ServerLevel level, Vec3 pos, Entity entity) {
+		if (entity.isOnPortalCooldown()) {
+			return;
+		}
     	if (entity instanceof ServerPlayer) {
     		ServerPlayer player = (ServerPlayer)entity;
+    		player.setPortalCooldown();
     		float yRot = player.getYRot();
     		float xRot = player.getXRot();
     		player.teleportTo(level, pos.x, pos.y, pos.z, yRot, xRot);
-    		player.setPortalCooldown();
     		return;
     	}
 		Entity newEntity = entity.getType().create(level);

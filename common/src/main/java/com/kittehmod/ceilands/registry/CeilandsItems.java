@@ -1,18 +1,32 @@
 package com.kittehmod.ceilands.registry;
 
-import com.kittehmod.ceilands.entity.ModBoat;
+import com.kittehmod.ceilands.entity.vehicle.ModBoat;
+import com.kittehmod.ceilands.item.CastleLordArmorItem;
 import com.kittehmod.ceilands.item.CeilandsPortalActivatorItem;
 import com.kittehmod.ceilands.item.ModBoatItem;
 
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.EquipmentSlot.Type;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.SpawnEggItem;
 
 public class CeilandsItems
 {
     public static final Item CEILANDS_PORTAL_ACTIVATOR = new CeilandsPortalActivatorItem(new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_TOOLS));
 
+    public static final Item CASTLE_LORD_REGALIA_FRAGMENTS = new Item(new Item.Properties().rarity(Rarity.RARE).tab(CreativeModeTab.TAB_MISC));
+
+    public static final Item CASTLE_LORD_CROWN = new CastleLordArmorItem(EquipmentSlot.HEAD, new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(CreativeModeTab.TAB_COMBAT));
+    public static final Item CASTLE_LORD_CHESTPLATE = new CastleLordArmorItem(EquipmentSlot.CHEST, new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(CreativeModeTab.TAB_COMBAT));
+    public static final Item CASTLE_LORD_LEGGINGS = new CastleLordArmorItem(EquipmentSlot.LEGS, new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(CreativeModeTab.TAB_COMBAT));
+    public static final Item CASTLE_LORD_BOOTS = new CastleLordArmorItem(EquipmentSlot.FEET, new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(CreativeModeTab.TAB_COMBAT));
+
+    public static final Item CASTLE_LORD_SPAWN_EGG = new SpawnEggItem(CeilandsEntities.CASTLE_LORD, 0x808080, 0x7DD880, new Item.Properties().tab(CreativeModeTab.TAB_MISC));
+    
 	public static final Item CEILINGNEOUS = new BlockItem(CeilandsBlocks.CEILINGNEOUS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 	public static final Item CEILINGNEOUS_STAIRS = new BlockItem(CeilandsBlocks.CEILINGNEOUS_STAIRS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 	public static final Item CEILINGNEOUS_SLAB = new BlockItem(CeilandsBlocks.CEILINGNEOUS_SLAB, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
@@ -34,6 +48,24 @@ public class CeilandsItems
 	public static final Item CEILINGNEOUS_BUTTON = new BlockItem(CeilandsBlocks.CEILINGNEOUS_BUTTON, new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE));
 	public static final Item CEILINGNEOUS_PRESSURE_PLATE = new BlockItem(CeilandsBlocks.CEILINGNEOUS_PRESSURE_PLATE, new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE));
 
+	public static final Item ROOFSHALE = new BlockItem(CeilandsBlocks.ROOFSHALE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item ROOFSHALE_STAIRS = new BlockItem(CeilandsBlocks.ROOFSHALE_STAIRS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item ROOFSHALE_SLAB = new BlockItem(CeilandsBlocks.ROOFSHALE_SLAB, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item ROOFSHALE_WALL = new BlockItem(CeilandsBlocks.ROOFSHALE_WALL, new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
+
+	public static final Item POLISHED_ROOFSHALE = new BlockItem(CeilandsBlocks.POLISHED_ROOFSHALE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item POLISHED_ROOFSHALE_STAIRS = new BlockItem(CeilandsBlocks.POLISHED_ROOFSHALE_STAIRS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item POLISHED_ROOFSHALE_SLAB = new BlockItem(CeilandsBlocks.POLISHED_ROOFSHALE_SLAB, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item POLISHED_ROOFSHALE_WALL = new BlockItem(CeilandsBlocks.POLISHED_ROOFSHALE_WALL, new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
+
+	public static final Item ROOFSHALE_BRICKS = new BlockItem(CeilandsBlocks.ROOFSHALE_BRICKS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item ROOFSHALE_BRICK_STAIRS = new BlockItem(CeilandsBlocks.ROOFSHALE_BRICK_STAIRS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item ROOFSHALE_BRICK_SLAB = new BlockItem(CeilandsBlocks.ROOFSHALE_BRICK_SLAB, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item ROOFSHALE_BRICK_WALL = new BlockItem(CeilandsBlocks.ROOFSHALE_BRICK_WALL, new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
+	
+	public static final Item CHISELED_ROOFSHALE = new BlockItem(CeilandsBlocks.CHISELED_ROOFSHALE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item CHISELED_ROOFSHALE_BRICKS = new BlockItem(CeilandsBlocks.CHISELED_ROOFSHALE_BRICKS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	
 	public static final Item CEILINGNEOUS_COAL_ORE = new BlockItem(CeilandsBlocks.CEILINGNEOUS_COAL_ORE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 	public static final Item CEILINGNEOUS_COPPER_ORE = new BlockItem(CeilandsBlocks.CEILINGNEOUS_COPPER_ORE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 	public static final Item CEILINGNEOUS_IRON_ORE = new BlockItem(CeilandsBlocks.CEILINGNEOUS_IRON_ORE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));

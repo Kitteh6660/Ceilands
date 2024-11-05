@@ -1,0 +1,39 @@
+{
+  "parent": "ceilands:ceilands/find_ocean_cube",
+  "criteria": {
+    "loot_ocean_cube_major": {
+      "conditions": {
+        "loot_table": "ceilands:chests/ocean_cube_major"
+      },
+      "trigger": "minecraft:player_generates_container_loot"
+    },
+    "loot_ocean_cube_minor": {
+      "conditions": {
+        "loot_table": "ceilands:chests/ocean_cube_minor"
+      },
+      "trigger": "minecraft:player_generates_container_loot"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "frame": "task",
+    "hidden": false,
+    "show_toast": true,
+    "icon": {
+      "item": "minecraft:chest"
+    },
+    "description": {
+      "translate": "advancements.ceilands.loot_ocean_cube.description"
+    },
+    "title": {
+      "translate": "advancements.ceilands.loot_ocean_cube.title"
+    }
+  },
+  "requirements": [
+    [
+      "loot_ocean_cube_major",
+      "loot_ocean_cube_minor"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

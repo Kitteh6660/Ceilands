@@ -1,4 +1,4 @@
-package com.kittehmod.ceilands.entity;
+package com.kittehmod.ceilands.entity.vehicle;
 
 import org.jetbrains.annotations.Nullable;
 

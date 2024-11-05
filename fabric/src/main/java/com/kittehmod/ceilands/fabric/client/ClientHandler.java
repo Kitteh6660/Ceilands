@@ -1,6 +1,8 @@
 package com.kittehmod.ceilands.fabric.client;
 
 import com.kittehmod.ceilands.client.ClientBase;
+import com.kittehmod.ceilands.client.entity.model.CastleLordModel;
+import com.kittehmod.ceilands.client.renderer.CastleLordRenderer;
 import com.kittehmod.ceilands.client.renderer.CeilandsBoatRenderer;
 import com.kittehmod.ceilands.registry.CeilandsBlockEntities;
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
@@ -10,6 +12,7 @@ import com.kittehmod.ceilands.registry.CeilandsItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
@@ -25,8 +28,13 @@ public class ClientHandler implements ClientModInitializer
 		if (FabricLoader.getInstance().isModLoaded("connector")) {
 			return;
 		}
+	    EntityModelLayerRegistry.registerModelLayer(CastleLordRenderer.CASTLE_LORD_MODEL_LAYER, CastleLordModel::getBaseLayerDefinition);
+	    EntityModelLayerRegistry.registerModelLayer(CastleLordRenderer.CASTLE_LORD_MODEL_INNER_ARMOR_LAYER, CastleLordModel::getInnerLayerDefinition);
+	    EntityModelLayerRegistry.registerModelLayer(CastleLordRenderer.CASTLE_LORD_MODEL_OUTER_ARMOR_LAYER, CastleLordModel::getOuterLayerDefinition);
+	    
 		BlockEntityRenderers.register(CeilandsBlockEntities.CEILANDS_SIGN, SignRenderer::new);
 		
+		EntityRendererRegistry.register(CeilandsEntities.CASTLE_LORD, CastleLordRenderer::new);
 		EntityRendererRegistry.register(CeilandsEntities.CEILANDS_BOAT, (boat) -> { return new CeilandsBoatRenderer(boat, false); } );
 		EntityRendererRegistry.register(CeilandsEntities.CEILANDS_CHEST_BOAT, (boat) -> { return new CeilandsBoatRenderer(boat, true); } );
 		

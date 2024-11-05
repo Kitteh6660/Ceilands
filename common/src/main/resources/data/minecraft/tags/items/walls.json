@@ -3,6 +3,9 @@
   "values": [
     "ceilands:ceilingneous_wall",
     "ceilands:polished_ceilingneous_wall",
-    "ceilands:ceilingneous_brick_wall"
+    "ceilands:ceilingneous_brick_wall",
+    "ceilands:roofshale_wall",
+    "ceilands:polished_roofshale_wall",
+    "ceilands:roofshale_brick_wall"
   ]
 }

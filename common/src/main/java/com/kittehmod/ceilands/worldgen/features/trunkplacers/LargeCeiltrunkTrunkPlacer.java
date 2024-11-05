@@ -81,7 +81,7 @@ public class LargeCeiltrunkTrunkPlacer extends TrunkPlacer
 			}
 		}
 
-		return ImmutableList.of(new FoliagePlacer.FoliageAttachment(pos.below(height), -1, true));
+		return height >= 3 ? ImmutableList.of(new FoliagePlacer.FoliageAttachment(pos.below(height), -1, true)) : ImmutableList.of();
 	}
 
 	private void placeLogIfFreeWithOffset(LevelSimulatedReader reader, BiConsumer<BlockPos, BlockState> consumer, RandomSource random, BlockPos.MutableBlockPos pos$mutable, TreeConfiguration config, BlockPos pos, int x, int y, int z) {

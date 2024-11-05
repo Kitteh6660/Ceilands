@@ -1,0 +1,47 @@
+{
+  "parent": "ceilands:ceilands/trade_in_ceilands",
+  "criteria": {
+    "trade_in_ceilands": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "dimension": "ceilands:the_ceilands",
+                "position": {
+                  "y": {
+                    "max": 1.0
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:villager_trade"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "frame": "goal",
+    "hidden": false,
+    "show_toast": true,
+    "description": {
+      "translate": "advancements.ceilands.trade_in_ceilands_at_min_height.description"
+    },
+    "icon": {
+      "item": "minecraft:emerald_block"
+    },
+    "title": {
+      "translate": "advancements.ceilands.trade_in_ceilands_at_min_height.title"
+    }
+  },
+  "requirements": [
+    [
+      "trade_in_ceilands"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

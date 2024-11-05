@@ -12,8 +12,6 @@ public class CeilandsModFabric implements ModInitializer
 		if (FabricLoader.getInstance().isModLoaded("connector")) {
 			return;
 		}
-		CeilandsRegistry.registerPrimary();
-		CeilandsRegistry.registerSecondary();
-		CeilandsGameRules.setup();
+		CeilandsRegistry.initializeRegistry();
 	}
 }

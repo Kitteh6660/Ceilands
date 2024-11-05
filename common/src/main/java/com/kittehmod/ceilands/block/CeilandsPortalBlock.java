@@ -8,6 +8,7 @@ import com.kittehmod.ceilands.util.CeilandsPortalHelper;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.Direction.AxisDirection;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceKey;
@@ -31,6 +32,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.portal.PortalInfo;
 import net.minecraft.world.level.portal.PortalShape;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -103,7 +105,6 @@ public class CeilandsPortalBlock extends Block
 			else {
 				entity.portalTime = 0;
 				entity.portalEntrancePos = pos.immutable();
-				entity.setPortalCooldown();
 				handleCeilandsPortal(state, level, pos, entity);
 			}
 		}

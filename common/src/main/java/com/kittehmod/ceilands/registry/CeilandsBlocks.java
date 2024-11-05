@@ -39,6 +39,7 @@ public class CeilandsBlocks
 {
 	public static final Block CEILANDS_PORTAL = new CeilandsPortalBlock(BlockBehaviour.Properties.of(Material.PORTAL).strength(-1.0F, 0.0F).lightLevel((light) -> { return 8; } ).noCollission().noOcclusion());
 	
+	// Ceilingneous
 	public static final Block CEILINGNEOUS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
 	public static final Block CEILINGNEOUS_STAIRS = new StairBlock(CEILINGNEOUS.defaultBlockState(), BlockBehaviour.Properties.copy(CEILINGNEOUS)) {};
 	public static final Block CEILINGNEOUS_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(CEILINGNEOUS));
@@ -60,6 +61,26 @@ public class CeilandsBlocks
 	public static final Block CEILINGNEOUS_BUTTON = new StoneButtonBlock(BlockBehaviour.Properties.of(Material.STONE).noCollission().strength(0.5F).sound(SoundType.STONE).noCollission()) {};
 	public static final Block CEILINGNEOUS_PRESSURE_PLATE = new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(0.5F).sound(SoundType.STONE)) {};
 	
+	// Roofshale
+	public static final Block ROOFSHALE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
+	public static final Block ROOFSHALE_STAIRS = new StairBlock(ROOFSHALE.defaultBlockState(), BlockBehaviour.Properties.copy(ROOFSHALE)) {};
+	public static final Block ROOFSHALE_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(ROOFSHALE));
+	public static final Block ROOFSHALE_WALL = new WallBlock(BlockBehaviour.Properties.copy(ROOFSHALE));
+
+	public static final Block POLISHED_ROOFSHALE = new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE));
+	public static final Block POLISHED_ROOFSHALE_STAIRS = new StairBlock(POLISHED_ROOFSHALE.defaultBlockState(), BlockBehaviour.Properties.copy(POLISHED_ROOFSHALE)) {};
+	public static final Block POLISHED_ROOFSHALE_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(POLISHED_ROOFSHALE));
+	public static final Block POLISHED_ROOFSHALE_WALL = new WallBlock(BlockBehaviour.Properties.copy(POLISHED_ROOFSHALE));
+	
+	public static final Block ROOFSHALE_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE));
+	public static final Block ROOFSHALE_BRICK_STAIRS = new StairBlock(ROOFSHALE_BRICKS.defaultBlockState(), BlockBehaviour.Properties.copy(ROOFSHALE_BRICKS)) {};
+	public static final Block ROOFSHALE_BRICK_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(ROOFSHALE_BRICKS));
+	public static final Block ROOFSHALE_BRICK_WALL = new WallBlock(BlockBehaviour.Properties.copy(ROOFSHALE_BRICKS));
+
+	public static final Block CHISELED_ROOFSHALE = new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE));
+	public static final Block CHISELED_ROOFSHALE_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE));
+
+	// Ore Blocks
 	public static final Block CEILINGNEOUS_COAL_ORE = new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(0, 2));
 	public static final Block CEILINGNEOUS_COPPER_ORE = new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
 	public static final Block CEILINGNEOUS_IRON_ORE = new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
@@ -69,6 +90,7 @@ public class CeilandsBlocks
 	public static final Block CEILINGNEOUS_LAPIS_ORE = new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(2, 5));
 	public static final Block CEILINGNEOUS_EMERALD_ORE = new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(3, 7));
 	
+	// Ceiltrunk
 	public static final ModLogBlock CEILTRUNK_LOG = new ModLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)) {};
 	public static final Block STRIPPED_CEILTRUNK_LOG = new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)) {};
 	public static final ModLogBlock CEILTRUNK_WOOD = new ModLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)) {};
@@ -87,6 +109,7 @@ public class CeilandsBlocks
 	public static final Block CEILTRUNK_SIGN = new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.CEILTRUNK);
 	public static final Block CEILTRUNK_WALL_SIGN = new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.CEILTRUNK);
 	
+	// Luzawood
 	public static final Block LUZAWOOD_LOG = new ModLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)) {};
 	public static final Block STRIPPED_LUZAWOOD_LOG = new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)) {};
 	public static final Block LUZAWOOD_WOOD = new ModLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)) {};

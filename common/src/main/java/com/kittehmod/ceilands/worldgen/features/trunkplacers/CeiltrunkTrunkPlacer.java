@@ -37,10 +37,12 @@ public class CeiltrunkTrunkPlacer extends TrunkPlacer
 		if (reader.isStateAtPosition(pos.above(), (blockstate) -> blockstate.getBlock() != Blocks.GRASS_BLOCK)) {
 			setDirtAt(reader, consumer, random, pos.above(), config);
 		}
+		int logPlacedCount = 0;
 		for(int i = 0; i < height; ++i) {
-			this.placeLog(reader, consumer, random, pos.below(i), config);
+			if (this.placeLog(reader, consumer, random, pos.below(i), config)) {
+				logPlacedCount++;
+			}
 		}
-
-		return ImmutableList.of(new FoliagePlacer.FoliageAttachment(pos.below(height - 2), 1, false));
+		return logPlacedCount > 0 ? ImmutableList.of(new FoliagePlacer.FoliageAttachment(pos.below(height - 2), 1, false)) : ImmutableList.of();
    }
 }

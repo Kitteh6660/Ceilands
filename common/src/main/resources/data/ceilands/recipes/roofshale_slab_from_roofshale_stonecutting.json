@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ceilands:roofshale"
+  },
+  "result": "ceilands:roofshale_slab",
+  "count": 2
+}
