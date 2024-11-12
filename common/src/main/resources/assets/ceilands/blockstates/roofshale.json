@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "ceilands:block/roofshale"
+      },
+      {
+        "model": "ceilands:block/roofshale_mirrored"
+      },
+      {
+        "model": "ceilands:block/roofshale",
+        "y": 180
+      },
+      {
+        "model": "ceilands:block/roofshale_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

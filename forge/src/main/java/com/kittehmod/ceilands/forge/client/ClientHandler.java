@@ -2,6 +2,8 @@ package com.kittehmod.ceilands.forge.client;
 
 import com.kittehmod.ceilands.Ceilands;
 import com.kittehmod.ceilands.client.ClientBase;
+import com.kittehmod.ceilands.client.entity.model.CastleLordModel;
+import com.kittehmod.ceilands.client.renderer.CastleLordRenderer;
 import com.kittehmod.ceilands.client.renderer.CeilandsBoatRenderer;
 import com.kittehmod.ceilands.forge.compat.TwilightForestCompat;
 import com.kittehmod.ceilands.forge.compat.WoodworksCompat;
@@ -25,6 +27,7 @@ import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.client.event.RegisterDimensionSpecialEffectsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -39,6 +42,7 @@ public class ClientHandler
 		BlockEntityRenderers.register(CeilandsBlockEntities.CEILANDS_SIGN, SignRenderer::new);
 		BlockEntityRenderers.register(CeilandsBlockEntities.CEILANDS_HANGING_SIGN, HangingSignRenderer::new);
 		
+		EntityRenderers.register(CeilandsEntities.CASTLE_LORD, CastleLordRenderer::new);
 		EntityRenderers.register(CeilandsEntities.CEILANDS_BOAT, (boat) -> { return new CeilandsBoatRenderer(boat, false); } );
 		EntityRenderers.register(CeilandsEntities.CEILANDS_CHEST_BOAT, (boat) -> { return new CeilandsBoatRenderer(boat, true); } );
 		
@@ -58,6 +62,13 @@ public class ClientHandler
 			ItemBlockRenderTypes.setRenderLayer(ForgeRegistries.BLOCKS.getValue(WoodworksCompat.LUZAWOOD_LADDER_RES), RenderType.cutout());
 			ItemBlockRenderTypes.setRenderLayer(ForgeRegistries.BLOCKS.getValue(WoodworksCompat.LUZAWOOD_LEAF_PILE_RES), RenderType.cutout());
 		}
+	}
+	
+	@SubscribeEvent
+	public static void registerEntityLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+	    event.registerLayerDefinition(CastleLordRenderer.CASTLE_LORD_MODEL_LAYER, CastleLordModel::getBaseLayerDefinition);
+	    event.registerLayerDefinition(CastleLordRenderer.CASTLE_LORD_MODEL_INNER_ARMOR_LAYER, CastleLordModel::getInnerLayerDefinition);
+	    event.registerLayerDefinition(CastleLordRenderer.CASTLE_LORD_MODEL_OUTER_ARMOR_LAYER, CastleLordModel::getOuterLayerDefinition);
 	}
 	
 	@SubscribeEvent

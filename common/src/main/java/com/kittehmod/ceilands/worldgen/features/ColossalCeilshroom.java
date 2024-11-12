@@ -33,6 +33,9 @@ public class ColossalCeilshroom extends Feature<BlockStateConfiguration>
 				break;
 			}
 		}
+		if (!worldgenlevel.getBlockState(blockpos.below()).is(Blocks.AIR)) {
+			shouldPlace = false;
+		}
 		if (!shouldPlace) {
 			return false; // Cancel.
 		}

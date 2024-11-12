@@ -5,7 +5,7 @@
   "temperature": 0.6,
   "temperature_modifier": "none",
   "downfall": 0.6,
-  "creature_spawn_probability": 0.5,
+  "creature_spawn_probability": 0.6,
   "effects": {
     "fog_color": 15724543,
     "foliage_color": 54043536,
@@ -67,6 +67,7 @@
       "ceilands:ore_lapis_ceilands",
       "ceilands:ore_lapis_ceilands_buried",
       "ceilands:ore_copper_ceilands",
+      "ceilands:ore_roofshale",
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
@@ -78,6 +79,7 @@
       "minecraft:spring_lava"
     ],
     [
+      "ceilands:structure_chains",
       "minecraft:glow_lichen",
       "minecraft:patch_grass_badlands",
       "minecraft:patch_dead_bush_badlands",

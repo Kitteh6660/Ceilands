@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "ceilands:block/polished_roofshale",
+    "side": "ceilands:block/polished_roofshale",
+    "top": "ceilands:block/polished_roofshale"
+  }
+}

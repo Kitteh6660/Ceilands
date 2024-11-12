@@ -9,6 +9,7 @@ import com.kittehmod.ceilands.forge.compat.FarmersDelightCompat;
 import com.kittehmod.ceilands.forge.compat.TwilightForestCompat;
 import com.kittehmod.ceilands.forge.compat.WoodworksCompat;
 import com.kittehmod.ceilands.forge.util.CreativeTabHelper;
+import com.kittehmod.ceilands.registry.CeilandsGameRules;
 
 import net.minecraft.SharedConstants;
 import net.minecraft.client.renderer.Sheets;
@@ -43,6 +44,7 @@ public class CeilandsModForge {
 			bus.addListener(this::setupClient);
 		}
 		bus.addListener(this::setupDataPacks);
+		CeilandsGameRules.setup();
 	}
 
 	private void hookCompats(IEventBus bus) {

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "roofshale_stairs",
+  "key": {
+    "#": {
+      "item": "ceilands:polished_roofshale"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ceilands:polished_roofshale_stairs"
+  }
+}

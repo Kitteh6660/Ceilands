@@ -35,7 +35,7 @@ public class CeilandsPortalActivatorItem extends Item
 		if (!level.isClientSide()) {
 			if (inPortalDimension(level)) {
 				//optional = net.minecraftforge.event.ForgeEventFactory.onTrySpawnPortal(level, pos, optional);
-				if (isPortal(level, pos, player.getDirection().getClockWise(), true)) {
+				if (isPortal(level, pos, player.getDirection().getClockWise(), true) || isPortal(level, pos, player.getDirection(), true)) {
 					level.playSound(player, pos, SoundEvents.FLINTANDSTEEL_USE, SoundSource.BLOCKS, 1.0F, level.getRandom().nextFloat() * 0.4F + 0.8F);
 					return InteractionResult.SUCCESS;
 				}

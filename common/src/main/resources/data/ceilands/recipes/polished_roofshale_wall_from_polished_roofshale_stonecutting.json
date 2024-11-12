@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ceilands:polished_roofshale"
+  },
+  "result": "ceilands:polished_roofshale_wall",
+  "count": 1
+}

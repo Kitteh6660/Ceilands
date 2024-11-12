@@ -3,8 +3,8 @@ package com.kittehmod.ceilands.item;
 import java.util.List;
 import java.util.function.Predicate;
 
-import com.kittehmod.ceilands.entity.ModBoat;
-import com.kittehmod.ceilands.entity.ModChestBoat;
+import com.kittehmod.ceilands.entity.vehicle.ModBoat;
+import com.kittehmod.ceilands.entity.vehicle.ModChestBoat;
 
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;

@@ -1,0 +1,45 @@
+{
+  "parent": "ceilands:ceilands/kill_castle_lord",
+  "criteria": {
+    "castle_lord_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [ "ceilands:castle_lord_crown" ]
+          },
+          {
+            "items": [ "ceilands:castle_lord_chestplate" ]
+          },
+          {
+            "items": [ "ceilands:castle_lord_leggings" ]
+          },
+          {
+            "items": [ "ceilands:castle_lord_boots" ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "frame": "challenge",
+    "hidden": false,
+    "show_toast": true,
+    "icon": {
+      "item": "ceilands:castle_lord_chestplate"
+    },
+    "description": {
+      "translate": "advancements.ceilands.castle_lord_armor.description"
+    },
+    "title": {
+      "translate": "advancements.ceilands.castle_lord_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "castle_lord_armor"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,177 @@
+{
+  "name": "ceilands:zombie/ceillage_ceiltrunk_bridges_and_houses",
+  "fallback": "ceilands:ceillage/ceiltrunk/bridge_fence",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_straight_short",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_straight",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_straight_long",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_corner",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_cross",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_junction",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_stairs_short",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_stairs",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/small_house_1",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/small_house_2",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/small_house_3",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/medium_house_1",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/medium_house_2",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/butcher_shop",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/cleric_hut",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/library",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/fletcher_site",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/mason_site",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/houses/smithy",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    }
+  ]
+}

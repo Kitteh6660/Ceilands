@@ -5,7 +5,7 @@
   "temperature": 1.0,
   "temperature_modifier": "none",
   "downfall": 0.6,
-  "creature_spawn_probability": 0.7,
+  "creature_spawn_probability": 0.9,
   "effects": {
     "fog_color": 12644288,
     "foliage_color": 13631232,
@@ -63,6 +63,7 @@
       "ceilands:ore_lapis_ceilands",
       "ceilands:ore_lapis_ceilands_buried",
       "ceilands:ore_copper_ceilands",
+      "ceilands:ore_roofshale",
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
@@ -74,6 +75,7 @@
       "minecraft:spring_lava"
     ],
     [
+      "ceilands:structure_chains",
       "ceilands:ceiling_moss_patch",
       "ceilands:colossal_ceilshroom",
       "ceilands:colossal_ceiltrunk",
@@ -112,7 +114,14 @@
         "weight": 5
       }
     ],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minecraft:frog",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 10
+      }
+    ],
     "misc": [],
     "monster": [
       {

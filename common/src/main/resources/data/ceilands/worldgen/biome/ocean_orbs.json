@@ -64,6 +64,7 @@
       "ceilands:ore_lapis_ceilands",
       "ceilands:ore_lapis_ceilands_buried",
       "ceilands:ore_copper_ceilands",
+      "ceilands:ore_roofshale",
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
@@ -75,6 +76,7 @@
       "minecraft:spring_lava"
     ],
     [
+      "ceilands:structure_chains",
       "minecraft:glow_lichen",
       "minecraft:patch_grass_badlands",
       "minecraft:patch_dead_bush_badlands",
@@ -192,15 +194,22 @@
         "maxCount": 3,
         "minCount": 2,
         "weight": 4
-      },
+      }
+    ],
+    "water_creature": [
       {
         "type": "minecraft:squid",
         "maxCount": 6,
         "minCount": 4,
         "weight": 3
-      }
-    ],
-    "water_creature": []
+      },
+	  {
+	    "type": "minecraft:dolphin",
+	    "maxCount": 6,
+	    "minCount": 4,
+	    "weight": 3
+	  }
+	]
   },
   "spawn_costs": {}
 }

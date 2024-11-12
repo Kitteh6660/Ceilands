@@ -51,7 +51,6 @@ public class CeilingSaplingBlock extends SaplingBlock
 		} else {
 			this.treeGrower.growTree(level, level.getChunkSource().getGenerator(), pos, state, random);
 		}
-
 	}
 
 	@Override

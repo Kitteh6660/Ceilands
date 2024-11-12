@@ -15,23 +15,28 @@ import org.spongepowered.asm.mixin.injection.At.Shift;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.kittehmod.ceilands.registry.CeilandsDimension;
+import com.kittehmod.ceilands.registry.CeilandsGameRules;
 
 import org.spongepowered.asm.mixin.injection.At;
 
 import net.minecraft.server.commands.TeleportCommand;
 
-@Mixin(Entity.class)
+@Mixin(LivingEntity.class)
 public class VoidMixin 
 {
-	@Inject(method = "checkBelowWorld()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;onBelowWorld()V", shift = Shift.BEFORE), cancellable = true) 
-	private void injectCheckBelowWorld(CallbackInfo callback) {
+	@Inject(method = "onBelowWorld()V", at = @At(value = "HEAD"), cancellable = true) 
+	private void injectOutOfWorld(CallbackInfo callback) {
 		Entity entity = ((Entity)(Object)this);
+		if (!entity.level().getGameRules().getBoolean(CeilandsGameRules.CEILANDS_VOID_TELEPORT)) {
+			return;
+		}
 		if ((!entity.level().isClientSide()) && entity.level().dimension() == CeilandsDimension.CEILANDS && entity.canChangeDimensions()) {
 			MinecraftServer minecraftserver = ((ServerLevel)entity.level()).getServer();
 			ServerLevel destinationLevel = minecraftserver.getLevel(Level.OVERWORLD);
 			int x = (int)entity.position().x();
 			int z = (int)entity.position().z();
 			entity.teleportTo(destinationLevel, entity.getX(), destinationLevel.getMaxBuildHeight(), entity.getZ(), null, entity.getYRot(), entity.getXRot());
+			callback.cancel();
 		}
 	}
 }

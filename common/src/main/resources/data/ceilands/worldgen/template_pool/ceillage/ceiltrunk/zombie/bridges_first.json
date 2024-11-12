@@ -1,0 +1,33 @@
+{
+  "name": "ceilands:zombie/ceillage_ceiltrunk_bridges",
+  "fallback": "ceilands:ceillage/ceiltrunk/zombie/bridge_fence",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_straight_short",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_straight",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/ceiltrunk/zombie/bridge_long",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_ceiltrunk"
+      }
+    }
+  ]
+}

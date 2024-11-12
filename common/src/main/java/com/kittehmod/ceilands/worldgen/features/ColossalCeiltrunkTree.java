@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
@@ -29,6 +30,7 @@ public class ColossalCeiltrunkTree extends Feature<BlockStateConfiguration>
 		RandomSource randomsource = context.random();
 		WorldGenLevel worldgenlevel = context.level();
 		boolean foundSpace = false;
+		boolean isOKToPutLog = false;
 		// Push the huge Ceiltrunk tree down to find space.
 		for (int i = 1; i < 6; i++) {
 			if (worldgenlevel.getBlockState(blockpos.below(i)).getBlock() != Blocks.AIR && !worldgenlevel.getBlockState(blockpos.below(i)).is(BlockTags.CAVE_VINES)) {
@@ -68,10 +70,23 @@ public class ColossalCeiltrunkTree extends Feature<BlockStateConfiguration>
 		for (int trunkY = 0; trunkY < trunkHeight; trunkY++) {
 			for (int trunkX = -trunkRadius; trunkX < trunkRadius; trunkX++) {
 				for (int trunkZ = -trunkRadius; trunkZ < trunkRadius; trunkZ++) {
-					if ((trunkX > -trunkRadius && trunkX < trunkRadius - 1) || (trunkZ > -trunkRadius && trunkZ < trunkRadius - 1)) {
-						if (worldgenlevel.getBlockState(blockpos.below(trunkY).east(trunkX).south(trunkZ)).getBlock() == Blocks.AIR || worldgenlevel.getBlockState(blockpos.below(trunkY).east(trunkX).south(trunkZ)).is(BlockTags.CAVE_VINES) || worldgenlevel.getBlockState(blockpos.below(trunkY).east(trunkX).south(trunkZ)).is(CeilandsBlocks.CEILTRUNK_LEAVES)) {
-							this.setBlock(worldgenlevel, blockpos.below(trunkY).east(trunkX).south(trunkZ), CeilandsBlocks.CEILTRUNK_LOG.defaultBlockState());							
-						}
+					isOKToPutLog = false;
+					// Round out the corners.
+					if ((trunkX == -trunkRadius + 1 || trunkX == trunkRadius - 2) && (trunkZ == -trunkRadius + 1 || trunkZ == trunkRadius - 2)) {
+						isOKToPutLog = true;
+					}
+					else {
+						isOKToPutLog = trunkRadius <= 3;
+					}
+					if ((trunkX > -trunkRadius + 1 && trunkX < trunkRadius - 2) || (trunkZ > -trunkRadius + 1 && trunkZ < trunkRadius - 2)) {
+						isOKToPutLog = true;
+					}
+					if (!isOKToPutLog) {
+						continue;
+					}
+					// Put the trunk.
+					if (worldgenlevel.getBlockState(blockpos.below(trunkY).east(trunkX).south(trunkZ)).getBlock() == Blocks.AIR || worldgenlevel.getBlockState(blockpos.below(trunkY).east(trunkX).south(trunkZ)).is(BlockTags.CAVE_VINES) || worldgenlevel.getBlockState(blockpos.below(trunkY).east(trunkX).south(trunkZ)).is(CeilandsBlocks.CEILTRUNK_LEAVES)) {
+						this.setBlock(worldgenlevel, blockpos.below(trunkY).east(trunkX).south(trunkZ), CeilandsBlocks.CEILTRUNK_LOG.defaultBlockState());							
 					}
 				}
 			}

@@ -1,4 +1,6 @@
 {
+  "name": "ceilands:ceilands_pillager_outpost_features",
+  "fallback": "minecraft:empty",
   "elements": [
     {
       "element": {

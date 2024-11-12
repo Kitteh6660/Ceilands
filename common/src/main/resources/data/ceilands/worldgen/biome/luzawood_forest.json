@@ -5,7 +5,7 @@
   "temperature": 0.8,
   "temperature_modifier": "none",
   "downfall": 0.6,
-  "creature_spawn_probability": 0.4,
+  "creature_spawn_probability": 0.9,
   "effects": {
     "fog_color": 13027071,
     "foliage_color": 6734847,
@@ -64,6 +64,7 @@
       "ceilands:ore_lapis_ceilands",
       "ceilands:ore_lapis_ceilands_buried",
       "ceilands:ore_copper_ceilands",
+      "ceilands:ore_roofshale",
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
@@ -75,6 +76,7 @@
       "minecraft:spring_lava"
     ],
     [
+      "ceilands:structure_chains",
       "ceilands:flower_luzawood_forest",
       "ceilands:patch_grass_luzawood",
       "ceilands:patch_froglight",
@@ -148,7 +150,7 @@
         "maxCount": 1,
         "minCount": 1,
         "weight": 1
-      },
+      }
     ],
     "misc": [],
     "monster": [
