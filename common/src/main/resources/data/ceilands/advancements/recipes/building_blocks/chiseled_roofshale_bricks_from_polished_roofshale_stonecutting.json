@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "ceilands:roofshale_bricks"
+              "ceilands:polished_roofshale"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ceilands:chiseled_roofshale_from_roofshale_bricks_stonecutting"
+        "recipe": "ceilands:chiseled_roofshale_bricks_from_polished_roofshale_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ceilands:chiseled_roofshale_from_roofshale_bricks_stonecutting"
+      "ceilands:chiseled_roofshale_bricks_from_polished_roofshale_stonecutting"
     ]
   }
 }

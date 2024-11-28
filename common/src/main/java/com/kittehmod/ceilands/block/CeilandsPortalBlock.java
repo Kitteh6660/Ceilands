@@ -1,19 +1,13 @@
 package com.kittehmod.ceilands.block;
 
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
-import com.kittehmod.ceilands.registry.CeilandsDimension;
 import com.kittehmod.ceilands.tags.CeilandsBlockTags;
-import com.kittehmod.ceilands.util.CeilandsPortalHelper;
 
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.Direction.AxisDirection;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -30,9 +24,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.portal.PortalInfo;
 import net.minecraft.world.level.portal.PortalShape;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -95,36 +87,20 @@ public class CeilandsPortalBlock extends Block
 	@Override
 	public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
 		if (!level.isClientSide() && !entity.isPassenger() && !entity.isVehicle() && entity.canChangeDimensions()) {
-			// entity.handleInsidePortal(pos);
-			if (entity.isOnPortalCooldown()) {
+			if (!entity.blockPosition().equals(pos)) {
 				return;
 			}
-			if (entity.portalTime < 190) {
-				entity.portalTime += 2;
-			}
-			else {
+			if (entity.isOnPortalCooldown()) {
 				entity.portalTime = 0;
-				entity.portalEntrancePos = pos.immutable();
-				handleCeilandsPortal(state, level, pos, entity);
+				return;
 			}
+			entity.handleInsidePortal(pos);
 		}
 		else if (level.isClientSide()) {
 			if (entity instanceof Player) {
 				((LocalPlayer)entity).handleInsidePortal(pos);
 			}
 		}
-	}
-	
-	private void handleCeilandsPortal(BlockState state, Level level, BlockPos pos, Entity entity) {
-		MinecraftServer minecraftserver = ((ServerLevel)level).getServer();
-		ResourceKey<Level> levelToChoose = entity.getLevel() == minecraftserver.getLevel(CeilandsDimension.CEILANDS) ? Level.OVERWORLD : CeilandsDimension.CEILANDS;
-		ServerLevel destinationWorld = minecraftserver.getLevel(levelToChoose);
-		if (destinationWorld == null) {
-			return;
-		}
-		CeilandsPortalHelper helper = new CeilandsPortalHelper(destinationWorld);
-		PortalInfo portalInfo = helper.getPortalInfo(entity, destinationWorld, null);
-		CeilandsPortalHelper.attemptTeleport(destinationWorld, portalInfo.pos, entity);
 	}
 	
 	public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {

@@ -44,7 +44,7 @@ public class CeilandsTeleporter implements ITeleporter
 	public Optional<BlockUtil.FoundRectangle> getExistingPortal(BlockPos pos) {
 		PoiManager poiManager = this.level.getPoiManager();
 		poiManager.ensureLoadedAndValid(level, pos, 64);
-		Optional<PoiRecord> optional = poiManager.getInSquare((poiType) -> poiType.get() == CeilandsPOIType.CEILANDS_PORTAL_POI, pos, 64, PoiManager.Occupancy.ANY).sorted(Comparator.<PoiRecord>comparingDouble((poi) ->
+		Optional<PoiRecord> optional = poiManager.getInSquare((poiType) -> poiType.is(CeilandsPOIType.CEILANDS_PORTAL), pos, 64, PoiManager.Occupancy.ANY).sorted(Comparator.<PoiRecord>comparingDouble((poi) ->
                 poi.getPos().distSqr(pos)).thenComparingInt((poi) -> poi.getPos().getY())).filter((poi) -> this.level.getBlockState(poi.getPos()).hasProperty(BlockStateProperties.HORIZONTAL_AXIS)).findFirst();
 		
 		return optional.map((poi) -> {
@@ -132,12 +132,12 @@ public class CeilandsTeleporter implements ITeleporter
             }
         }
 
-        BlockState undergardenPortal = CeilandsBlocks.CEILANDS_PORTAL.defaultBlockState().setValue(CeilandsPortalBlock.AXIS, axis);
+        BlockState ceilandsPortal = CeilandsBlocks.CEILANDS_PORTAL.defaultBlockState().setValue(CeilandsPortalBlock.AXIS, axis);
 
         for(int j2 = 0; j2 < 2; ++j2) {
             for(int l2 = 0; l2 < 3; ++l2) {
                 mutablePos.setWithOffset(blockpos, j2 * direction.getStepX(), l2, j2 * direction.getStepZ());
-                this.level.setBlock(mutablePos, undergardenPortal, 18);
+                this.level.setBlock(mutablePos, ceilandsPortal, 18);
             }
         }
 

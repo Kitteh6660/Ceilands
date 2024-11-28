@@ -1,16 +1,15 @@
 package com.kittehmod.ceilands.fabric;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.kittehmod.ceilands.Ceilands;
 import com.kittehmod.ceilands.block.CeilandsFlammableBlocks;
 import com.kittehmod.ceilands.entity.mob.CastleLord;
 import com.kittehmod.ceilands.item.CeilandsFuels;
-import com.kittehmod.ceilands.registry.CeilandsBlockEntities;
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
 import com.kittehmod.ceilands.registry.CeilandsEntities;
-import com.kittehmod.ceilands.registry.CeilandsFeatures;
 import com.kittehmod.ceilands.registry.CeilandsGameRules;
-import com.kittehmod.ceilands.registry.CeilandsItems;
-import com.kittehmod.ceilands.registry.CeilandsTrunkPlacerType;
 import com.kittehmod.ceilands.registry.ModRegistryHandler;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -18,7 +17,6 @@ import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -27,10 +25,14 @@ import oshi.util.tuples.Triplet;
 
 public class CeilandsRegistry 
 {
+	public static final List<Pair<ResourceLocation, Block>> COMPAT_BLOCKS = new ArrayList();
+	public static final List<Pair<ResourceLocation, Item>> COMPAT_ITEMS = new ArrayList();
+	
 	public static void initializeRegistry() {
 		// Set up primary registries.
 		ModRegistryHandler.registerModContent(true);
 		CeilandsRegistry.registerPOIs();
+		
 		// Set up secondary registries.
 		CeilandsRegistry.registerStrippables();
 		CeilandsRegistry.registerFuels();
@@ -40,6 +42,7 @@ public class CeilandsRegistry
 		// Set up tertiary registries.
 		FabricDefaultAttributeRegistry.register(CeilandsEntities.CASTLE_LORD, CastleLord.createAttributes());
 	}
+
 	
 	public static void registerPOIs() {
 		PointOfInterestHelper.register(new ResourceLocation(Ceilands.MOD_ID, "ceilands_portal"), 0, 1, CeilandsBlocks.CEILANDS_PORTAL);

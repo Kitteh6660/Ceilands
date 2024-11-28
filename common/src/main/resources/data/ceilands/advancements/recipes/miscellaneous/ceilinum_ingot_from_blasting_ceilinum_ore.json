@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_log": {
+    "has_item": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ceilands:polished_roofshale"
+              "ceilands:ceilinum_ore"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ceilands:chiseled_roofshale_from_polished_roofshale_stonecutting"
+        "recipe": "ceilands:ceilinum_ingot_from_blasting_ceilinum_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_log",
+      "has_item",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ceilands:chiseled_roofshale_from_polished_roofshale_stonecutting"
+      "ceilands:ceilinum_ingot_from_blasting_ceilinum_ore"
     ]
   }
 }

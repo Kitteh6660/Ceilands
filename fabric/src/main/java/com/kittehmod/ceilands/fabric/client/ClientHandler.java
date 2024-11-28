@@ -46,6 +46,9 @@ public class ClientHandler implements ClientModInitializer
 		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.LUZAWOOD_SAPLING, RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.LUZAWOOD_DOOR, RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.LUZAWOOD_TRAPDOOR, RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILINUM_DOOR, RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILINUM_TRAPDOOR, RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILINUM_BARS, RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.POTTED_LUZAWOOD_SAPLING, RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILANDS_PORTAL, RenderType.translucent());
 		

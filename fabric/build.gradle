@@ -21,6 +21,8 @@ dependencies {
     modImplementation "com.terraformersmc:modmenu:4.2.0-beta.2", {
         exclude module: "fabric-api"
     }
+	modImplementation "curse.maven:farmers-delight-fabric-482834:4939667"
+	// modImplementation "curse.maven:the-twilight-forest-227639:4490392"
     implementation project(":common")
 }
 

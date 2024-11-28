@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RedStoneOreBlock;
@@ -59,7 +60,7 @@ public class CeilandsBlocks
 	public static final Block CHISELED_CEILINGNEOUS = new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE));
 	
 	public static final Block CEILINGNEOUS_BUTTON = new StoneButtonBlock(BlockBehaviour.Properties.of(Material.STONE).noCollission().strength(0.5F).sound(SoundType.STONE).noCollission()) {};
-	public static final Block CEILINGNEOUS_PRESSURE_PLATE = new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(0.5F).sound(SoundType.STONE)) {};
+	public static final Block CEILINGNEOUS_PRESSURE_PLATE = new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.STONE).noCollission().requiresCorrectToolForDrops().strength(0.5F).sound(SoundType.STONE)) {};
 	
 	// Roofshale
 	public static final Block ROOFSHALE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
@@ -90,6 +91,20 @@ public class CeilandsBlocks
 	public static final Block CEILINGNEOUS_LAPIS_ORE = new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(2, 5));
 	public static final Block CEILINGNEOUS_EMERALD_ORE = new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(3, 7));
 	
+	// Ceilinum
+	public static final Block CEILINUM_ORE = new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(0, 2));
+	public static final Block RAW_CEILINUM_BLOCK = new Block(BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL));
+	public static final Block CEILINUM_BLOCK = new Block(BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL));
+
+	public static final Block CUT_CEILINUM = new Block(BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL));
+	public static final Block CUT_CEILINUM_STAIRS = new StairBlock(CUT_CEILINUM.defaultBlockState(), BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)) {};
+	public static final Block CUT_CEILINUM_SLAB = new SlabBlock(BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL));
+	public static final Block CHISELED_CEILINUM = new Block(BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL));
+	public static final Block CEILINUM_BARS = new IronBarsBlock(BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)) {};
+
+	public static final Block CEILINUM_DOOR = new DoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()) {};
+	public static final Block CEILINUM_TRAPDOOR = new TrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()) {};
+
 	// Ceiltrunk
 	public static final ModLogBlock CEILTRUNK_LOG = new ModLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)) {};
 	public static final Block STRIPPED_CEILTRUNK_LOG = new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).sound(SoundType.WOOD)) {};

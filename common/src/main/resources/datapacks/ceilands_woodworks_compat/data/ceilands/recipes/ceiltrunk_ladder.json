@@ -16,9 +16,9 @@
           "#": {
             "item": "ceilands:ceiltrunk_planks"
           },
-		  "X": {
-		    "tag": "ceilands:rods/wooden"
-		  }
+    		  "S": {
+    		    "tag": "ceilands:rods/wooden"
+    		  }
         },
         "pattern": [
           "S S",

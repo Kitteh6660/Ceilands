@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "ceilands_fabric.refmap.json",
   "mixins": [
+    "EntityMixin",
     "AnimalMixin",
     "StrayMixin",
     "ServerLevelMixin",

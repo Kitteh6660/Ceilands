@@ -16,9 +16,9 @@
           "#": {
             "item": "ceilands:luzawood_planks"
           },
-		  "X": {
-		    "tag": "ceilands:rods/wooden"
-		  }
+    		  "S": {
+    		    "tag": "ceilands:rods/wooden"
+    		  }
         },
         "pattern": [
           "S S",

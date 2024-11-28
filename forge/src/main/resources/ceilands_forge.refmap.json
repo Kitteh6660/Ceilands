@@ -1,5 +1,9 @@
 {
   "mappings": {
+    "com/kittehmod/ceilands/forge/forge/mixin/EntityMixin": {
+      "handleNetherPortal()V": "Lnet/minecraft/world/entity/Entity;m_20157_()V",
+      "Lnet/minecraft/server/MinecraftServer;getLevel(Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/server/level/ServerLevel;": "Lnet/minecraft/server/MinecraftServer;m_129880_(Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/server/level/ServerLevel;"
+    },
     "com/kittehmod/ceilands/forge/forge/mixin/StrayMixin": {
       "checkStraySpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/world/entity/monster/Stray;m_219120_(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z"
     },
@@ -16,6 +20,10 @@
   },
   "data": {
     "searge": {
+      "com/kittehmod/ceilands/forge/forge/mixin/EntityMixin": {
+        "handleNetherPortal()V": "Lnet/minecraft/world/entity/Entity;m_20157_()V",
+        "Lnet/minecraft/server/MinecraftServer;getLevel(Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/server/level/ServerLevel;": "Lnet/minecraft/server/MinecraftServer;m_129880_(Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/server/level/ServerLevel;"
+      },
       "com/kittehmod/ceilands/forge/forge/mixin/StrayMixin": {
         "checkStraySpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/world/entity/monster/Stray;m_219120_(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z"
       },

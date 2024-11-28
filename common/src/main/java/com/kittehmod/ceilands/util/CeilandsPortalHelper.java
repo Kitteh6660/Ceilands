@@ -6,7 +6,6 @@ import java.util.function.Function;
 
 import org.jetbrains.annotations.Nullable;
 
-import com.kittehmod.ceilands.Ceilands;
 import com.kittehmod.ceilands.block.CeilandsPortalBlock;
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
 import com.kittehmod.ceilands.registry.CeilandsDimension;
@@ -15,6 +14,8 @@ import com.kittehmod.ceilands.registry.CeilandsPOIType;
 import net.minecraft.BlockUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.TicketType;
@@ -23,6 +24,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.village.poi.PoiManager;
 import net.minecraft.world.entity.ai.village.poi.PoiRecord;
 import net.minecraft.world.level.ChunkPos;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -171,9 +173,8 @@ public class CeilandsPortalHelper
         }
         else {
             WorldBorder border = level.getWorldBorder();
-            int offset = destinationIsCeilands ? 0 : -64;
             double diff = DimensionType.getTeleportationScale(entity.getLevel().dimensionType(), level.dimensionType());
-            BlockPos blockpos = border.clampToBounds(entity.getX() * diff, entity.getY() + offset, entity.getZ() * diff);
+            BlockPos blockpos = border.clampToBounds(entity.getX() * diff, entity.getY(), entity.getZ() * diff);
             return this.getOrMakePortal(entity, blockpos, border).map((result) -> {
                 BlockState blockstate = entity.level.getBlockState(entity.portalEntrancePos);
                 Direction.Axis axis;
@@ -207,10 +208,19 @@ public class CeilandsPortalHelper
         }
     }
     
-    public static void attemptTeleport(ServerLevel level, Vec3 pos, Entity entity) {
-		if (entity.isOnPortalCooldown()) {
+	public static void handleCeilandsPortal(Level level, Entity entity) {
+		MinecraftServer minecraftserver = ((ServerLevel)level).getServer();
+		ResourceKey<Level> levelToChoose = entity.getLevel() == minecraftserver.getLevel(CeilandsDimension.CEILANDS) ? Level.OVERWORLD : CeilandsDimension.CEILANDS;
+		ServerLevel destinationWorld = minecraftserver.getLevel(levelToChoose);
+		if (destinationWorld == null) {
 			return;
 		}
+		CeilandsPortalHelper helper = new CeilandsPortalHelper(destinationWorld);
+		PortalInfo portalInfo = helper.getPortalInfo(entity, destinationWorld, null);
+		CeilandsPortalHelper.attemptTeleport(destinationWorld, portalInfo.pos, entity);
+	}
+	
+    public static void attemptTeleport(ServerLevel level, Vec3 pos, Entity entity) {
     	if (entity instanceof ServerPlayer) {
     		ServerPlayer player = (ServerPlayer)entity;
     		player.setPortalCooldown();

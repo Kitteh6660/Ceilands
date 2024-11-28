@@ -6,7 +6,6 @@ import com.kittehmod.ceilands.item.CeilandsPortalActivatorItem;
 import com.kittehmod.ceilands.item.ModBoatItem;
 
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.EquipmentSlot.Type;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -75,6 +74,23 @@ public class CeilandsItems
 	public static final Item CEILINGNEOUS_LAPIS_ORE = new BlockItem(CeilandsBlocks.CEILINGNEOUS_LAPIS_ORE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 	public static final Item CEILINGNEOUS_EMERALD_ORE = new BlockItem(CeilandsBlocks.CEILINGNEOUS_EMERALD_ORE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 
+	public static final Item CEILINUM_ORE = new BlockItem(CeilandsBlocks.CEILINUM_ORE, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item RAW_CEILINUM_BLOCK = new BlockItem(CeilandsBlocks.RAW_CEILINUM_BLOCK, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item CEILINUM_BLOCK = new BlockItem(CeilandsBlocks.CEILINUM_BLOCK, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+
+	public static final Item CUT_CEILINUM = new BlockItem(CeilandsBlocks.CUT_CEILINUM, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item CUT_CEILINUM_STAIRS = new BlockItem(CeilandsBlocks.CUT_CEILINUM_STAIRS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item CUT_CEILINUM_SLAB = new BlockItem(CeilandsBlocks.CUT_CEILINUM_SLAB, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item CHISELED_CEILINUM = new BlockItem(CeilandsBlocks.CHISELED_CEILINUM, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final Item CEILINUM_BARS = new BlockItem(CeilandsBlocks.CEILINUM_BARS, new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)) {};
+
+	public static final Item CEILINUM_DOOR = new BlockItem(CeilandsBlocks.CEILINUM_DOOR, new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)) {};
+	public static final Item CEILINUM_TRAPDOOR = new BlockItem(CeilandsBlocks.CEILINUM_TRAPDOOR, new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)) {};
+	
+	public static final Item RAW_CEILINUM = new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS));
+	public static final Item CEILINUM_INGOT = new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS));
+	public static final Item CEILINUM_NUGGET = new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS));
+	
 	public static final Item CEILTRUNK_LOG = new BlockItem(CeilandsBlocks.CEILTRUNK_LOG, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 	public static final Item STRIPPED_CEILTRUNK_LOG = new BlockItem(CeilandsBlocks.STRIPPED_CEILTRUNK_LOG, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 	public static final Item CEILTRUNK_WOOD = new BlockItem(CeilandsBlocks.CEILTRUNK_WOOD, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));

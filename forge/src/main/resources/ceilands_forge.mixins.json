@@ -5,6 +5,7 @@
   "refmap": "ceilands_forge.refmap.json",
   "mixins": [
     "ModLogBlockMixin",
+    "EntityMixin",
     "AnimalMixin",
     "StrayMixin",
     "ServerLevelMixin",
