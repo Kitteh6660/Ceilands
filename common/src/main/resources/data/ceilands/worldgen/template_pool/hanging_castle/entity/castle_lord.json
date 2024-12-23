@@ -1,5 +1,5 @@
 {
-  "name": "ceilands:hanging_castle/start",
+  "name": "ceilands:hanging_castle/entity/castle_lord",
   "fallback": "minecraft:empty",
   "elements": [
     {

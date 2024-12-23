@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": {
+      "item": "ceilands:castle_lord_regalia_fragments"
+    },
+    "I": {
+      "item": "ceilands:ceilinum_ingot"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": [
+    "III",
+    "WFW",
+    "III"
+  ],
+  "result": {
+    "count": 2,
+    "item": "ceilands:castle_lord_regalia_fragments"
+  }
+}

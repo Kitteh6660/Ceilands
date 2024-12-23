@@ -8,8 +8,8 @@ import com.kittehmod.ceilands.forge.compat.BoatloadCompat;
 import com.kittehmod.ceilands.forge.compat.FarmersDelightCompat;
 import com.kittehmod.ceilands.forge.compat.TwilightForestCompat;
 import com.kittehmod.ceilands.forge.compat.WoodworksCompat;
-import com.kittehmod.ceilands.forge.util.CreativeTabHelper;
 import com.kittehmod.ceilands.registry.CeilandsGameRules;
+import com.kittehmod.ceilands.util.CreativeModeTabDatabase;
 
 import net.minecraft.SharedConstants;
 import net.minecraft.client.renderer.Sheets;
@@ -32,12 +32,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import oshi.util.tuples.Quartet;
 
+import net.minecraft.world.item.TridentItem;
+
 @Mod(Ceilands.MOD_ID)
-public class CeilandsModForge {
+public class CeilandsModForge 
+{
 	public CeilandsModForge() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		MinecraftForge.EVENT_BUS.register(CeilandsRegistry.class);
-		MinecraftForge.EVENT_BUS.register(CreativeTabHelper.class);
 		bus.addListener(this::setupCommon);
 		hookCompats(bus);
 		if (FMLEnvironment.dist == Dist.CLIENT) {
@@ -63,6 +65,7 @@ public class CeilandsModForge {
 	}
 
 	private void setupCommon(final FMLCommonSetupEvent event) {
+		CreativeModeTabDatabase.populateContents();
 		event.enqueueWork(() -> WoodType.register(ModWoodType.CEILTRUNK));
 		event.enqueueWork(() -> WoodType.register(ModWoodType.LUZAWOOD));
 		event.enqueueWork(() -> CeilandsRegistry.registerFlammable());

@@ -1,9 +1,11 @@
 package com.kittehmod.ceilands.fabric.client;
 
+import com.kittehmod.ceilands.client.CeilandsSkyEffect;
 import com.kittehmod.ceilands.client.ClientBase;
 import com.kittehmod.ceilands.client.entity.model.CastleLordModel;
 import com.kittehmod.ceilands.client.renderer.CastleLordRenderer;
 import com.kittehmod.ceilands.client.renderer.CeilandsBoatRenderer;
+import com.kittehmod.ceilands.client.renderer.SpiderMonarchRenderer;
 import com.kittehmod.ceilands.registry.CeilandsBlockEntities;
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
 import com.kittehmod.ceilands.registry.CeilandsEntities;
@@ -36,10 +38,14 @@ public class ClientHandler implements ClientModInitializer
 		BlockEntityRenderers.register(CeilandsBlockEntities.CEILANDS_SIGN, SignRenderer::new);
 		BlockEntityRenderers.register(CeilandsBlockEntities.CEILANDS_HANGING_SIGN, HangingSignRenderer::new);
 		
+		EntityRendererRegistry.register(CeilandsEntities.SPIDER_MONARCH, SpiderMonarchRenderer::new);
 		EntityRendererRegistry.register(CeilandsEntities.CASTLE_LORD, CastleLordRenderer::new);
 		EntityRendererRegistry.register(CeilandsEntities.CEILANDS_BOAT, (boat) -> { return new CeilandsBoatRenderer(boat, false); } );
 		EntityRendererRegistry.register(CeilandsEntities.CEILANDS_CHEST_BOAT, (boat) -> { return new CeilandsBoatRenderer(boat, true); } );
 		
+		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILINUM_BARS, RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILINUM_DOOR, RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILINUM_TRAPDOOR, RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILTRUNK_LEAVES, RenderType.cutoutMipped());
 		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILTRUNK_SAPLING, RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(CeilandsBlocks.CEILTRUNK_DOOR, RenderType.cutout());

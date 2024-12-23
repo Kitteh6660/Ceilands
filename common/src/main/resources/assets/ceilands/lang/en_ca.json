@@ -135,7 +135,7 @@
 
   "item.ceilands.castle_lord_spawn_egg": "Castle Lord Spawn Egg",
   "item.ceilands.mad_experimenter_spawn_egg": "Mad Experimenter Spawn Egg",
-  "item.ceilands.spider_queen_spawn_egg": "Spider Queen Spawn Egg",
+  "item.ceilands.spider_monarch_spawn_egg": "Spider Monarch Spawn Egg",
   "item.ceilands.spiderling_spawn_egg": "Spiderling Spawn Egg",
 
   "item.ceilands.castle_lord_regalia_fragments": "Castle Lord Regalia Fragments",
@@ -161,7 +161,7 @@
   "biome.ceilands.arid_roof": "Arid Roof",
   
   "entity.ceilands.castle_lord": "Castle Lord",
-  "entity.ceilands.spider_queen": "Spider Queen",
+  "entity.ceilands.spider_monarch": "Spider Monarch",
   "entity.ceilands.spiderling": "Spiderling",
   "entity.ceilands.mad_experimenter": "Mad Experimenter",
   "entity.ceilands.ceilands_boat": "Ceilands Boat",
@@ -179,8 +179,8 @@
   "advancements.ceilands.find_lost_laboratory.description": "Find a Lost Laboratory within Inverted Peaks.",
   "advancements.ceilands.kill_castle_lord.title": "Usurper",
   "advancements.ceilands.kill_castle_lord.description": "Defeat the Castle Lord at the throne room of a Hanging Castle.",
-  "advancements.ceilands.kill_spider_queen.title": "Arachno Slayer",
-  "advancements.ceilands.kill_spider_queen.description": "Defeat the Spider Queen lurking on Giant Webs.",
+  "advancements.ceilands.kill_spider_monarch.title": "Arachno Slayer",
+  "advancements.ceilands.kill_spider_monarch.description": "Defeat the Spider Monarch lurking on Giant Webs.",
   "advancements.ceilands.kill_mad_experimenter.title": "Spanner in the Works",
   "advancements.ceilands.kill_mad_experimenter.description": "Defeat the Mad Experimenter within Lost Laboratory.",
   "advancements.ceilands.kill_all_ceilands_mobs.title": "Monsters Hunted in the Sky",
@@ -200,7 +200,7 @@
   "advancements.ceilands.trade_in_ceilands_at_min_height.title": "Daredeal",
   "advancements.ceilands.trade_in_ceilands_at_min_height.description": "Trade at the bottom layer of the Ceilands. Better hope you don't fall!",
   "advancements.ceilands.explore_ceilands.title": "Topsy Tourist Destination",
-  "advancements.ceilands.explore_ceilands.description": "Explore all five Ceilands biomes.",
+  "advancements.ceilands.explore_ceilands.description": "Explore all six Ceilands biomes.",
   "advancements.ceilands.long_elytra_glide_in_ceilands.title": "I Believe I Can Fly",
   "advancements.ceilands.long_elytra_glide_in_ceilands.description": "Glide continuously for 1km within the Ceilands using Elytra."
 }

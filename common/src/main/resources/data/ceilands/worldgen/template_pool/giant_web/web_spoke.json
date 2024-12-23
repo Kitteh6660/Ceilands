@@ -1,0 +1,15 @@
+{
+  "name": "ceilands:giant_web",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:giant_web/web_spoke",
+        "projection": "rigid",
+        "processors": "ceilands:giant_web_cobweb_randomizer"
+      }
+    }
+  ]
+}

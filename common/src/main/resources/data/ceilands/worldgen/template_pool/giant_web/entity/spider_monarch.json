@@ -1,0 +1,15 @@
+{
+  "name": "ceilands:giant_web/entity/spider_monarch",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:giant_web/entities/spider_monarch",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

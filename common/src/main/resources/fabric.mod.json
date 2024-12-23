@@ -26,7 +26,7 @@
     ]
   },
   "mixins": [
-    "ceilands_fabric.mixins.json"
+    "ceilands.mixins.json"
   ],
   "accessWidener": "ceilands.accesswidener",
 

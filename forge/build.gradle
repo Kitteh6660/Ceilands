@@ -27,7 +27,8 @@ minecraft {
             taskName 'runClient'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-			arg "-mixin.config=" + "ceilands_forge.mixins.json"
+            arg "-mixin.config=" + "ceilands.mixins.json"
+            arg "-mixin.config=" + "ceilands_forge.mixins.json"
             mods {
                 modClientRun {
                     source sourceSets.main
@@ -42,7 +43,8 @@ minecraft {
             taskName 'runServer'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-			arg "-mixin.config=" + "ceilands_forge.mixins.json"
+            arg "-mixin.config=" + "ceilands.mixins.json"
+            arg "-mixin.config=" + "ceilands_forge.mixins.json"
             mods {
                 modServerRun {
                     source sourceSets.main
@@ -96,9 +98,9 @@ dependencies {
     implementation fg.deobf("curse.maven:blueprint-382216:5292242")
     implementation fg.deobf("curse.maven:woodworks-543610:5292418")
     implementation fg.deobf("curse.maven:boatload-337396:5292325")
-	implementation fg.deobf("curse.maven:farmers-delight-398521:5051242")
-	implementation fg.deobf("curse.maven:the-twilight-forest-227639:5071019")
-	implementation fg.deobf("curse.maven:farlands-reborn-909515:4847560")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:5051242")
+    implementation fg.deobf("curse.maven:the-twilight-forest-227639:5071019")
+    implementation fg.deobf("curse.maven:farlands-reborn-909515:4847560")
 }
 
 tasks.withType(JavaCompile).configureEach {

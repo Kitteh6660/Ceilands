@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "ceilands:spider_monarch_fang"
+    },
+    "S": {
+      "tag": "ceilands:rods/wooden"
+    }
+  },
+  "pattern": [
+    "  F",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "item": "ceilands:venomous_spear"
+  }
+}

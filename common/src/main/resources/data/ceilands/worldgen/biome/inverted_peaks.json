@@ -67,6 +67,9 @@
       "ceilands:ore_lapis_ceilands",
       "ceilands:ore_lapis_ceilands_buried",
       "ceilands:ore_copper_ceilands",
+      "ceilands:ore_ceilinum_ceilands_lower",
+      "ceilands:ore_ceilinum_ceilands_upper",
+      "ceilands:ore_ceilinum_ceilands_extra",
       "ceilands:ore_roofshale",
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
@@ -80,14 +83,7 @@
     ],
     [
       "ceilands:structure_chains",
-      "minecraft:glow_lichen",
-      "minecraft:patch_grass_badlands",
-      "minecraft:patch_dead_bush_badlands",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane_badlands",
-      "minecraft:patch_pumpkin",
-      "minecraft:patch_cactus_decorated"
+      "minecraft:glow_lichen"
     ],
     []
   ],

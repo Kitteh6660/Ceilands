@@ -4,6 +4,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.kittehmod.ceilands.registry.CeilandsEntities;
 import com.kittehmod.ceilands.registry.CeilandsItems;
+import com.kittehmod.ceilands.registry.CeilandsSoundEvents;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -161,6 +162,11 @@ public class CastleLord extends Monster implements InventoryCarrier
     }
 
 	@Override
+	protected SoundEvent getAmbientSound() {
+		return CeilandsSoundEvents.CASTLE_LORD_AMBIENT;
+	}
+    
+	@Override
 	protected SoundEvent getSwimSound() {
 		return SoundEvents.HOSTILE_SWIM;
 	}
@@ -172,22 +178,17 @@ public class CastleLord extends Monster implements InventoryCarrier
 
 	@Override
 	protected SoundEvent getHurtSound(DamageSource $$0) {
-		return SoundEvents.HOSTILE_HURT;
+		return CeilandsSoundEvents.CASTLE_LORD_HURT;
 	}
 
 	@Override
 	protected SoundEvent getDeathSound() {
-		return SoundEvents.HOSTILE_DEATH;
+		return CeilandsSoundEvents.CASTLE_LORD_DEATH;
 	}
 
 	@Override
 	public LivingEntity.Fallsounds getFallSounds() {
 		return new LivingEntity.Fallsounds(SoundEvents.HOSTILE_SMALL_FALL, SoundEvents.HOSTILE_BIG_FALL);
-	}
-
-	@Override
-	public float getWalkTargetValue(BlockPos $$0, LevelReader $$1) {
-		return -$$1.getPathfindingCostFromLightLevels($$0);
 	}
 
 	@Override

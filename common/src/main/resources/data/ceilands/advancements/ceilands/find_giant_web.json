@@ -1,0 +1,44 @@
+{
+  "parent": "ceilands:ceilands/root",
+  "criteria": {
+    "giant_web": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "ceilands:giant_web"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.ceilands.find_giant_web.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:cobweb"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ceilands.find_giant_web.title"
+    }
+  },
+  "requirements": [
+    [
+      "giant_web"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  }
+}

@@ -12,7 +12,7 @@
       "below_top": 70
     },
     "min_inclusive": {
-      "absolute": 16
+      "above_bottom": 16
     }
   },
   "max_distance_from_center": 80,

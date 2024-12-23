@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "ceilands:block/ceilinum_door_bottom",
+    "top": "ceilands:block/ceilinum_door_top"
+  }
+}

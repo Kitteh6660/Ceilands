@@ -2,6 +2,7 @@ package com.kittehmod.ceilands.registry;
 
 import com.kittehmod.ceilands.Ceilands;
 
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -14,4 +15,5 @@ public class CeilandsBiomes
 	public static final ResourceKey<Biome> OCEAN_ORBS = ResourceKey.create(Registries.BIOME, new ResourceLocation(Ceilands.MOD_ID, "ocean_orbs"));	
 	public static final ResourceKey<Biome> SNOW_ROOF = ResourceKey.create(Registries.BIOME, new ResourceLocation(Ceilands.MOD_ID, "snow_roof"));
 	public static final ResourceKey<Biome> INVERTED_PEAKS = ResourceKey.create(Registries.BIOME, new ResourceLocation(Ceilands.MOD_ID, "inverted_peaks"));
+	public static final ResourceKey<Biome> ARID_ROOF = ResourceKey.create(Registries.BIOME, new ResourceLocation(Ceilands.MOD_ID, "arid_roof"));
 }

@@ -1,0 +1,23 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "ceilands:block/ceilinum_bars",
+        "bars": "ceilands:block/ceilinum_bars"
+    },
+    "elements": [
+        {   "from": [ 8, 0, 7 ],
+            "to": [ 8, 16, 9 ],
+            "faces": {
+                "west": { "uv": [ 2, 0, 4, 16 ], "texture": "#bars" },
+                "east": { "uv": [ 4, 0, 2, 16 ], "texture": "#bars" }
+            }
+        },
+        {   "from": [ 7, 0, 8 ],
+            "to": [ 9, 16, 8 ],
+            "faces": {
+                "north": { "uv": [ 2, 0, 4, 16 ], "texture": "#bars" },
+                "south": { "uv": [ 4, 0, 2, 16 ], "texture": "#bars" }
+            }
+        }
+    ]
+}

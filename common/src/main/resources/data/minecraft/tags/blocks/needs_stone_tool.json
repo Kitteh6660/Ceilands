@@ -1,6 +1,16 @@
 {
   "replace": false,
   "values": [
+    "ceilands:raw_ceilinum_block",
+    "ceilands:ceilinum_block",
+    "ceilands:cut_ceilinum",
+    "ceilands:cut_ceilinum_stairs",
+    "ceilands:cut_ceilinum_slab",
+    "ceilands:chiseled_ceilinum",
+    "ceilands:ceilinum_bars",
+    "ceilands:ceilinum_door",
+    "ceilands:ceilinum_trapdoor",
+    "ceilands:ceilinum_ore",
     "ceilands:ceilingneous_copper_ore",
     "ceilands:ceilingneous_iron_ore",
     "ceilands:ceilingneous_lapis_ore"

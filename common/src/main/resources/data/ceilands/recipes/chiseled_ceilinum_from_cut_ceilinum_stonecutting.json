@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ceilands:cut_ceilinum"
+  },
+  "result": "ceilands:chiseled_ceilinum",
+  "count": 1
+}

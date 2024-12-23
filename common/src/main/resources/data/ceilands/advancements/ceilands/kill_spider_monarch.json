@@ -1,0 +1,40 @@
+{
+  "parent": "ceilands:ceilands/find_giant_web",
+  "criteria": {
+    "killed_spider_monarch": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "ceilands:spider_monarch"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "frame": "goal",
+    "hidden": false,
+    "show_toast": true,
+    "icon": {
+      "item": "ceilands:spider_monarch_fang"
+    },
+    "description": {
+      "translate": "advancements.ceilands.kill_spider_monarch.description"
+    },
+    "title": {
+      "translate": "advancements.ceilands.kill_spider_monarch.title"
+    }
+  },
+  "requirements": [
+    [
+      "killed_spider_monarch"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

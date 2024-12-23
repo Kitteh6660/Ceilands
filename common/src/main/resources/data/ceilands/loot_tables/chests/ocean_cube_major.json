@@ -49,6 +49,22 @@
               "function": "minecraft:set_count"
             }
           ],
+          "name": "ceilands:ceilinum_ingot",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "name": "minecraft:emerald",
           "weight": 40
         },
@@ -111,6 +127,22 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
+                "max": 10.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "ceilands:ceilinum_nugget",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
                 "max": 3.0,
                 "min": 1.0
               },
@@ -163,7 +195,7 @@
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 5.0,
+        "max": 6.0,
         "min": 2.0
       }
     },

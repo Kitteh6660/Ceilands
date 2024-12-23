@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ceilands:block/cut_ceilinum_slab"
+    },
+    "type=double": {
+      "model": "ceilands:block/cut_ceilinum"
+    },
+    "type=top": {
+      "model": "ceilands:block/cut_ceilinum_slab_top"
+    }
+  }
+}

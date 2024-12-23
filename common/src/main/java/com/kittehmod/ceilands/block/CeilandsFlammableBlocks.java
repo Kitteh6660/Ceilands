@@ -32,5 +32,7 @@ public class CeilandsFlammableBlocks
 		CEILANDS_FLAMMABLE_BLOCKS.add(new Triplet(CeilandsBlocks.STRIPPED_LUZAWOOD_WOOD, 5, 5));
 		CEILANDS_FLAMMABLE_BLOCKS.add(new Triplet(CeilandsBlocks.CEILTRUNK_LEAVES, 30, 60));
 		CEILANDS_FLAMMABLE_BLOCKS.add(new Triplet(CeilandsBlocks.LUZAWOOD_LEAVES, 30, 60));
+		CEILANDS_FLAMMABLE_BLOCKS.add(new Triplet(CeilandsBlocks.SPIDER_SILK_BLOCK, 10, 20));
+		CEILANDS_FLAMMABLE_BLOCKS.add(new Triplet(CeilandsBlocks.SPIDER_SILK_CARPET, 10, 20));
 	}
 }
