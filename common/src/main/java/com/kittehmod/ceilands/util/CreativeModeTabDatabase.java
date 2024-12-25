@@ -88,8 +88,8 @@ public class CreativeModeTabDatabase
 		insertAfter(CeilandsItems.CEILINUM_BARS, CeilandsItems.CEILINUM_DOOR, TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.BUILDING_BLOCKS);
 		insertAfter(CeilandsItems.CEILINUM_DOOR, CeilandsItems.CEILINUM_TRAPDOOR, TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.BUILDING_BLOCKS);
 		
-		insert(CeilandsItems.SPIDER_SILK_BLOCK, TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.BUILDING_BLOCKS);
-		insert(CeilandsItems.SPIDER_SILK_CARPET, TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.BUILDING_BLOCKS);
+		insertAfter(CeilandsItems.CEILINUM_TRAPDOOR, CeilandsItems.SPIDER_SILK_BLOCK, TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.BUILDING_BLOCKS);
+		insertAfter(CeilandsItems.SPIDER_SILK_BLOCK, CeilandsItems.SPIDER_SILK_CARPET, TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.BUILDING_BLOCKS);
 
 		// Natural Blocks
 		insertAfter(Items.END_STONE, CeilandsItems.CEILINGNEOUS, TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.NATURAL_BLOCKS);
