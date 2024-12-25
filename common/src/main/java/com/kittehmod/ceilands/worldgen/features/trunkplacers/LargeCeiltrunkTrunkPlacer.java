@@ -48,8 +48,8 @@ public class LargeCeiltrunkTrunkPlacer extends TrunkPlacer
 		boolean branchOrientation = false;
 		Direction dir = STARTING_BRANCH_DIRECTION[random.nextInt(4)];
 		for (int i = 0; i < height; ++i) {
-			this.placeLogIfFreeWithOffset(reader, consumer, random, blockpos$mutableblockpos, config, pos, 0, -i, 0);
 			if (i < height - 1) {
+				this.placeLogIfFreeWithOffset(reader, consumer, random, blockpos$mutableblockpos, config, pos, 0, -i, 0);
 				this.placeLogIfFreeWithOffset(reader, consumer, random, blockpos$mutableblockpos, config, pos, 1, -i, 0);
 				this.placeLogIfFreeWithOffset(reader, consumer, random, blockpos$mutableblockpos, config, pos, 1, -i, 1);
 				this.placeLogIfFreeWithOffset(reader, consumer, random, blockpos$mutableblockpos, config, pos, 0, -i, 1);
@@ -81,7 +81,7 @@ public class LargeCeiltrunkTrunkPlacer extends TrunkPlacer
 			}
 		}
 
-		return height >= 3 ? ImmutableList.of(new FoliagePlacer.FoliageAttachment(pos.below(height), -1, true)) : ImmutableList.of();
+		return height >= 3 ? ImmutableList.of(new FoliagePlacer.FoliageAttachment(pos.below(height - 1), -1, true)) : ImmutableList.of();
 	}
 
 	private void placeLogIfFreeWithOffset(LevelSimulatedReader reader, BiConsumer<BlockPos, BlockState> consumer, RandomSource random, BlockPos.MutableBlockPos pos$mutable, TreeConfiguration config, BlockPos pos, int x, int y, int z) {
