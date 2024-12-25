@@ -8,7 +8,7 @@
         "element_type": "minecraft:single_pool_element",
         "location": "ceilands:giant_web/web_center",
         "projection": "rigid",
-        "processors": "ceilands:giant_web_cobweb_randomizer"
+        "processors": "minecraft:empty"
       }
     }
   ]
