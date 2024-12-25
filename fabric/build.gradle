@@ -32,7 +32,7 @@ loom {
         accessWidenerPath.set(project(":common").file("src/main/resources/${project.mod_id}.accesswidener"))
     }
     mixin {
-        defaultRefmapName.set("${project.mod_id}_fabric.refmap.json")
+        defaultRefmapName.set("${project.mod_id}.refmap.json")
     }
     runs {
         client {
