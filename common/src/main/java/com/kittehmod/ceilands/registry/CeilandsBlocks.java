@@ -7,7 +7,6 @@ import java.util.function.ToIntFunction;
 import com.kittehmod.ceilands.Ceilands;
 import com.kittehmod.ceilands.block.CeilandsPortalBlock;
 import com.kittehmod.ceilands.block.CeilingSaplingBlock;
-import com.kittehmod.ceilands.block.ModBedBlock;
 import com.kittehmod.ceilands.block.ModBlockSetType;
 import com.kittehmod.ceilands.block.ModCeilingHangingSignBlock;
 import com.kittehmod.ceilands.block.ModLogBlock;
@@ -20,7 +19,6 @@ import com.kittehmod.ceilands.worldgen.features.trees.LuzawoodTreeGrower;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
@@ -171,8 +169,8 @@ public class CeilandsBlocks
 	public static final Block CEILANDS_PORTAL = registerBlock("ceilands_portal", new CeilandsPortalBlock(BlockBehaviour.Properties.of().strength(-1.0F, 0.0F).lightLevel((light) -> { return 8; } ).noCollission().noOcclusion()));
 	public static final Block POTTED_LUZAWOOD_SAPLING = registerBlock("potted_luzawood_sapling", new FlowerPotBlock(LUZAWOOD_SAPLING, BlockBehaviour.Properties.of().instabreak().noCollission()));
 
-	public static final Block SPIDER_SILK_BLOCK = registerBlock("spider_silk_block", new Block(BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOL)));
-	public static final Block SPIDER_SILK_CARPET = registerBlock("spider_silk_carpet", new CarpetBlock(BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOL)));
+	public static final Block SPIDER_SILK_BLOCK = registerBlock("spider_silk_block", new Block(BlockBehaviour.Properties.of().strength(3.0F, 1.0F).sound(SoundType.WOOL)));
+	public static final Block SPIDER_SILK_CARPET = registerBlock("spider_silk_carpet", new CarpetBlock(BlockBehaviour.Properties.of().strength(3.0F, 1.0F).sound(SoundType.WOOL)));
 	// public static final Block SPIDER_SILK_BED = registerBlock("spider_silk_bed", new ModBedBlock(DyeColor.WHITE, BlockBehaviour.Properties.of().strength(1.0F).sound(SoundType.WOOL)));
 
 	private static ToIntFunction<BlockState> litBlockEmission(int p_50760_) {
