@@ -8,7 +8,7 @@
     "HuskMixin",
     "StrayMixin",
     "ServerLevelMixin",
-    "NetherFossilStructureMixin",
+    "ShearsMixin",
     "VoidMixin"
   ],
   "client": [
