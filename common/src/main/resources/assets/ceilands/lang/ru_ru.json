@@ -127,6 +127,10 @@
   "block.ceilands.hollow_luzawood_log_climbable": "Блювуд полый-бревно",
   "block.ceilands.luzawood_banister": "Блювуд перила",
   
+  "block.ceilands.spider_silk_block": "Паук шелк блок",
+  "block.ceilands.spider_silk_carpet": "Паук шелк ковёр",
+  "block.ceilands.spider_silk_bed": "Паук шелк кровать",
+  
   "item.ceilands.ceilands_portal_activator": "Цеиландс портал инструмент активации",
   "item.ceilands.venomous_spear": "Ядовитый копье",
   "item.ceilands.grappling_hook": "дрек крюк",
@@ -141,6 +145,8 @@
   "item.ceilands.spiderling_spawn_egg": "Яйцо призыва Паучок",
 
   "item.ceilands.castle_lord_regalia_fragments": "Замок господин регалии осколок",
+  "item.ceilands.spider_monarch_fang": "Паук королева зуб",
+  "item.ceilands.spider_silk": "Паук шелк",
   
   "item.ceilands.raw_ceilinum": "Raw цеилиниум",
   "item.ceilands.ceilinum_ingot": "Цеилиниум слиток",
