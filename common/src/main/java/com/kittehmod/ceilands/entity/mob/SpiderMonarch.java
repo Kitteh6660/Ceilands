@@ -5,9 +5,12 @@ import org.jetbrains.annotations.Nullable;
 import com.kittehmod.ceilands.registry.CeilandsEntities;
 import com.kittehmod.ceilands.registry.CeilandsSoundEvents;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -19,12 +22,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
@@ -36,6 +33,7 @@ import net.minecraft.world.level.Level;
 public class SpiderMonarch extends Spider
 {
 	private final ServerBossEvent bossEvent = (ServerBossEvent)(new ServerBossEvent(this.getDisplayName(), BossEvent.BossBarColor.WHITE, BossEvent.BossBarOverlay.PROGRESS)).setDarkenScreen(true);
+	private static final EntityDataAccessor<BlockPos> SPAWN_POSITION = SynchedEntityData.defineId(SpiderMonarch.class, EntityDataSerializers.BLOCK_POS);
 	
 	public SpiderMonarch(EntityType<? extends Spider> mob, Level level) {
 		super(mob, level);
@@ -67,6 +65,7 @@ public class SpiderMonarch extends Spider
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
+        this.entityData.define(SPAWN_POSITION, this.blockPosition());
     }
     
     @Override
@@ -97,13 +96,7 @@ public class SpiderMonarch extends Spider
     
 	@Override
 	protected void registerGoals() {
-		this.goalSelector.addGoal(1, new FloatGoal(this));
-        this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.0, false));
-		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0));
-        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+		super.registerGoals();
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Zombie.class, true));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Animal.class, true));
 	}
@@ -173,10 +166,8 @@ public class SpiderMonarch extends Spider
     }
     
     public void startSeenByPlayer(ServerPlayer player) {
-    	if (this.distanceTo(player) < 32) {
-            super.startSeenByPlayer(player);
-            this.bossEvent.addPlayer(player);
-    	}
+    	super.startSeenByPlayer(player);
+        this.bossEvent.addPlayer(player);
     }
 
     public void stopSeenByPlayer(ServerPlayer player) {
