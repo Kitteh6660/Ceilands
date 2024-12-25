@@ -45,13 +45,13 @@ public class ColossalCeilshroom extends Feature<BlockStateConfiguration>
 		int stemHeight = stemRadius * (3 + randomsource.nextInt(7));
 		int stemTaperThreshold = 3 + randomsource.nextInt(2);
 		int stemTaperThreshold2 = randomsource.nextFloat() < 0.5 ? (stemTaperThreshold * 2) + randomsource.nextInt(4) : -1;
-		// Create the stem.
-		for (int stemY = 0; stemY < stemHeight; stemY++) {
+		// Step 1: Create the stem.
+		for (int stemY = -1; stemY < stemHeight; stemY++) {
 			for (int stemX = -stemRadius; stemX < stemRadius; stemX++) {
 				for (int stemZ = -stemRadius; stemZ < stemRadius; stemZ++) {
 					if ((stemX > -stemRadius && stemX < stemRadius - 1) || (stemZ > -stemRadius && stemZ < stemRadius - 1)) {
 						if (worldgenlevel.getBlockState(blockpos.below(stemY).east(stemX).south(stemZ)).getBlock() == Blocks.AIR) {
-							this.setBlock(worldgenlevel, blockpos.below(stemY).east(stemX).south(stemZ), Blocks.MUSHROOM_STEM.defaultBlockState());							
+							this.setBlock(worldgenlevel, blockpos.below(stemY).east(stemX).south(stemZ), stemY == -1 ? Blocks.MOSS_BLOCK.defaultBlockState() : Blocks.MUSHROOM_STEM.defaultBlockState());
 						}
 					}
 				}
@@ -65,7 +65,7 @@ public class ColossalCeilshroom extends Feature<BlockStateConfiguration>
 			if (stemRadius < 2) stemRadius = 2;
 		}
 		blockpos = blockpos.below(stemHeight);
-		// Create the cap. The cap will have moss to allow flora to grow.
+		// Step 2: Create the cap. The cap will have moss to allow flora to grow.
 		Block capBlock = randomsource.nextFloat() < 0.5 ? Blocks.RED_MUSHROOM_BLOCK : Blocks.BROWN_MUSHROOM_BLOCK;
 		Block lushBlock = randomsource.nextFloat() < 0.3 ? Blocks.MOSS_BLOCK : Blocks.GRASS_BLOCK;
 		int capRadius = 5 + (stemRadius * 4) + randomsource.nextInt(5);
