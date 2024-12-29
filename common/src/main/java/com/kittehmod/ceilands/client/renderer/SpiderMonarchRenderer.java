@@ -7,7 +7,6 @@ import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.SpiderRenderer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.monster.CaveSpider;
 
 public class SpiderMonarchRenderer extends SpiderRenderer<SpiderMonarch> 
 {

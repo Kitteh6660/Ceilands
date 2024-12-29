@@ -40,7 +40,6 @@ import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.BlockSetType.PressurePlateSensitivity;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import oshi.util.tuples.Pair;
 

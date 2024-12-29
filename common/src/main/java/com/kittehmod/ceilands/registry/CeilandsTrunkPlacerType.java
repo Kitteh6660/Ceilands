@@ -10,7 +10,6 @@ import com.kittehmod.ceilands.worldgen.features.trunkplacers.LargeCeiltrunkTrunk
 import com.kittehmod.ceilands.worldgen.features.trunkplacers.LuzawoodTrunkPlacer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import oshi.util.tuples.Pair;
 

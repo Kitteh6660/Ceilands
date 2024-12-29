@@ -1,18 +1,14 @@
 package com.kittehmod.ceilands.item;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Multimap;
 import com.kittehmod.ceilands.util.MobEffectHelper;
 import com.mojang.datafixers.util.Pair;
 
 import net.minecraft.core.Holder;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.util.StringUtil;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
@@ -25,12 +21,8 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
-
-import net.minecraft.world.item.PotionItem;
 
 public class VenomousSpearItem extends Item
 {
