@@ -8,4 +8,5 @@ public class CompatsNeoForge
 	public static final boolean TWILIGHT_FOREST_INSTALLED = ModList.get().isLoaded("twilightforest");
 	public static final boolean BOATLOAD_INSTALLED = ModList.get().isLoaded("boatload");
 	public static final boolean WOODWORKS_INSTALLED = ModList.get().isLoaded("woodworks");
+	public static final boolean DRAMATIC_DOORS_INSTALLED = ModList.get().isLoaded("dramaticdoors");
 }

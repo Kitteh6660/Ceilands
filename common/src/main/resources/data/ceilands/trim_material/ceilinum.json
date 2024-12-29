@@ -1,0 +1,9 @@
+{
+  "asset_name": "ceilinum",
+  "description": {
+    "color": "#9AD19A",
+    "translate": "trim_material.ceilands.ceilinum"
+  },
+  "ingredient": "ceilands:ceilinum_ingot",
+  "item_model_index": 0.7
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ceilands:lost_laboratory/wall_endcap",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:lost_laboratory/wall_endcap",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

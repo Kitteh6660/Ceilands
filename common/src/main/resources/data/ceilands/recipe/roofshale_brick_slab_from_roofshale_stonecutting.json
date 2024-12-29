@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ceilands:roofshale"
+  },
+  "result": {
+    "id": "ceilands:roofshale_brick_slab",
+    "count": 2
+  }
+}

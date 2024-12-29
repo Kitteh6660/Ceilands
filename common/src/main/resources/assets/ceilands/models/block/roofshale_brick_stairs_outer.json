@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "ceilands:block/roofshale_bricks",
+    "side": "ceilands:block/roofshale_bricks",
+    "top": "ceilands:block/roofshale_bricks"
+  }
+}

@@ -17,6 +17,22 @@
       },
       "trigger": "minecraft:location"
     },
+    "ceilands:arid_roof": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "ceilands:arid_roof"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
     "ceilands:inverted_peaks": {
       "conditions": {
         "player": [
@@ -84,15 +100,15 @@
   },
   "display": {
     "announce_to_chat": true,
-    "description": {
-      "translate": "advancements.ceilands.explore_ceilands.description"
-    },
     "frame": "challenge",
     "hidden": false,
+    "show_toast": true,
     "icon": {
       "id": "ceilands:luzawood_log"
     },
-    "show_toast": true,
+    "description": {
+      "translate": "advancements.ceilands.explore_ceilands.description"
+    },
     "title": {
       "translate": "advancements.ceilands.explore_ceilands.title"
     }
@@ -100,6 +116,9 @@
   "requirements": [
     [
       "ceilands:snowroof"
+    ],
+    [
+      "ceilands:arid_roof"
     ],
     [
       "ceilands:inverted_peaks"

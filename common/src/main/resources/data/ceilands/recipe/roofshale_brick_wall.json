@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "roofshale_wall",
+  "key": {
+    "#": {
+      "item": "ceilands:roofshale_bricks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "ceilands:roofshale_brick_wall"
+  }
+}

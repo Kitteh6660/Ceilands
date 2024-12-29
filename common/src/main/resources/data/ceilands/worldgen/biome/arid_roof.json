@@ -1,0 +1,202 @@
+{
+  "has_precipitation": false,
+  "precipitation": "none",
+  "category": "desert",
+  "temperature": 1.5,
+  "temperature_modifier": "none",
+  "downfall": 0.2,
+  "creature_spawn_probability": 0.8,
+  "effects": {
+    "fog_color": 13936128,
+    "sky_color": 13936200,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "carvers": {
+    "air": [
+      "ceilands:ceilands_cave",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [
+      "ceilands:floating_ceilingneous_rock",
+      "ceilands:floating_roofshale_rock",
+      "ceilands:ceiling_roofshale_rock"
+    ],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "ceilands:fossil_ceilands",
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
+    ],
+    [],
+    [],
+    [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_tuff",
+      "ceilands:ore_coal_ceilands_upper",
+      "ceilands:ore_coal_ceilands_lower",
+      "ceilands:ore_iron_ceilands_upper",
+      "ceilands:ore_iron_ceilands_middle",
+      "ceilands:ore_iron_ceilands_small",
+      "ceilands:ore_gold_ceilands",
+      "ceilands:ore_gold_ceilands_extra",
+      "ceilands:ore_redstone_ceilands",
+      "ceilands:ore_redstone_ceilands_lower",
+      "ceilands:ore_diamond_ceilands",
+      "ceilands:ore_diamond_ceilands_large",
+      "ceilands:ore_diamond_ceilands_buried",
+      "ceilands:ore_emerald_ceilands",
+      "ceilands:ore_lapis_ceilands",
+      "ceilands:ore_lapis_ceilands_buried",
+      "ceilands:ore_copper_ceilands",
+      "ceilands:ore_ceilinum_ceilands_lower",
+      "ceilands:ore_ceilinum_ceilands_upper",
+      "ceilands:ore_roofshale",
+      "minecraft:underwater_magma",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel"
+    ],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "ceilands:structure_chains",
+      "ceilands:patch_cactus_arid_roof",
+      "ceilands:patch_dead_bush_arid_roof",
+      "minecraft:flower_default",
+      "minecraft:glow_lichen"
+    ],
+    []
+  ],
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:frog",
+        "maxCount": 5,
+        "minCount": 2,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:camel",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 2
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:zombie",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 15
+      },
+      {
+        "type": "minecraft:husk",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 80
+      },
+      {
+        "type": "minecraft:zombie_villager",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      },
+      {
+        "type": "minecraft:skeleton",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:creeper",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 15
+      },
+      {
+        "type": "minecraft:slime",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:enderman",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:witch",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:cod",
+        "maxCount": 5,
+        "minCount": 3,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:salmon",
+        "maxCount": 8,
+        "minCount": 3,
+        "weight": 10
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ]
+  },
+  "spawn_costs": {}
+}

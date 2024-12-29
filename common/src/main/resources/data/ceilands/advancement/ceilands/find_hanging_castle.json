@@ -20,15 +20,15 @@
   },
   "display": {
     "announce_to_chat": true,
-    "description": {
-      "translate": "advancements.ceilands.find_hanging_castle.description"
-    },
     "frame": "task",
     "hidden": false,
+    "show_toast": true,
     "icon": {
       "id": "ceilands:ceilingneous_bricks"
     },
-    "show_toast": true,
+    "description": {
+      "translate": "advancements.ceilands.find_hanging_castle.description"
+    },
     "title": {
       "translate": "advancements.ceilands.find_hanging_castle.title"
     }

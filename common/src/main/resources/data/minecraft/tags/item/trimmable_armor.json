@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ceilands:castle_lord_crown",
+    "ceilands:castle_lord_chestplate",
+    "ceilands:castle_lord_leggings",
+    "ceilands:castle_lord_boots"
+  ]
+}

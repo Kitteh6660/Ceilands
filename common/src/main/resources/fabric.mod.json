@@ -26,14 +26,14 @@
     ]
   },
   "mixins": [
-    "ceilands_fabric.mixins.json"
+    "ceilands.mixins.json"
   ],
   "accessWidener": "ceilands.accesswidener",
 
   "depends": {
-    "fabricloader": ">=0.14.21",
+    "fabricloader": ">=0.15.11",
     "fabric-api": ">=0.90.0",
-    "minecraft": ">=1.20.1",
+    "minecraft": ">=1.21.1",
     "java": ">=17"
   },
   "suggests": {

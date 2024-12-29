@@ -20,15 +20,15 @@
   },
   "display": {
     "announce_to_chat": true,
-    "description": {
-      "translate": "advancements.ceilands.find_ocean_cube.description"
-    },
     "frame": "task",
     "hidden": false,
+    "show_toast": true,
     "icon": {
       "id": "minecraft:wet_sponge"
     },
-    "show_toast": true,
+    "description": {
+      "translate": "advancements.ceilands.find_ocean_cube.description"
+    },
     "title": {
       "translate": "advancements.ceilands.find_ocean_cube.title"
     }

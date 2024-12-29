@@ -19,7 +19,7 @@ repositories {
     }
 }
 
-minecraft.accessTransformers.file project(":common").file('src/main/resources/META-INF/accesstransformer.cfg')
+minecraft.accessTransformers.file file('src/main/resources/META-INF/accesstransformer.cfg')
 
 runs {
     configureEach {
@@ -32,9 +32,6 @@ runs {
 	}
 	server {
 		systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
-	}
-	data {
-		programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
 	}
 }
 

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "ceilands:castle_lord_regalia_fragments"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "result": {
+    "id": "ceilands:castle_lord_leggings"
+  }
+}

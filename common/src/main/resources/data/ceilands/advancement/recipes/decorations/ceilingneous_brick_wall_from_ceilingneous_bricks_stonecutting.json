@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ceilands:ceilingneous_brick_wall_from_polished_ceilingneous_bricks_stonecutting"
+        "recipe": "ceilands:ceilingneous_brick_wall_from_ceilingneous_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ceilands:ceilingneous_brick_wall_from_polished_ceilingneous_bricks_stonecutting"
+      "ceilands:ceilingneous_brick_wall_from_polished_bricks_stonecutting"
     ]
   }
 }

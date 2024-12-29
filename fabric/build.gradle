@@ -39,12 +39,14 @@ loom {
             client()
             setConfigName("Fabric Client")
             ideConfigGenerated(true)
+			vmArg "-Dfabric-tag-conventions-v2.missingTagTranslationWarning=SILENCED"
             runDir("run")
         }
         server {
             server()
             setConfigName("Fabric Server")
             ideConfigGenerated(true)
+			vmArg "-Dfabric-tag-conventions-v2.missingTagTranslationWarning=SILENCED"
             runDir("run")
         }
         datagen {

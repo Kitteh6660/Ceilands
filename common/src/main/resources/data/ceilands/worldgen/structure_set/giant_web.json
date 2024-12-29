@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "ceilands:giant_web",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "frequency": 0.4,
+    "spacing": 12,
+    "separation": 4,
+    "salt": 1624821
+  }
+}

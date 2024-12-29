@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ceilands:block/chiseled_roofshale_top",
+    "side": "ceilands:block/chiseled_roofshale"
+  }
+}

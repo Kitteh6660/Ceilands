@@ -1,0 +1,15 @@
+{
+  "name": "ceilands:giant_web_bowl_quadrant",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:giant_web/bowl_quadrant",
+        "projection": "rigid",
+        "processors": "ceilands:giant_web_bowl_cobweb_randomizer"
+      }
+    }
+  ]
+}

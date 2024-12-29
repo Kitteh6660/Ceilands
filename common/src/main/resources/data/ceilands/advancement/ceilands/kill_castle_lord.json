@@ -1,0 +1,41 @@
+{
+  "parent": "ceilands:ceilands/find_hanging_castle",
+  "criteria": {
+    "killed_castle_lord": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "ceilands:castle_lord"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "frame": "goal",
+    "hidden": false,
+    "show_toast": true,
+    "icon": {
+      "count": 1,
+      "id": "ceilands:castle_lord_crown"
+    },
+    "description": {
+      "translate": "advancements.ceilands.kill_castle_lord.description"
+    },
+    "title": {
+      "translate": "advancements.ceilands.kill_castle_lord.title"
+    }
+  },
+  "requirements": [
+    [
+      "killed_castle_lord"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

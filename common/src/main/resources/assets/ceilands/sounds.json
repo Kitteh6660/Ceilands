@@ -1,0 +1,68 @@
+{
+  "entity.castle_lord.ambient": {
+    "sounds": [
+      "minecraft:mob/pillager/idle1",
+      "minecraft:mob/pillager/idle2",
+      "minecraft:mob/pillager/idle3",
+      "minecraft:mob/pillager/idle4"
+    ],
+    "subtitle": "ceilands.subtitles.entity.castle_lord.ambient"
+  },
+  "entity.castle_lord.chasing": {
+    "sounds": [
+      "minecraft:mob/pillager/idle1",
+      "minecraft:mob/pillager/idle2",
+      "minecraft:mob/pillager/idle3",
+      "minecraft:mob/pillager/idle4"
+    ],
+    "subtitle": "ceilands.subtitles.entity.castle_lord.chasing"
+  },
+  "entity.castle_lord.death": {
+    "sounds": [
+      "minecraft:mob/pillager/death1",
+      "minecraft:mob/pillager/death2"
+    ],
+    "subtitle": "ceilands.subtitles.entity.castle_lord.death"
+  },
+  "entity.castle_lord.hurt": {
+    "sounds": [
+      "minecraft:mob/pillager/hurt1",
+      "minecraft:mob/pillager/hurt2",
+      "minecraft:mob/pillager/hurt3"
+    ],
+    "subtitle": "ceilands.subtitles.entity.castle_lord.hurt"
+  },
+  "entity.spider_monarch.ambient": {
+    "sounds": [
+      "minecraft:mob/spider/say1",
+      "minecraft:mob/spider/say2",
+      "minecraft:mob/spider/say3",
+      "minecraft:mob/spider/say4"
+    ],
+    "subtitle": "ceilands.subtitles.entity.spider_monarch.ambient"
+  },
+  "entity.spider_monarch.step": {
+    "sounds": [
+      "minecraft:mob/spider/step1",
+      "minecraft:mob/spider/step2",
+      "minecraft:mob/spider/step3",
+      "minecraft:mob/spider/step4"
+    ],
+    "subtitle": "ceilands.subtitles.entity.spider_monarch.step"
+  },
+  "entity.spider_monarch.death": {
+    "sounds": [
+      "minecraft:mob/spider/death"
+    ],
+    "subtitle": "ceilands.subtitles.entity.spider_monarch.death"
+  },
+  "entity.spider_monarch.hurt": {
+    "sounds": [
+      "minecraft:mob/spider/say1",
+      "minecraft:mob/spider/say2",
+      "minecraft:mob/spider/say3",
+      "minecraft:mob/spider/say4"
+    ],
+    "subtitle": "ceilands.subtitles.entity.spider_monarch.hurt"
+  }
+}

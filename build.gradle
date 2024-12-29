@@ -8,11 +8,11 @@ plugins {
 
 forgix {
     group = "${rootProject.mod_group_id}.${rootProject.mod_id}"
-    mergedJarName = "${rootProject.archives_base_name}-QuiFabrge-${rootProject.mod_version}.jar"
-	outputDir = "quifabrge/build/libs"
+    mergedJarName = "${rootProject.archives_base_name}-NeoQuiFab-${rootProject.mod_version}.jar"
+	outputDir = "neoquifab/build/libs"
 	version = '${rootProject.mod_version}'
 	
-	forge {
+	neoforge {
 		projectName = "neoforge"
 		jarLocation = "build/libs/neoforge.jar"
 		additionalRelocate("com.kittehmod.ceilands", "com.kittehmod.ceilands.neoforge")

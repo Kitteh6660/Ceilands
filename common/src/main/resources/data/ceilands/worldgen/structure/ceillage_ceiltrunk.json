@@ -5,11 +5,11 @@
   "spawn_overrides": {},
   "terrain_adaptation": "none",
   "start_pool": "ceilands:ceillage/ceiltrunk/start",
-  "size": 4,
+  "size": 6,
   "start_height": {
     "type": "minecraft:uniform",
     "max_inclusive": {
-      "below_top": 70
+      "below_top": 48
     },
     "min_inclusive": {
       "absolute": 16

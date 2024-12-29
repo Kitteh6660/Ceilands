@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 import org.joml.Quaternionf;
 
 import com.google.common.collect.ImmutableMap;
-import com.kittehmod.ceilands.entity.ModBoat;
+import com.kittehmod.ceilands.entity.vehicle.ModBoat;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.datafixers.util.Pair;

@@ -1,0 +1,114 @@
+{
+  "name": "ceilands:ceillage_luzawood_houses",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/small_house_1",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/small_house_2",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/small_house_3",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/medium_house_1",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/medium_house_2",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/medium_house_3",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/butcher_shop",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/cleric_hut",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/library",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/fletcher_site",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/mason_site",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:ceillage/luzawood/zombie/houses/smithy",
+        "projection": "rigid",
+        "processors": "ceilands:zombie_luzawood"
+      }
+    }
+  ]
+}

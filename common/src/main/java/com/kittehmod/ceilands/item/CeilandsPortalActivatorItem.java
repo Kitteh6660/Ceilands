@@ -16,8 +16,6 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.portal.PortalShape;
-import net.minecraft.world.level.block.BaseFireBlock;
-import net.minecraft.world.level.block.Blocks;
 
 public class CeilandsPortalActivatorItem extends Item
 {

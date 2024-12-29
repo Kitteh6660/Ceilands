@@ -3,6 +3,10 @@
   "values": [
     "ceilands:ceilingneous_slab",
     "ceilands:polished_ceilingneous_slab",
-    "ceilands:ceilingneous_brick_slab"
+    "ceilands:ceilingneous_brick_slab",
+    "ceilands:roofshale_slab",
+    "ceilands:polished_roofshale_slab",
+    "ceilands:roofshale_brick_slab",
+    "ceilands:cut_ceilinum_slab"
   ]
 }

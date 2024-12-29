@@ -139,30 +139,29 @@ public class SmallFloatingIslandFeature extends Feature<BlockStateConfiguration>
 
 	}
 
-	private void generateIcebergBlock(LevelAccessor p_225110_, RandomSource p_225111_, BlockPos p_225112_, int p_225113_, int p_225114_, int p_225115_, int p_225116_, int p_225117_, int p_225118_, boolean p_225119_, int p_225120_, double p_225121_, boolean p_225122_, BlockState p_225123_) {
-		double d0 = p_225119_ ? this.signedDistanceEllipse(p_225114_, p_225116_, BlockPos.ZERO, p_225118_, this.getEllipseC(p_225115_, p_225113_, p_225120_), p_225121_)
-				: this.signedDistanceCircle(p_225114_, p_225116_, BlockPos.ZERO, p_225117_, p_225111_);
+	private void generateIcebergBlock(LevelAccessor level, RandomSource random, BlockPos pos, int p_225113_, int p_225114_, int p_225115_, int p_225116_, int p_225117_, int p_225118_, boolean p_225119_, int p_225120_, double p_225121_, boolean p_225122_, BlockState state) {
+		double d0 = p_225119_ ? this.signedDistanceEllipse(p_225114_, p_225116_, BlockPos.ZERO, p_225118_, this.getEllipseC(p_225115_, p_225113_, p_225120_), p_225121_) : this.signedDistanceCircle(p_225114_, p_225116_, BlockPos.ZERO, p_225117_, random);
 		if (d0 < 0.0D) {
-			BlockPos blockpos = p_225112_.offset(p_225114_, p_225115_, p_225116_);
-			double d1 = p_225119_ ? -0.5D : (double) (-6 - p_225111_.nextInt(3));
-			if (d0 > d1 && p_225111_.nextDouble() > 0.9D) {
+			BlockPos blockpos = pos.offset(p_225114_, p_225115_, p_225116_);
+			double d1 = p_225119_ ? -0.5D : (double) (-6 - random.nextInt(3));
+			if (d0 > d1 && random.nextDouble() > 0.9D) {
 				return;
 			}
 
-			this.setIcebergBlock(blockpos, p_225110_, p_225111_, p_225113_ - p_225115_, p_225113_, p_225119_, p_225122_, p_225123_);
+			this.setIcebergBlock(blockpos, level, random, p_225113_ - p_225115_, p_225113_, p_225119_, p_225122_, state);
 		}
 
 	}
 
-	private void setIcebergBlock(BlockPos p_225125_, LevelAccessor p_225126_, RandomSource p_225127_, int p_225128_, int p_225129_, boolean p_225130_, boolean p_225131_, BlockState p_225132_) {
-		BlockState blockstate = p_225126_.getBlockState(p_225125_);
-		if (blockstate.is(Blocks.AIR) || blockstate.is(Blocks.CAVE_AIR) || blockstate.is(Blocks.SNOW_BLOCK) || blockstate.is(Blocks.ICE) || blockstate.is(Blocks.WATER)) {
-			boolean flag = !p_225130_ || p_225127_.nextDouble() > 0.05D;
+	private void setIcebergBlock(BlockPos pos, LevelAccessor level, RandomSource randomsource, int p_225128_, int p_225129_, boolean p_225130_, boolean p_225131_, BlockState state) {
+		BlockState blockstate = level.getBlockState(pos);
+		if (blockstate.is(Blocks.AIR) || blockstate.is(Blocks.CAVE_AIR) || blockstate.is(Blocks.SNOW_BLOCK) || blockstate.is(Blocks.RED_SAND) || blockstate.is(Blocks.ICE) || blockstate.is(Blocks.WATER)) {
+			boolean flag = !p_225130_ || randomsource.nextDouble() > 0.05D;
 			int i = p_225130_ ? 3 : 2;
-			if (p_225131_ && !blockstate.is(Blocks.WATER) && (double) p_225128_ <= (double) p_225127_.nextInt(Math.max(1, p_225129_ / i)) + (double) p_225129_ * 0.6D && flag) {
-				this.setBlock(p_225126_, p_225125_, Blocks.SNOW_BLOCK.defaultBlockState());
+			if (p_225131_ && !blockstate.is(Blocks.WATER) && (double) p_225128_ <= (double) randomsource.nextInt(Math.max(1, p_225129_ / i)) + (double) p_225129_ * 0.6D && flag) {
+				this.setBlock(level, pos, state.getBlock() == CeilandsBlocks.ROOFSHALE ? Blocks.RED_SAND.defaultBlockState() : Blocks.SNOW_BLOCK.defaultBlockState());
 			} else {
-				this.setBlock(p_225126_, p_225125_, p_225132_);
+				this.setBlock(level, pos, state);
 			}
 		}
 

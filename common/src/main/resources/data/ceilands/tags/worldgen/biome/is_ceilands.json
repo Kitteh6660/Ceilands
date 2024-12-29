@@ -1,10 +1,10 @@
 {
-  "replace": false,
   "values": [
+    "ceilands:arid_roof",
+    "ceilands:snow_roof",
+    "ceilands:inverted_peaks",
     "ceilands:topsy_forest",
     "ceilands:luzawood_forest",
-    "ceilands:inverted_peaks",
-    "ceilands:snow_roof",
     "ceilands:ocean_orbs"
   ]
 }

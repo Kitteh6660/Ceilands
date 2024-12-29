@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "ceilands:block/roofshale",
+    "side": "ceilands:block/roofshale",
+    "top": "ceilands:block/roofshale"
+  }
+}

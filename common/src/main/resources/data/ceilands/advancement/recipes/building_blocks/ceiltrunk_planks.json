@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "ceilands:ceiltrunk_logs"
+            "items": "#ceilands:ceiltrunk_logs"
           }
         ]
       },

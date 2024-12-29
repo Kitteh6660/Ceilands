@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ceilands:cut_ceilinum"
+  },
+  "result": {
+    "id": "ceilands:cut_ceilinum_stairs",
+    "count": 1
+  }
+}

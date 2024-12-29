@@ -2,13 +2,8 @@ package com.kittehmod.ceilands.util;
 
 import java.util.Comparator;
 import java.util.Optional;
-import java.util.function.Function;
 
-import org.jetbrains.annotations.Nullable;
-
-import com.kittehmod.ceilands.block.CeilandsPortalBlock;
 import com.kittehmod.ceilands.registry.CeilandsBlocks;
-import com.kittehmod.ceilands.registry.CeilandsDimension;
 import com.kittehmod.ceilands.registry.CeilandsPOIType;
 
 import net.minecraft.BlockUtil;
@@ -16,24 +11,16 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.TicketType;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.village.poi.PoiManager;
 import net.minecraft.world.entity.ai.village.poi.PoiRecord;
-import net.minecraft.world.entity.ai.village.poi.PoiTypes;
-import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.NetherPortalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.border.WorldBorder;
-import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.portal.DimensionTransition;
 import net.minecraft.world.level.portal.PortalForcer;
-import net.minecraft.world.level.portal.PortalShape;
-import net.minecraft.world.phys.Vec3;
 
 public class CeilandsPortalForcer extends PortalForcer
 {

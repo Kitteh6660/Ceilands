@@ -9,6 +9,4 @@ public class Ceilands
     public static final String MOD_ID = "ceilands";
     
     public static final Logger LOGGER = LogUtils.getLogger();
-
-    public Ceilands() {}
 }

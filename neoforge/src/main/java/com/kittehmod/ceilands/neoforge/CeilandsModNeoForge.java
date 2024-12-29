@@ -3,28 +3,19 @@ package com.kittehmod.ceilands.neoforge;
 import com.google.common.collect.ImmutableList;
 import com.kittehmod.ceilands.Ceilands;
 import com.kittehmod.ceilands.block.ModWoodType;
-import com.kittehmod.ceilands.neoforge.client.ClientHandler;
 import com.kittehmod.ceilands.neoforge.compat.FarmersDelightCompat;
 import com.kittehmod.ceilands.neoforge.compat.TwilightForestCompat;
-import com.kittehmod.ceilands.neoforge.util.CreativeTabHelper;
-import com.kittehmod.ceilands.registry.CeilandsGameRules;
 
-import net.minecraft.client.renderer.Sheets;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack.Position;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import oshi.util.tuples.Quartet;
 
@@ -33,7 +24,6 @@ public class CeilandsModNeoForge
 {
 	public CeilandsModNeoForge(IEventBus bus, ModContainer container) {
 		bus.register(CeilandsRegistry.class);
-		bus.register(CreativeTabHelper.class);
 		bus.addListener(this::setupCommon);
 		hookCompats(bus);
 		bus.addListener(this::setupDataPacks);

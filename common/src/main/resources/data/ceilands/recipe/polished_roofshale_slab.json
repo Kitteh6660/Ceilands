@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "roofshale_slab",
+  "key": {
+    "#": {
+      "item": "ceilands:polished_roofshale"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "ceilands:polished_roofshale_slab"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "ceilands:item/bed",
+  "textures": {
+    "bed": "ceilands:entity/bed/spider_silk"
+  }
+}

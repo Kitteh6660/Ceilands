@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "ceilinum_ingot",
+  "ingredient": {
+    "item": "ceilands:ceilinum_ore"
+  },
+  "result": {
+    "id": "ceilands:ceilinum_ingot"
+  }
+}

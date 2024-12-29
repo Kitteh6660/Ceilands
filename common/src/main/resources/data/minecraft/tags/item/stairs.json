@@ -3,6 +3,10 @@
   "values": [
     "ceilands:ceilingneous_stairs",
     "ceilands:polished_ceilingneous_stairs",
-    "ceilands:ceilingneous_brick_stairs"
+    "ceilands:ceilingneous_brick_stairs",
+    "ceilands:roofshale_stairs",
+    "ceilands:polished_roofshale_stairs",
+    "ceilands:roofshale_brick_stairs",
+    "ceilands:cut_ceilinum_stairs"
   ]
 }

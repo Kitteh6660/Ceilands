@@ -1,0 +1,58 @@
+# The Mod TOML file for Ceilands.
+
+modLoader="javafml" #mandatory
+loaderVersion="[2,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+
+license="MIT" # License Schmicense
+
+[[mods]] #mandatory
+	modId="${mod_id}"
+	version="${version}"
+	displayName="The Ceilands"
+	displayURL="https://www.curseforge.com/minecraft/mc-mods/the-ceilands" 
+	issueTrackerURL="https://github.com/Kitteh6660/Ceilands/issues"
+	logoFile="logo.png" #optional
+	authors="Kitteh6660" #optional
+	
+	credits="Thank you /u/Raphe9000 for the wonderful idea! Thank you firenh#7567 for the textures!" #optional
+	
+	# The description text for the mod (multi line!) (#mandatory)
+	description="${description}"
+
+[[mixins]]
+config = "${mod_id}.mixins.json"
+
+[[accessTransformers]]
+file="META-INF/accesstransformer.cfg"
+
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.ceilands]]
+    modId="neoforge" #mandatory
+    type="required" #mandatory
+    versionRange="[21.1.0,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ceilands]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ceilands]]
+    modId="blueprint"
+    type="optional"
+    versionRange="[1.21,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.ceilands]]
+    modId="farmersdelight"
+    type="optional"
+    versionRange="[1.2.4,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.ceilands]]
+    modId="twilightforest"
+    type="optional"
+    versionRange="[4.6.2780,)"
+    ordering="AFTER"
+    side="BOTH"

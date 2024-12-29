@@ -18,7 +18,23 @@
             }
           ],
           "name": "minecraft:iron_ingot",
-          "weight": 30
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "ceilands:ceilinum_ingot",
+          "weight": 15
         },
         {
           "type": "minecraft:item",
@@ -87,6 +103,22 @@
           ],
           "name": "minecraft:iron_nugget",
           "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 10.0,
+                "min": 4.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "ceilands:ceilinum_nugget",
+          "weight": 6
         },
         {
           "type": "minecraft:item",

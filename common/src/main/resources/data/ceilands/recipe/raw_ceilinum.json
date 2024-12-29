@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ceilands:raw_ceilinum_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "ceilands:raw_ceilinum"
+  }
+}

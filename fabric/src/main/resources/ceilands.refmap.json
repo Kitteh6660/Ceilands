@@ -1,0 +1,56 @@
+{
+  "mappings": {
+    "com/kittehmod/ceilands/fabric/mixin/AnimalMixin": {
+      "checkAnimalSpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1429;method_20663(Lnet/minecraft/class_1299;Lnet/minecraft/class_1936;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+    },
+    "com/kittehmod/ceilands/fabric/mixin/HuskMixin": {
+      "checkHuskSpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1576;method_20677(Lnet/minecraft/class_1299;Lnet/minecraft/class_5425;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+    },
+    "com/kittehmod/ceilands/fabric/mixin/LevelRendererMixin": {
+      "Lnet/minecraft/client/renderer/DimensionSpecialEffects;skyType()Lnet/minecraft/client/renderer/DimensionSpecialEffects$SkyType;": "Lnet/minecraft/class_5294;method_29992()Lnet/minecraft/class_5294$class_5401;",
+      "Lnet/minecraft/client/renderer/LevelRenderer;renderSky(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V": "Lnet/minecraft/class_761;method_3257(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;FLnet/minecraft/class_4184;ZLjava/lang/Runnable;)V"
+    },
+    "com/kittehmod/ceilands/fabric/mixin/ServerLevelMixin": {
+      "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V": "Lnet/minecraft/class_3218;method_29199(J)V",
+      "tick(Ljava/util/function/BooleanSupplier;)V": "Lnet/minecraft/class_3218;method_18765(Ljava/util/function/BooleanSupplier;)V"
+    },
+    "com/kittehmod/ceilands/fabric/mixin/ShearsMixin": {
+      "createToolProperties()Lnet/minecraft/world/item/component/Tool;": "Lnet/minecraft/class_1820;method_58416()Lnet/minecraft/class_9424;",
+      "mineBlock(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/LivingEntity;)Z": "Lnet/minecraft/class_1820;method_7879(Lnet/minecraft/class_1799;Lnet/minecraft/class_1937;Lnet/minecraft/class_2680;Lnet/minecraft/class_2338;Lnet/minecraft/class_1309;)Z"
+    },
+    "com/kittehmod/ceilands/fabric/mixin/StrayMixin": {
+      "checkStraySpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1627;method_20686(Lnet/minecraft/class_1299;Lnet/minecraft/class_5425;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+    },
+    "com/kittehmod/ceilands/fabric/mixin/VoidMixin": {
+      "onBelowWorld()V": "Lnet/minecraft/class_1309;method_5825()V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/kittehmod/ceilands/fabric/mixin/AnimalMixin": {
+        "checkAnimalSpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1429;method_20663(Lnet/minecraft/class_1299;Lnet/minecraft/class_1936;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+      },
+      "com/kittehmod/ceilands/fabric/mixin/HuskMixin": {
+        "checkHuskSpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1576;method_20677(Lnet/minecraft/class_1299;Lnet/minecraft/class_5425;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+      },
+      "com/kittehmod/ceilands/fabric/mixin/LevelRendererMixin": {
+        "Lnet/minecraft/client/renderer/DimensionSpecialEffects;skyType()Lnet/minecraft/client/renderer/DimensionSpecialEffects$SkyType;": "Lnet/minecraft/class_5294;method_29992()Lnet/minecraft/class_5294$class_5401;",
+        "Lnet/minecraft/client/renderer/LevelRenderer;renderSky(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V": "Lnet/minecraft/class_761;method_3257(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;FLnet/minecraft/class_4184;ZLjava/lang/Runnable;)V"
+      },
+      "com/kittehmod/ceilands/fabric/mixin/ServerLevelMixin": {
+        "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V": "Lnet/minecraft/class_3218;method_29199(J)V",
+        "tick(Ljava/util/function/BooleanSupplier;)V": "Lnet/minecraft/class_3218;method_18765(Ljava/util/function/BooleanSupplier;)V"
+      },
+      "com/kittehmod/ceilands/fabric/mixin/ShearsMixin": {
+        "createToolProperties()Lnet/minecraft/world/item/component/Tool;": "Lnet/minecraft/class_1820;method_58416()Lnet/minecraft/class_9424;",
+        "mineBlock(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/LivingEntity;)Z": "Lnet/minecraft/class_1820;method_7879(Lnet/minecraft/class_1799;Lnet/minecraft/class_1937;Lnet/minecraft/class_2680;Lnet/minecraft/class_2338;Lnet/minecraft/class_1309;)Z"
+      },
+      "com/kittehmod/ceilands/fabric/mixin/StrayMixin": {
+        "checkStraySpawnRules(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z": "Lnet/minecraft/class_1627;method_20686(Lnet/minecraft/class_1299;Lnet/minecraft/class_5425;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+      },
+      "com/kittehmod/ceilands/fabric/mixin/VoidMixin": {
+        "onBelowWorld()V": "Lnet/minecraft/class_1309;method_5825()V"
+      }
+    }
+  }
+}

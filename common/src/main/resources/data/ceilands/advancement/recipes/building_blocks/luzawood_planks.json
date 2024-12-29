@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "ceilands:luzawood_logs"
+            "items": "#ceilands:luzawood_logs"
           }
         ]
       },

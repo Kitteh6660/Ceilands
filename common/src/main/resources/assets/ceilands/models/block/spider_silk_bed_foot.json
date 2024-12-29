@@ -1,0 +1,6 @@
+{
+  "parent": "ceilands:block/template_bed_foot",
+  "textures": {
+    "bed": "ceilands:entity/bed/spider_silk"
+  }
+}

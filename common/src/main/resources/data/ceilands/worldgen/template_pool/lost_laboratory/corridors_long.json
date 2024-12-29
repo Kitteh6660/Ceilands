@@ -1,0 +1,24 @@
+{
+  "name": "ceilands:lost_laboratory/corridors_long",
+  "fallback": "ceilands:lost_laboratory/wall_endcap",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:lost_laboratory/corridor_specimen",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:lost_laboratory/corridor_living_area",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

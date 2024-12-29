@@ -1,0 +1,15 @@
+{
+  "name": "ceilands:giant_web_frame_corner_filler",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ceilands:giant_web/frame_corner_filler",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

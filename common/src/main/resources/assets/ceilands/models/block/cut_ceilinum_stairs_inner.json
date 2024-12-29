@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "ceilands:block/cut_ceilinum",
+    "side": "ceilands:block/cut_ceilinum",
+    "top": "ceilands:block/cut_ceilinum"
+  }
+}
