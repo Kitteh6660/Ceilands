@@ -1,39 +1,5 @@
 package com.kittehmod.ceilands.neoforge.compat;
 
-import com.kittehmod.ceilands.Ceilands;
-import com.kittehmod.ceilands.block.CeilandsFlammableBlocks;
-import com.kittehmod.ceilands.neoforge.CeilandsRegistry;
-import com.kittehmod.ceilands.registry.CeilandsBlocks;
-import com.kittehmod.ceilands.registry.CeilandsItems;
-/*import com.teamabnormals.blueprint.client.BlueprintChestMaterials;
-import com.teamabnormals.blueprint.client.renderer.block.ChestBlockEntityWithoutLevelRenderer;
-import com.teamabnormals.blueprint.common.block.BlueprintBeehiveBlock;
-import com.teamabnormals.blueprint.common.block.BlueprintChiseledBookShelfBlock;
-import com.teamabnormals.blueprint.common.block.LeafPileBlock;
-import com.teamabnormals.blueprint.common.block.chest.BlueprintChestBlock;
-import com.teamabnormals.blueprint.common.block.chest.BlueprintTrappedChestBlock;
-import com.teamabnormals.blueprint.common.block.entity.BlueprintChestBlockEntity;
-import com.teamabnormals.blueprint.common.block.entity.BlueprintTrappedChestBlockEntity;
-import com.teamabnormals.blueprint.common.item.BEWLRBlockItem;
-import com.teamabnormals.woodworks.core.registry.WoodworksBlocks;*/
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab.TabVisibility;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LadderBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import oshi.util.tuples.Pair;
-import oshi.util.tuples.Triplet;
-
 // To be re-implemented when Blueprint gets updated to 1.21.
 public class WoodworksCompat 
 {

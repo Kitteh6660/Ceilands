@@ -1,21 +1,5 @@
 package com.kittehmod.ceilands.neoforge.compat;
 
-import com.kittehmod.ceilands.Ceilands;
-import com.kittehmod.ceilands.neoforge.CeilandsRegistry;
-import com.kittehmod.ceilands.registry.CeilandsItems;
-//import com.teamabnormals.boatload.common.item.FurnaceBoatItem;
-//import com.teamabnormals.boatload.common.item.LargeBoatItem;
-//import com.teamabnormals.boatload.core.api.BoatloadBoatType;
-
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab.TabVisibility;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import oshi.util.tuples.Pair;
-
 // To be re-implemented when Blueprint gets updated to 1.21.
 public class BoatloadCompat 
 {

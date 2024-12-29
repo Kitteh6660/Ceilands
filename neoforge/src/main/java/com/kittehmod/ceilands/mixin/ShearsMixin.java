@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.kittehmod.ceilands.registry.CeilandsBlocks;
 import com.kittehmod.ceilands.tags.CeilandsBlockTags;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 
